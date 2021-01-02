@@ -19,6 +19,7 @@ namespace Weapons
             var player = LevelManager.Instance.Player.GetComponent<PlayerMovement>();
             var proj = Instantiate(projectile, spawnPoint.position, transform.rotation);
             proj.GetComponent<BaseProjectile>().SetMovingDirection(player.Facing);
+            _currentCooldown = fireRate;
         }
     }
 }

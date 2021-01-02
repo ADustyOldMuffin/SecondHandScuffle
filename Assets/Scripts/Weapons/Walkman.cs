@@ -37,6 +37,7 @@ namespace Weapons
             projectile1.GetComponent<BaseProjectile>().SetMovingDirection(facingTop);
             projectile2.GetComponent<BaseProjectile>().SetMovingDirection(player.Facing);
             projectile3.GetComponent<BaseProjectile>().SetMovingDirection(facingBottom);
+            _currentCooldown = fireRate;
         }
     }
 }
