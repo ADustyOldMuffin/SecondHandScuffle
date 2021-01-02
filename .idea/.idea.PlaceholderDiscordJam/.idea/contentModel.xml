@@ -333,6 +333,7 @@
             <e p="InputManager.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="Levels" t="Include">
+              <e p="MainGameManager.cs" t="Include" />
               <e p="MainMenuManager.cs" t="Include" />
             </e>
           </e>
@@ -351,11 +352,13 @@
           <e p="Weapons" t="Include">
             <e p="BaseWeapon.cs" t="Include" />
             <e p="Boomerang.cs" t="Include" />
+            <e p="OldWand.cs" t="Include" />
             <e p="Projectiles" t="Include">
               <e p="BaseProjectile.cs" t="Include" />
               <e p="BoomerangProjectile.cs" t="Include" />
               <e p="NormalProjectile.cs" t="Include" />
               <e p="ToastProjectile.cs" t="Include" />
+              <e p="WandProjectile.cs" t="Include" />
             </e>
             <e p="Revolver.cs" t="Include" />
             <e p="Toaster.cs" t="Include" />
