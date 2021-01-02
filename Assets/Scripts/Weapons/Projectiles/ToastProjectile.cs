@@ -10,8 +10,6 @@ namespace Weapons.Projectiles
         protected override int DamageAmount { get; } = 3;
         protected override float ProjectileLifetime { get; } = 10f;
 
-        private float _aliveFor = 0.0f;
-
         protected void Start()
         {
             var zRotation = 0.0f;

@@ -11,7 +11,8 @@ namespace Weapons
         [SerializeField] private float diskSpread = .2f;
         protected override void OnAttack(InputAction.CallbackContext _)
         {
-            base.OnAttack(_);
+            if (_currentCooldown > 0.0f)
+                return;
 
             var player = LevelManager.Instance.Player.GetComponent<PlayerMovement>();
             var position = spawnPoint.position;

@@ -36,6 +36,9 @@ namespace Managers
         public delegate void PlayerScoreChange();
         public static event PlayerScoreChange OnPlayerScoreChange;
 
+        public delegate void PlayerWeaponReturn();
+        public static event PlayerWeaponReturn OnPlayerWeaponReturn;
+
         public int PlayerScore { get; private set; }
 
         public GameObject Player { get; private set; }
@@ -103,6 +106,12 @@ namespace Managers
         {
             if (OnPlayerScoreChange != null)
                 OnPlayerScoreChange();
+        }
+        
+        public static void PlayerWeaponReturned()
+        {
+            if (OnPlayerWeaponReturn != null)
+                OnPlayerWeaponReturn();
         }
 
         public void IncreaseScore(int amount)

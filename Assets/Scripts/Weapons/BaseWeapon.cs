@@ -39,7 +39,7 @@ namespace Weapons
             InputManager.Instance.InputMaster.Player.Attack.Disable();
         }
 
-        protected void OnDestroy()
+        protected virtual void OnDestroy()
         {
             if (InputManager.Instance is null)
                 return;
@@ -60,8 +60,7 @@ namespace Weapons
         
         protected virtual void OnAttack(InputAction.CallbackContext _)
         {
-            if (_currentCooldown > 0.0f)
-                return;
+            throw new NotImplementedException();
         }
     }
 }

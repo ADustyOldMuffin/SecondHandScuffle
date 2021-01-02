@@ -22,8 +22,8 @@ TagManager:
   - Enemy
   - Obstacles
   - Weapon
-  - Projectiles
-  - 
+  - UserProjectiles
+  - EnemyProjectiles
   - 
   - 
   - 
