@@ -203,6 +203,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
+      propertyPath: weapons.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
+      propertyPath: weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 4892415075673869870, guid: 0c66c3f043e68e746985b29a2e24c7d6,
+        type: 3}
+    - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
+      propertyPath: weapons.Array.data[4]
+      value: 
+      objectReference: {fileID: 6290915048901103486, guid: 35b8d55859bf50e45b27364bfec433c7,
+        type: 3}
     - target: {fileID: 1763867931160164617, guid: 439680f1d1118e64c971cadd04468592,
         type: 3}
       propertyPath: m_Name
@@ -2668,6 +2685,12 @@ MonoBehaviour:
   - {fileID: 1530191519}
   heartSprites: []
   playerCurrentHealth: 6
+--- !u!4 &912165722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1763867931160164622, guid: 439680f1d1118e64c971cadd04468592,
+    type: 3}
+  m_PrefabInstance: {fileID: 322239049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1215133096
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,8 +3302,8 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 912165722}
+  m_Follow: {fileID: 912165722}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5

@@ -98,7 +98,7 @@ MonoBehaviour:
   projectile: {fileID: 3398582381986195328, guid: dee837bff2ffb864f92a756dd5136d06,
     type: 3}
   spawnPoint: {fileID: 8920291292591591066}
-  fireRate: 1.5
+  fireRate: 1.2
   _currentCooldown: 0
 --- !u!1 &7761488178260571189
 GameObject:
