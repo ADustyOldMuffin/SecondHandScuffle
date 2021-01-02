@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Constants;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -30,9 +31,28 @@ namespace Managers
             SceneManager.LoadScene(Levels[levelToLoadOnStart]);
         }
 
-        public static void ChangeLevel(Level newLevel)
+        public void ChangeLevel(Level newLevel)
         {
-            SceneManager.LoadScene(Levels[newLevel]);
+            if (!Levels.TryGetValue(newLevel, out var sceneName))
+                return;
+
+            StartCoroutine(LoadScene(sceneName));
+        }
+
+        private static IEnumerator LoadScene(string sceneName)
+        {
+            var asyncLoadLevel = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+
+            while (!asyncLoadLevel.isDone)
+            {
+                // TODO Show loading screen?
+                yield return null;
+            }
+
+            // Wait for all objects to be instantiated
+            yield return new WaitForEndOfFrame();
+            
+            // Do anything else that needs to be done after loading a level
         }
     }
 }
