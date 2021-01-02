@@ -18,7 +18,12 @@ namespace Managers
         /// </summary>
         private static Dictionary<Level, string> Levels = new Dictionary<Level, string>()
         {
-            {Level.Test, "TestScene"}
+            {Level.Test, "TestScene"},
+            {Level.OpeningAnimation, "OpeningAnimation"},
+            {Level.MainMenu, "MainMenu"},
+            {Level.Options, "Options"},
+            {Level.MainGame, "MainGame"},
+            {Level.GameOver, "GameOver"}
         };
 
         public delegate void PlayerDeathAction();
@@ -41,6 +46,13 @@ namespace Managers
                 return;
 
             StartCoroutine(LoadScene(sceneName));
+        }
+
+        //cannot reference Level from inspector. put this in place so that buttons were usable. on click needs a public method. change level was not avaliable
+        public void LoadLevel(int newLevel)
+        {
+            // Make sure we have the level.
+            SceneManager.LoadScene(newLevel);
         }
 
         private static IEnumerator LoadScene(string sceneName)

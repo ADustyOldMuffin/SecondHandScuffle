@@ -9,6 +9,12 @@ namespace Player
 
         private int _currentHealth = 0;
 
+        private void Awake()
+        {
+            //start at full health
+            _currentHealth = startingHealth;
+        }
+
         public void DamagePlayer(int amount)
         {
             if (_currentHealth - amount <= 0)
@@ -23,6 +29,16 @@ namespace Player
         public void ResetPlayerHealth()
         {
             _currentHealth = startingHealth;
+        }
+
+        public int GetPlayerHealth()
+        {
+            return _currentHealth;
+        }
+
+        public int GetMaxHealth()
+        {
+            return startingHealth;
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Player
     {
         [SerializeField] private float moveSpeed = 3f;
         [SerializeField] private Rigidbody2D myRigidbody;
+        [SerializeField] private Animator myAnimator;
 
         private Vector2 _movement;
 
@@ -26,6 +27,7 @@ namespace Player
         private void FixedUpdate()
         {
             myRigidbody.MovePosition(myRigidbody.position + _movement * (moveSpeed * Time.fixedDeltaTime));
+            MovingAnimation();
         }
 
         private void OnEnable()
@@ -44,6 +46,14 @@ namespace Player
             
             InputManager.Instance.InputMaster.Player.VerticalMovement.Disable();
             InputManager.Instance.InputMaster.Player.HorizontalMovement.Disable();
+        }
+
+        private void MovingAnimation()
+        {
+            if(_movement.x == 0 && _movement.y == 0)
+            {
+                myAnimator.SetBool("isIdle", true);
+            }
         }
     }
 }

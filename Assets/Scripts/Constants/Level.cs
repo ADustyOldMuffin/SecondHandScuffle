@@ -4,6 +4,10 @@
     {
         None,
         Test,
-        MainMenu
+        OpeningAnimation,
+        MainMenu,
+        Options,
+        MainGame,
+        GameOver
     }
 }
