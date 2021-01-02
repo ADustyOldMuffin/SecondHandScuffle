@@ -29,5 +29,10 @@ namespace Managers
 
             SceneManager.LoadScene(Levels[levelToLoadOnStart]);
         }
+
+        public static void ChangeLevel(Level newLevel)
+        {
+            SceneManager.LoadScene(Levels[newLevel]);
+        }
     }
 }
