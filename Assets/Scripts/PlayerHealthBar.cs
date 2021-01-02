@@ -46,7 +46,7 @@ public class PlayerHealthBar : MonoBehaviour
     void Update()
     {
         //Debug.Log(gameSession.GetScore().ToString());
-        if (playerHealth != null)
+        if (playerHealth != null && playerHealth.GetPlayerHealth() > 0)
         {
 
             //healthText.SetText(FindObjectOfType<Player>().GetHealth().ToString());

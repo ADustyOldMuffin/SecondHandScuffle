@@ -20,6 +20,7 @@ namespace Player
 
         public void DamagePlayer(int amount)
         {
+            Debug.Log(GetPlayerHealth());
             if (_currentHealth - amount <= 0)
             {
                 LevelManager.PlayerDied();
