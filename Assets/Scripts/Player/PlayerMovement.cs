@@ -1,4 +1,5 @@
 ﻿using System;
+using Animancer;
 using Managers;
 using UnityEngine;
 
@@ -8,7 +9,10 @@ namespace Player
     {
         [SerializeField] private float moveSpeed = 3f;
         [SerializeField] private Rigidbody2D myRigidbody;
-        [SerializeField] private Animator myAnimator;
+        [SerializeField] private AnimancerComponent animancer;
+        [SerializeField] private DirectionalAnimationSet idles;
+        [SerializeField] private DirectionalAnimationSet moving;
+        [SerializeField] private Vector2 facing = Vector2.down;
 
         private Vector2 _movement;
 
@@ -18,16 +22,25 @@ namespace Player
                 return;
 
             InputManager.Instance.InputMaster.Player.VerticalMovement.performed +=
-                context => _movement.y = context.ReadValue<float>();
+                context =>
+                {
+                    _movement.y = context.ReadValue<float>();
+                    UpdateMovementAnimation();
+                };
 
             InputManager.Instance.InputMaster.Player.HorizontalMovement.performed +=
-                context => _movement.x = context.ReadValue<float>();
+                context =>
+                {
+                    _movement.x = context.ReadValue<float>();
+                    UpdateMovementAnimation();
+                };
+            
+            UpdateMovementAnimation();
         }
 
         private void FixedUpdate()
         {
             myRigidbody.MovePosition(myRigidbody.position + _movement * (moveSpeed * Time.fixedDeltaTime));
-            MovingAnimation();
         }
 
         private void OnEnable()
@@ -48,11 +61,22 @@ namespace Player
             InputManager.Instance.InputMaster.Player.HorizontalMovement.Disable();
         }
 
-        private void MovingAnimation()
+        private void Play(DirectionalAnimationSet animationSet)
         {
-            if(_movement.x == 0 && _movement.y == 0)
+            var clip = animationSet.GetClip(facing);
+            animancer.Play(clip);
+        }
+        
+        private void UpdateMovementAnimation()
+        {
+            if (_movement != Vector2.zero)
             {
-                myAnimator.SetBool("isIdle", true);
+                facing = _movement;
+                Play(moving);
+            }
+            else
+            {
+                Play(idles);
             }
         }
     }

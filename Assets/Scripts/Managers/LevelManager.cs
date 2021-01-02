@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Constants;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace Managers
         /// <summary>
         /// All the levels in the project in the format of Key - Level Enum, Value - Scene name
         /// </summary>
-        private static Dictionary<Level, string> Levels = new Dictionary<Level, string>()
+        private static readonly Dictionary<Level, string> Levels = new Dictionary<Level, string>()
         {
             {Level.Test, "TestScene"},
             {Level.OpeningAnimation, "OpeningAnimation"},
@@ -28,6 +29,11 @@ namespace Managers
 
         public delegate void PlayerDeathAction();
         public static event PlayerDeathAction OnPlayerDeath;
+
+        public delegate void PlayerScoreChange();
+        public static event PlayerScoreChange OnPlayerScoreChange;
+
+        public int PlayerScore { get; private set; }
 
         protected override void Awake()
         {
@@ -52,7 +58,12 @@ namespace Managers
         public void LoadLevel(int newLevel)
         {
             // Make sure we have the level.
-            SceneManager.LoadScene(newLevel);
+            if (!Levels.TryGetValue((Level) newLevel, out var levelName))
+            {
+                throw new ArgumentException($"Level does not exist with the value of {newLevel}", nameof(newLevel));
+            }
+
+            StartCoroutine(LoadScene(levelName));
         }
 
         private static IEnumerator LoadScene(string sceneName)
@@ -75,6 +86,24 @@ namespace Managers
         {
             if (OnPlayerDeath != null)
                 OnPlayerDeath();
+        }
+
+        public static void PlayerScoreChanged()
+        {
+            if (OnPlayerScoreChange != null)
+                OnPlayerScoreChange();
+        }
+
+        public void IncreaseScore(int amount)
+        {
+            PlayerScore += amount;
+            PlayerScoreChanged();
+        }
+
+        public void SetPlayerScore(int amount)
+        {
+            PlayerScore = amount;
+            PlayerScoreChanged();
         }
     }
 }
