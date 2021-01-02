@@ -9,7 +9,9 @@ using Player;
  Works? Yes
 
 This needs to access the current and max health of the player (which I have assumed to be 12 because 3 hearts * 4 pieces of heart)
-**/
+Fixed heart now in 6 half pieces
+ 
+ **/
 
 
 

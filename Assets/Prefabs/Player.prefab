@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40933284331c4e9c8c77342c2652bb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 12
+  startingHealth: 6
 --- !u!114 &2643783567012341803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 929627748846965041, guid: ffeb4ebf3d7c3644e867f81d9d49a627, type: 3}
+  - {fileID: 6290915048901103486, guid: 35b8d55859bf50e45b27364bfec433c7, type: 3}
   - {fileID: 4299141832617873128, guid: 7c9041bcafa24124791d3c2d1e2833b9, type: 3}
   - {fileID: 6290915048901103486, guid: 35b8d55859bf50e45b27364bfec433c7, type: 3}
   weaponHolder: {fileID: 273234653277260880}
