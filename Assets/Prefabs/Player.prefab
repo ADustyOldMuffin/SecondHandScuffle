@@ -90,7 +90,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1508415086664300729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ Animator:
   m_GameObject: {fileID: 1763867931160164617}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a853232a36767a642b17efe5108ac65b, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -179,7 +179,6 @@ MonoBehaviour:
   animancer: {fileID: 2643783567012341803}
   idles: {fileID: 11400000, guid: 643c13f039797734e803969df2a837f0, type: 2}
   moving: {fileID: 11400000, guid: 65fc4f2038d79914f9187a50ac7277ac, type: 2}
-  facing: {x: 0, y: 0}
 --- !u!114 &5269804195241282793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,8 +219,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
+  - {fileID: 929627748846965041, guid: ffeb4ebf3d7c3644e867f81d9d49a627, type: 3}
   - {fileID: 4299141832617873128, guid: 7c9041bcafa24124791d3c2d1e2833b9, type: 3}
+  - {fileID: 6290915048901103486, guid: 35b8d55859bf50e45b27364bfec433c7, type: 3}
   weaponHolder: {fileID: 273234653277260880}
+  mutationTime: 20
+  _currentMutationTime: 0
 --- !u!1 &1763867932049647614
 GameObject:
   m_ObjectHideFlags: 0

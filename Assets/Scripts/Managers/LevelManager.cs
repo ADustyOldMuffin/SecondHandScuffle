@@ -30,10 +30,15 @@ namespace Managers
         public delegate void PlayerDeathAction();
         public static event PlayerDeathAction OnPlayerDeath;
 
+        public delegate void PlayerHurtAction();
+        public static event PlayerHurtAction OnPlayerHurt;
+
         public delegate void PlayerScoreChange();
         public static event PlayerScoreChange OnPlayerScoreChange;
 
         public int PlayerScore { get; private set; }
+
+        public GameObject Player { get; private set; }
 
         protected override void Awake()
         {
@@ -88,6 +93,12 @@ namespace Managers
                 OnPlayerDeath();
         }
 
+        public static void HurtPlayer(int amount)
+        {
+            if (OnPlayerHurt != null)
+                OnPlayerHurt();
+        }
+
         public static void PlayerScoreChanged()
         {
             if (OnPlayerScoreChange != null)
@@ -104,6 +115,11 @@ namespace Managers
         {
             PlayerScore = amount;
             PlayerScoreChanged();
+        }
+
+        public void SetPlayer(GameObject player)
+        {
+            Player = player;
         }
     }
 }

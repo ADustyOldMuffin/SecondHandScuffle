@@ -12,7 +12,7 @@ namespace Player
         [SerializeField] private AnimancerComponent animancer;
         [SerializeField] private DirectionalAnimationSet idles;
         [SerializeField] private DirectionalAnimationSet moving;
-        [SerializeField] private Vector2 facing = Vector2.down;
+        public Vector2 Facing { get; private set; } = Vector2.down;
 
         private Vector2 _movement;
 
@@ -34,6 +34,20 @@ namespace Player
                     _movement.x = context.ReadValue<float>();
                     UpdateMovementAnimation();
                 };
+
+            InputManager.Instance.InputMaster.Player.VerticalLook.performed +=
+                context =>
+                {
+                    Facing = new Vector2(0, context.ReadValue<float>());
+                    UpdateMovementAnimation();
+                };
+            
+            InputManager.Instance.InputMaster.Player.HorizontalLook.performed +=
+                context =>
+                {
+                    Facing = new Vector2(context.ReadValue<float>(), 0);
+                    UpdateMovementAnimation();
+                };
             
             UpdateMovementAnimation();
         }
@@ -50,6 +64,8 @@ namespace Player
             
             InputManager.Instance.InputMaster.Player.VerticalMovement.Enable();
             InputManager.Instance.InputMaster.Player.HorizontalMovement.Enable();
+            InputManager.Instance.InputMaster.Player.VerticalLook.Enable();
+            InputManager.Instance.InputMaster.Player.HorizontalLook.Enable();
         }
 
         private void OnDisable()
@@ -59,25 +75,19 @@ namespace Player
             
             InputManager.Instance.InputMaster.Player.VerticalMovement.Disable();
             InputManager.Instance.InputMaster.Player.HorizontalMovement.Disable();
+            InputManager.Instance.InputMaster.Player.VerticalLook.Disable();
+            InputManager.Instance.InputMaster.Player.HorizontalLook.Disable();
         }
 
         private void Play(DirectionalAnimationSet animationSet)
         {
-            var clip = animationSet.GetClip(facing);
+            var clip = animationSet.GetClip(Facing);
             animancer.Play(clip);
         }
         
         private void UpdateMovementAnimation()
         {
-            if (_movement != Vector2.zero)
-            {
-                facing = _movement;
-                Play(moving);
-            }
-            else
-            {
-                Play(idles);
-            }
+            Play(_movement != Vector2.zero ? moving : idles);
         }
     }
 }
