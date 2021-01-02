@@ -24,7 +24,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""id"": ""1cc165e4-957c-416f-9009-deecbeaba6a8"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=2)""
                 },
                 {
                     ""name"": ""HorizontalMovement"",
@@ -32,7 +32,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""id"": ""c48536da-acc8-4181-976a-589bfa4c76b6"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press(behavior=2)""
                 }
             ],
             ""bindings"": [

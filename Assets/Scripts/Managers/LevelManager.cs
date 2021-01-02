@@ -21,6 +21,9 @@ namespace Managers
             {Level.Test, "TestScene"}
         };
 
+        public delegate void PlayerDeathAction();
+        public static event PlayerDeathAction OnPlayerDeath;
+
         protected override void Awake()
         {
             base.Awake();
@@ -33,6 +36,7 @@ namespace Managers
 
         public void ChangeLevel(Level newLevel)
         {
+            // Make sure we have the level.
             if (!Levels.TryGetValue(newLevel, out var sceneName))
                 return;
 
@@ -53,6 +57,12 @@ namespace Managers
             yield return new WaitForEndOfFrame();
             
             // Do anything else that needs to be done after loading a level
+        }
+
+        public static void PlayerDied()
+        {
+            if (OnPlayerDeath != null)
+                OnPlayerDeath();
         }
     }
 }
