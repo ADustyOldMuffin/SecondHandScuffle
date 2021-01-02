@@ -333,6 +333,7 @@
             <e p="InputManager.cs" t="Include" />
             <e p="LevelManager.cs" t="Include" />
             <e p="Levels" t="Include">
+              <e p="MainGameManager.cs" t="Include" />
               <e p="MainMenuManager.cs" t="Include" />
             </e>
           </e>
