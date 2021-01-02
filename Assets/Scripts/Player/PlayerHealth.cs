@@ -13,6 +13,9 @@ namespace Player
         {
             //start at full health
             _currentHealth = startingHealth;
+            
+            if(LevelManager.Instance != null)
+                LevelManager.Instance.SetPlayer(gameObject);
         }
 
         public void DamagePlayer(int amount)

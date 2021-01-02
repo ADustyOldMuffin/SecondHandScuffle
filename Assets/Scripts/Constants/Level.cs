@@ -2,12 +2,12 @@
 {
     public enum Level
     {
-        None,
-        Test,
-        OpeningAnimation,
-        MainMenu,
-        Options,
-        MainGame,
-        GameOver
+        None = 0,
+        Test = 1,
+        OpeningAnimation = 2,
+        MainMenu = 3,
+        Options = 4,
+        MainGame = 5,
+        GameOver = 6
     }
 }
