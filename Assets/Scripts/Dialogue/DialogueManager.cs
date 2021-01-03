@@ -42,19 +42,7 @@ public class DialogueManager : MonoBehaviour
 
     public void UpdateDialogue()
     {
-<<<<<<< Updated upstream
-        if(LevelManager.Instance == null || 
-           LevelManager.Instance.Player == null || 
-           !LevelManager.Instance.Player.TryGetComponent(out PlayerWeapon currentWeapon))
-            return;
         
-        Dialogue newDialogue = dialogueList[currentWeapon.GetCurrentWeaponIndex()];
-=======
-        int currentWeapon = LevelManager.Instance.Player.GetComponent<PlayerWeapon>().GetCurrentWeaponIndex();
-        Dialogue newDialogue = dialogueList[currentWeapon][Random.Range(0,dialogueList[currentWeapon].Length)];
->>>>>>> Stashed changes
-
-        textComponent.text = newDialogue.GetDialogue();
     }
 
 }

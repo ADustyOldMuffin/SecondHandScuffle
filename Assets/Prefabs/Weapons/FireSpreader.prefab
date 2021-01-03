@@ -135,7 +135,6 @@ MonoBehaviour:
   animancer: {fileID: 2356037496506870105}
   idles: {fileID: 11400000, guid: 2692ccc9389865e43977f0884f6b2bfd, type: 2}
   attacks: {fileID: 11400000, guid: e9b3be1484cda9a4484ed65e834b3385, type: 2}
-  attackSound: {fileID: 8300000, guid: 163e81c535c7e4b429be0b73e6e374e0, type: 3}
   type: 3
   weaponName: Fire Spreader
 --- !u!114 &2356037496506870105
@@ -162,7 +161,7 @@ Animator:
   m_GameObject: {fileID: 8882205430198357161}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ff01ab12ea1e3fd40b6fff754f1fd583, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

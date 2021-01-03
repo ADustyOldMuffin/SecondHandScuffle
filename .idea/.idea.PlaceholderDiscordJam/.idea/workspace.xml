@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85dee23f-99de-4e01-b0a3-14c26ab79e81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="85dee23f-99de-4e01-b0a3-14c26ab79e81" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,8 +52,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/ScoreText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mUfQiZ3BgOYYpha6KMBk9G40sM" />
