@@ -9681,8 +9681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1219511221}
-  startingDialogue: {fileID: 11400000, guid: a07bbc4e5ef71d44998909e56cc59b38, type: 2}
-  dialogueList: []
+  startingDialogue: {fileID: 11400000, guid: eeef062ff0159e54dbf2403fa2de7a3b, type: 2}
 --- !u!1 &2115470775
 GameObject:
   m_ObjectHideFlags: 0

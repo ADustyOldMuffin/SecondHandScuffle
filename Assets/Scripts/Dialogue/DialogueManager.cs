@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
         if(LevelManager.Instance == null)
             return;
         
-        //currentDialogue = startingDialogue;
+        currentDialogue = startingDialogue;
         textComponent.text = currentDialogue.GetDialogue();
         LevelManager.OnPlayerWeaponChange += UpdateDialogue;
     }
