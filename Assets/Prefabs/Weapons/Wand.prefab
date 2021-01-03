@@ -105,6 +105,7 @@ MonoBehaviour:
   animancer: {fileID: 8247286811951882767}
   idles: {fileID: 11400000, guid: 27a88faa10470764dbd63da39153b8e8, type: 2}
   attacks: {fileID: 11400000, guid: 085b6bdbc5db8374b833c825d5d45298, type: 2}
+  attackSound: {fileID: 8300000, guid: 064f0ed4b05079d4c96bae599ab89391, type: 3}
   type: 6
   weaponName: Wand
 --- !u!95 &6772452214275579863

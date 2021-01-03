@@ -105,6 +105,7 @@ MonoBehaviour:
   animancer: {fileID: 7796419833193181441}
   idles: {fileID: 11400000, guid: 74d451fdff5bc124d8a1d31a85ca713d, type: 2}
   attacks: {fileID: 11400000, guid: 900ba691204dc4a4fb80dd54043110ea, type: 2}
+  attackSound: {fileID: 8300000, guid: 995679633a3e09c4abe40e48b4c06f68, type: 3}
   type: 7
   weaponName: Baseball Bat
 --- !u!95 &1393293810073428299

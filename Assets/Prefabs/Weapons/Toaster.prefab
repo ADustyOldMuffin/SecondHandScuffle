@@ -105,6 +105,7 @@ MonoBehaviour:
   animancer: {fileID: 6326039619519744832}
   idles: {fileID: 11400000, guid: e8abddcf4e607c24e839cff523f1d645, type: 2}
   attacks: {fileID: 11400000, guid: cc40ec51765935843b024eaed1e1dc97, type: 2}
+  attackSound: {fileID: 8300000, guid: 8244f4ac2e570c341a7e49b968738820, type: 3}
   type: 4
   weaponName: Toaster
 --- !u!95 &3728115929130740583

@@ -105,6 +105,7 @@ MonoBehaviour:
   animancer: {fileID: 2606258745090040197}
   idles: {fileID: 11400000, guid: 973d75bd04ef10b448b8d0e4769ce762, type: 2}
   attacks: {fileID: 11400000, guid: 7627f99103259dc4aa85037e77c00284, type: 2}
+  attackSound: {fileID: 8300000, guid: b985c899c6884324c9998b43a56a5d0a, type: 3}
   type: 5
   weaponName: Walkman
   diskSpread: 0.2

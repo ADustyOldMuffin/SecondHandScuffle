@@ -23,6 +23,7 @@ namespace Weapons
         [SerializeField] protected AnimancerComponent animancer;
         [SerializeField] protected DirectionalAnimationSet idles;
         [SerializeField] protected DirectionalAnimationSet attacks;
+        [SerializeField] protected AudioClip attackSound;
 
         protected Vector2 Facing;
         protected bool IsAttacking;
@@ -35,8 +36,9 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.VerticalAttack.performed += OnVerticalAttack;
-            InputManager.Instance.InputMaster.Player.HorizontalAttack.performed += OnHorizontalAttack;
+            //InputManager.Instance.InputMaster.Player.VerticalAttack.performed += OnVerticalAttack;
+            //InputManager.Instance.InputMaster.Player.HorizontalAttack.performed += OnHorizontalAttack;
+            InputManager.Instance.InputMaster.Player.Attack.performed += OnAttackAction;
         }
 
         protected virtual void OnEnable()
@@ -44,8 +46,9 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.VerticalAttack.Enable();
-            InputManager.Instance.InputMaster.Player.HorizontalAttack.Enable();
+            //InputManager.Instance.InputMaster.Player.VerticalAttack.Enable();
+            //InputManager.Instance.InputMaster.Player.HorizontalAttack.Enable();
+            InputManager.Instance.InputMaster.Player.Attack.Enable();
         }
 
         protected virtual void OnDisable()
@@ -53,8 +56,9 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.VerticalAttack.Disable();
-            InputManager.Instance.InputMaster.Player.HorizontalAttack.Disable();
+            //InputManager.Instance.InputMaster.Player.VerticalAttack.Disable();
+            //InputManager.Instance.InputMaster.Player.HorizontalAttack.Disable();
+            InputManager.Instance.InputMaster.Player.Attack.Disable();
         }
 
         protected virtual void OnDestroy()
@@ -62,8 +66,9 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.VerticalAttack.performed -= OnVerticalAttack;
-            InputManager.Instance.InputMaster.Player.HorizontalAttack.performed -= OnHorizontalAttack;
+            //InputManager.Instance.InputMaster.Player.VerticalAttack.performed -= OnVerticalAttack;
+            //InputManager.Instance.InputMaster.Player.HorizontalAttack.performed -= OnHorizontalAttack;
+            InputManager.Instance.InputMaster.Player.Attack.performed -= OnAttackAction;
         }
 
         protected virtual void FixedUpdate()

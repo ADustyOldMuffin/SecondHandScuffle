@@ -135,6 +135,7 @@ MonoBehaviour:
   animancer: {fileID: 2601836694575526793}
   idles: {fileID: 11400000, guid: 7d356be361ff1164f98fc0f1219380c4, type: 2}
   attacks: {fileID: 11400000, guid: dbd1a06c5767a4949a9a316813955309, type: 2}
+  attackSound: {fileID: 8300000, guid: e155c544c7f0d324b8e41b201346206a, type: 3}
   type: 0
   weaponName: Pistol
 --- !u!95 &5710530039019400402

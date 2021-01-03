@@ -55,6 +55,7 @@ MonoBehaviour:
   animancer: {fileID: 6710492980102166198}
   idles: {fileID: 11400000, guid: 772856e4981a2ea47b22a6fec84a6ca0, type: 2}
   attacks: {fileID: 11400000, guid: 6f7701dfae39ece46aca333706ce6e4a, type: 2}
+  attackSound: {fileID: 8300000, guid: bfe01f012c4428e44bb9c9180efe0a1f, type: 3}
   type: 1
   weaponName: Boomerang
   spriteRenderer: {fileID: 1666498659289563088}

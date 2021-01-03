@@ -2,173 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85dee23f-99de-4e01-b0a3-14c26ab79e81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Attack_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Bat/Bat_Idle_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Attack_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Boomerang/Boomerang_Idle_set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Attack_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/EggBeater/EggBeater_Idle_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Attack_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Attack_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/FireSpreader/FireSpreader_Idle_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Attack_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Attack_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Pistol_Idle_set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Revolver.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Pistol/Revolver.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Attack_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Attack_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Toaster/Toaster_Idle_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Attack_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Attack_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Walkman/Walkman_Idle_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Attack_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Attack_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Left.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Left.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Right.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Right.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Set.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Set.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Up.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Weapons/Wand/Wand_Idle_Up.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/UI/gameoverscreen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/UI/gameoverscreen.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/beater-front.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/beater-front.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/firefront.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/firefront.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/pistol-front.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/pistol-front.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/toaster-front.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/toaster-front.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/wand-front.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/wand-front.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/boombox projectile.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/boombox projectile.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/eggbeater.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/eggbeater.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/enemydies.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/enemydies.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/everyfivemutations.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/everyfivemutations.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/flamethrower.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/flamethrower.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/mutation!.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/mutation!.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/regularbullet.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/regularbullet.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/supersoaker.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/supersoaker.wav.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/toaster.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/toaster.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/MainMenu_Animation.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/MainMenu_Animation.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player_Idle-Left-Sideways.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player_Idle-Left-Sideways.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player_Idle-Right-Sideways.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player_Idle-Right-Sideways.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player_Run-Back.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player_Run-Back.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player_Run-Forwards.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player_Run-Forwards.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player_Run-Left-Sideways.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player_Run-Left-Sideways.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Animations/Player_Run-Right-Sideways.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Animations/Player_Run-Right-Sideways.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MasterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MasterInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/baseballbat.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/baseballbat.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/boomerang.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/boomerang.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/cds.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/cds.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/damagetoplayer.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/damagetoplayer.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/deathsound.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/deathsound.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/homingbullet.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/homingbullet.wav.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/mutation!.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/mutation!.ogg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Bat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Bat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Boomerang.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Boomerang.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/EggBeater.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/EggBeater.prefab" afterDir="false" />
@@ -177,26 +37,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Toaster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Toaster.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Walkman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Walkman.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Wand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Wand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameOver.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OpeningAnimation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OpeningAnimation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Options.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Options.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseballBat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseballBat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Boomerang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Boomerang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/EggBeater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/EggBeater.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/FireSpreader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/FireSpreader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/OldWand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/OldWand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/EggBeaterProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/EggBeaterProjectile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Toaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Toaster.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Walkman.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Walkman.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,15 +83,16 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/EggBeaterProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/EggBeater.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseballBat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Boomerang.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/FireSpreader.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/OldWand.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Toaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Walkman.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseballBat.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mUfQiZ3BgOYYpha6KMBk9G40sM" />
@@ -295,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609553075903</updated>
-      <workItem from="1609553079265" duration="59093000" />
+      <workItem from="1609553079265" duration="60196000" />
     </task>
     <servers />
   </component>

@@ -19,6 +19,7 @@ namespace Weapons
             var proj = Instantiate(projectile, spawnPoint.position, transform.rotation);
             proj.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
             currentCooldown = fireRate;
+            AudioSource.PlayClipAtPoint(attackSound, transform.position);
         }
     }
 }
