@@ -19,6 +19,7 @@ namespace Player
         [SerializeField] private float _currentMutationTime;
         [SerializeField] private WeaponIcon UI_icon;
 
+
         private void Awake()
         {
             _currentWeapon = Instantiate(weapons.First(), weaponHolder);
@@ -27,6 +28,7 @@ namespace Player
             _currentWeapon.transform.position = weaponHolder.position;
             _currentWeapon.transform.rotation = weaponHolder.rotation;
             _currentMutationTime = mutationTime;
+
         }
 
         private void Start()
@@ -79,11 +81,8 @@ namespace Player
             LevelManager.Instance.IncreaseScore(1);
         }
 
-        //used in UI
-        public int GetWeaponIndex()
-        {
-            return _currentWeaponIndex;
-        }
+
+
     }
 
 }

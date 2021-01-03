@@ -43,6 +43,9 @@ namespace Managers
 
         public GameObject Player { get; private set; }
 
+
+        private EnemySpawner[] enemySpawners;
+
         protected override void Awake()
         {
             base.Awake();
@@ -51,6 +54,7 @@ namespace Managers
                 return;
 
             SceneManager.LoadScene(Levels[levelToLoadOnStart]);
+            enemySpawners = FindObjectsOfType<EnemySpawner>(); //this here because its less call heavy to update only when we do mutate
         }
 
         public void ChangeLevel(Level newLevel)
@@ -130,6 +134,14 @@ namespace Managers
         public void SetPlayer(GameObject player)
         {
             Player = player;
+        }
+
+        private void UpdateEnemySpawners()
+        {
+            for (int i = 0; i < enemySpawners.Length; i++)
+            {
+                enemySpawners[i].UpdateSpawnRange(PlayerScore);
+            }
         }
     }
 }

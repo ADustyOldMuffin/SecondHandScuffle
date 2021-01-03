@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Managers;
 
 public class SpawnMinions : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class SpawnMinions : MonoBehaviour
 
     [SerializeField] float spawnTimerMin = 2f;
     [SerializeField] float spawnTimerMax = 10f;
-
+    [SerializeField] float range = 6f;
+    private bool inRange = false;
     bool spawn = true;
 
     IEnumerator Start()
@@ -18,7 +20,8 @@ public class SpawnMinions : MonoBehaviour
         {
 
             yield return new WaitForSecondsRealtime(Random.Range(spawnTimerMin, spawnTimerMax));
-            if (spawn) { SpawnEnemies(); }
+            InRange();
+            if (spawn && inRange) { SpawnEnemies(); }
 
         }
     }
@@ -37,5 +40,20 @@ public class SpawnMinions : MonoBehaviour
 
         minion.transform.parent = transform;
 
+    }
+
+    private void InRange()
+    {
+        float distance = Mathf.Abs(Vector3.Distance(LevelManager.Instance.Player.transform.position, transform.position));
+        //Debug.Log(distance.ToString());
+        //Debug.Log(distance.ToString());
+        if (distance <= range)
+        {
+            inRange = true;
+        }
+        else
+        {
+            inRange = false;
+        }
     }
 }
