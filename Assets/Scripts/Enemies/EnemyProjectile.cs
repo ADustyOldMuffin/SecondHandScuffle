@@ -2,31 +2,45 @@
 using System.Linq;
 using Managers;
 using UnityEngine;
+using Player;
 
-namespace Weapons.Projectiles
-{
-    public class EnemyProjectile : BaseProjectile
+    public class EnemyProjectile : MonoBehaviour
     {
-        protected override bool HurtsPlayer { get; } = true;
-        protected override int DamageAmount { get; } = 1;
-        protected override float ProjectileLifetime { get; } = 10f;
 
         [SerializeField] private float moveSpeed = 10f;
+        [SerializeField] private int attackPower = 1;
         [SerializeField] private Rigidbody2D myRigidbody;
 
         private float _aliveFor = 0.0f;
 
-        private void FixedUpdate()
+
+        Vector3 aim;
+        Vector3 playerPosition;
+
+        void Awake()
         {
-            var myTransform = transform;
-            var newPosition = myTransform.position + _moveDirection * (moveSpeed * Time.fixedDeltaTime);
-            myRigidbody.MovePosition(newPosition);
-
-            if (_aliveFor >= ProjectileLifetime)
-                Destroy(gameObject);
-
-            _aliveFor += Time.fixedDeltaTime;
+            var player = LevelManager.Instance.Player.GetComponent<PlayerMovement>();
+            playerPosition = player.transform.position;
         }
+
+        void Start()
+        {
+            aim = (playerPosition - transform.position).normalized * moveSpeed;
+            myRigidbody.velocity = new Vector2(aim.x, aim.y);
+        }
+
+ 
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.tag == "Player")
+            {
+                other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(attackPower);
+                Destroy(gameObject);
+            }
+        }
+
+
+
     }
-}
+
 
