@@ -105,9 +105,12 @@ MonoBehaviour:
   animancer: {fileID: 8247286811951882767}
   idles: {fileID: 11400000, guid: 27a88faa10470764dbd63da39153b8e8, type: 2}
   attacks: {fileID: 11400000, guid: 085b6bdbc5db8374b833c825d5d45298, type: 2}
-  attackSound: {fileID: 8300000, guid: 064f0ed4b05079d4c96bae599ab89391, type: 3}
   type: 6
   weaponName: Wand
+  objectDialogue:
+  - {fileID: 11400000, guid: 44c49141492d0b54b87de090a3165142, type: 2}
+  - {fileID: 11400000, guid: 4a2896361831f5140bd2fb0e2e029d01, type: 2}
+  - {fileID: 11400000, guid: 93601609080719446aa31661248f87c4, type: 2}
 --- !u!95 &6772452214275579863
 Animator:
   serializedVersion: 3

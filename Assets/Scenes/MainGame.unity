@@ -9682,16 +9682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1219511221}
   startingDialogue: {fileID: 11400000, guid: a07bbc4e5ef71d44998909e56cc59b38, type: 2}
-  dialogueList:
-  - {fileID: 11400000, guid: eeef062ff0159e54dbf2403fa2de7a3b, type: 2}
-  - {fileID: 11400000, guid: a25027bf10ea6c14a933d716ed3b639e, type: 2}
-  - {fileID: 11400000, guid: 1a2ce244cda265f419118941cfc38a3b, type: 2}
-  - {fileID: 11400000, guid: fc5d549be29bed341b3579e9d8b73f46, type: 2}
-  - {fileID: 11400000, guid: bfc6b2fa34077dc49a652aa9e266f8dd, type: 2}
-  - {fileID: 11400000, guid: 526d4978b7ae47042bfefe83121df69d, type: 2}
-  - {fileID: 11400000, guid: 34d10738d91c11d4680147009e73b05f, type: 2}
-  - {fileID: 11400000, guid: 2ff500155c6c5654ab3b63943deca5a8, type: 2}
-  - {fileID: 11400000, guid: 680bdd3d6245d8a4197e0e7f18077d85, type: 2}
+  dialogueList: []
 --- !u!1 &2115470775
 GameObject:
   m_ObjectHideFlags: 0

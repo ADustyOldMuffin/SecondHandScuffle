@@ -135,9 +135,12 @@ MonoBehaviour:
   animancer: {fileID: 2640730298099071982}
   idles: {fileID: 11400000, guid: 6243cfa8fc2f9e249937448969e3f283, type: 2}
   attacks: {fileID: 11400000, guid: b80f8d3b17fb6484bb31906ece1edf9e, type: 2}
-  attackSound: {fileID: 8300000, guid: ff13e9c8cd52a164a9b0180610ec510c, type: 3}
   type: 2
   weaponName: Egg Beater
+  objectDialogue:
+  - {fileID: 11400000, guid: 34d10738d91c11d4680147009e73b05f, type: 2}
+  - {fileID: 11400000, guid: b8761a6d844bd4249b057ef2c7bcb234, type: 2}
+  - {fileID: 11400000, guid: b56d7b0be2953b244a6242e347e6e87a, type: 2}
 --- !u!114 &2640730298099071982
 MonoBehaviour:
   m_ObjectHideFlags: 0

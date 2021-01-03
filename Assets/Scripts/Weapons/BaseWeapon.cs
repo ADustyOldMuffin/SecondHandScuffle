@@ -29,6 +29,7 @@ namespace Weapons
 
         public WeaponType type;
         public string weaponName;
+        [SerializeField]  public Dialogue[] objectDialogue;
 
         protected virtual void Awake()
         {

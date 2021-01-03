@@ -137,6 +137,10 @@ MonoBehaviour:
   attacks: {fileID: 11400000, guid: e9b3be1484cda9a4484ed65e834b3385, type: 2}
   type: 3
   weaponName: Fire Spreader
+  objectDialogue:
+  - {fileID: 11400000, guid: fc5d549be29bed341b3579e9d8b73f46, type: 2}
+  - {fileID: 11400000, guid: c1e39fb0cc57d8645baad9275b9c9f16, type: 2}
+  - {fileID: 11400000, guid: 721c4685a009917498a0b1347d118825, type: 2}
 --- !u!114 &2356037496506870105
 MonoBehaviour:
   m_ObjectHideFlags: 0

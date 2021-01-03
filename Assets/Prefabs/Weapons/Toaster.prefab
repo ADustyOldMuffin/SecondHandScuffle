@@ -105,9 +105,12 @@ MonoBehaviour:
   animancer: {fileID: 6326039619519744832}
   idles: {fileID: 11400000, guid: e8abddcf4e607c24e839cff523f1d645, type: 2}
   attacks: {fileID: 11400000, guid: cc40ec51765935843b024eaed1e1dc97, type: 2}
-  attackSound: {fileID: 8300000, guid: 8244f4ac2e570c341a7e49b968738820, type: 3}
   type: 4
   weaponName: Toaster
+  objectDialogue:
+  - {fileID: 11400000, guid: bfc6b2fa34077dc49a652aa9e266f8dd, type: 2}
+  - {fileID: 11400000, guid: bdb979e14a2fe404f896f82f7ce7f3e0, type: 2}
+  - {fileID: 11400000, guid: 6659922c1b41f2a458c69c39a8465933, type: 2}
 --- !u!95 &3728115929130740583
 Animator:
   serializedVersion: 3
