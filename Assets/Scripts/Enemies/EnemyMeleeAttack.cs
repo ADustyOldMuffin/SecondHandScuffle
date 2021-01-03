@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
@@ -17,15 +18,12 @@ namespace Enemies
             movement = GetComponent<EnemyMovement>();
         }
 
-        void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            if (collision.collider.tag == "Player")
+            if (other.CompareTag("Player"))
             {
-                collision.gameObject.GetComponent<PlayerHealth>().DamagePlayer(attackPower);
-                movement.PushBackAfterMeleeAttack();
+                other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(attackPower);
             }
-
         }
-
     }
 }

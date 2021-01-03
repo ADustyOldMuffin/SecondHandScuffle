@@ -60,7 +60,8 @@ namespace Enemies
 
         void MoveTowardsTarget()
         {
-            myRGB.velocity = new Vector2(aim.x, aim.y);
+            var newPosition = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.fixedDeltaTime);
+            myRGB.MovePosition(newPosition);
         }
 
         void CheckToStopAndAttack()
