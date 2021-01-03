@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,11 @@ namespace Enemies
         [SerializeField] private int enemyHealth;
 
         private int _currentHealth;
+
+        private void Awake()
+        {
+            _currentHealth = enemyHealth;
+        }
 
         public void Damage(int amount, float knockBack = 0.0f, Vector2 direction = default)
         {

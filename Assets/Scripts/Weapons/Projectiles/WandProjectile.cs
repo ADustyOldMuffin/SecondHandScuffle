@@ -9,7 +9,7 @@ namespace Weapons.Projectiles
     public class WandProjectile : BaseProjectile
     {
         protected override bool HurtsPlayer { get; } = false;
-        protected override int DamageAmount { get; } = 1;
+        protected override int DamageAmount { get; } = 4;
         protected override float ProjectileLifetime { get; } = 15f;
 
         [SerializeField] private float moveSpeed = 10f;

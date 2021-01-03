@@ -11,7 +11,7 @@ namespace Weapons.Projectiles
         protected override bool HurtsPlayer { get; } = false;
         protected override int DamageAmount { get; } = 1;
 
-        private const int StartDamageAmount = 2;
+        private const int StartDamageAmount = 3;
 
         protected override void OnCollisionEnter2D(Collision2D other)
         {

@@ -7,7 +7,7 @@ namespace Weapons.Projectiles
     public class ToastProjectile : NormalProjectile
     {
         protected override bool HurtsPlayer { get; } = false;
-        protected override int DamageAmount { get; } = 3;
+        protected override int DamageAmount { get; } = 5;
         protected override float ProjectileLifetime { get; } = 10f;
 
         protected void Start()

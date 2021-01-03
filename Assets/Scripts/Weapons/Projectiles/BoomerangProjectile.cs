@@ -14,6 +14,8 @@ namespace Weapons.Projectiles
         [SerializeField] private Rigidbody2D myRigidbody;
         [SerializeField] private float moveSpeed = 10f;
         
+        protected override int DamageAmount { get; } = 2;
+        
         private float _currentTravelTime = 0.0f;
         
         protected override void OnTriggerEnter2D(Collider2D other)

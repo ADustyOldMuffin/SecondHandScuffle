@@ -8,7 +8,7 @@ namespace Weapons.Projectiles
     public class NormalProjectile : BaseProjectile
     {
         protected override bool HurtsPlayer { get; } = false;
-        protected override int DamageAmount { get; } = 1;
+        protected override int DamageAmount { get; } = 3;
         protected override float ProjectileLifetime { get; } = 10f;
 
         [SerializeField] private float moveSpeed = 10f;

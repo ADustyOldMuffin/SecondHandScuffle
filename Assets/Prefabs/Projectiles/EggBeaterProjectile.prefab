@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7135260583444044201}
   - component: {fileID: 1695337662431355966}
   - component: {fileID: 7496436625408292829}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EggBeaterProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

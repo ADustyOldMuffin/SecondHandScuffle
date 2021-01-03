@@ -6,7 +6,7 @@ namespace Weapons.Projectiles
     public class BaseballBatProjectile : BaseProjectile
     {
         protected override bool HurtsPlayer { get; } = false;
-        protected override int DamageAmount { get; } = 1;
+        protected override int DamageAmount { get; } = 3;
         protected override float ProjectileLifetime { get; } = .25f;
 
         private float _aliveFor = 0.0f;
