@@ -11,9 +11,6 @@ using Player;
         [SerializeField] private int attackPower = 1;
         [SerializeField] private Rigidbody2D myRigidbody;
 
-        private float _aliveFor = 0.0f;
-
-
         Vector3 aim;
         Vector3 playerPosition;
 
@@ -27,6 +24,7 @@ using Player;
         {
             aim = (playerPosition - transform.position).normalized * moveSpeed;
             myRigidbody.velocity = new Vector2(aim.x, aim.y);
+            Destroy(gameObject, 10f); //so it doesn't fly off forever
         }
 
  

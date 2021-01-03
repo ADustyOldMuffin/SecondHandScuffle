@@ -133,11 +133,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: __app
       objectReference: {fileID: 0}
-    - target: {fileID: 9011911535660286025, guid: 43502fd4a9e6415499e9e1c632047dd4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9011911535660286026, guid: 43502fd4a9e6415499e9e1c632047dd4,
         type: 3}
       propertyPath: m_RootOrder

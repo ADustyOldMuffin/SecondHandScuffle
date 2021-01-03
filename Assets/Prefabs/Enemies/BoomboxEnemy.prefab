@@ -240,10 +240,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dad07016b076de4ca4469975cc51ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3
+  minTimeBetweenShots: 1
+  maxTimeBetweenShots: 5
   projectile: {fileID: -7839479601897941267, guid: a74298062b106c840abddb4a5a10de2e,
     type: 3}
+  range: 6
 --- !u!61 &8366465378299649672
 BoxCollider2D:
   m_ObjectHideFlags: 0

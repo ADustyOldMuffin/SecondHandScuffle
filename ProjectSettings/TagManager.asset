@@ -8,6 +8,7 @@ TagManager:
   - EnemyProjectile
   - Enemy
   - Obstacle
+  - GameMusic
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - UserProjectiles
   - EnemyProjectiles
   - FrontWall
-  - 
+  - Icon
   - 
   - 
   - 
@@ -59,4 +60,10 @@ TagManager:
     locked: 0
   - name: FrontWall
     uniqueID: 1584112659
+    locked: 0
+  - name: UI
+    uniqueID: 398727229
+    locked: 0
+  - name: Icon
+    uniqueID: 1977501627
     locked: 0
