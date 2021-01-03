@@ -2,19 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85dee23f-99de-4e01-b0a3-14c26ab79e81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/EggBeater.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/EggBeater.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/EggBeaterProjectile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/EggBeaterProjectile.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/FireProjectile.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/FireProjectile.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Fire_Projectile.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Fire_Projectile.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/Projectiles/firesheet-export.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/Projectiles/firesheet-export.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/Projectiles/firesheet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/Projectiles/firesheet.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/firespreader.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/firespreader.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/FireProjectile.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/FireProjectile.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/FireSpreader.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/FireSpreader.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/FireSpreader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/FireSpreader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/DamageOverTime.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/DamageOverTime.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/FireProjectile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/FireProjectile.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/beater.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/beater.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MasterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MasterInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/BaseballBalProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/BaseballBatProjectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/BaseballBalProjectile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/BaseballBatProjectile.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,14 +68,21 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/EggBeaterProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/EggBeater.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/DamageOverTime.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/FireSpreader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/FireProjectile.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mUfQiZ3BgOYYpha6KMBk9G40sM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
@@ -102,7 +119,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609553075903</updated>
-      <workItem from="1609553079265" duration="42951000" />
+      <workItem from="1609553079265" duration="47421000" />
     </task>
     <servers />
   </component>
@@ -123,6 +140,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

@@ -325,10 +325,13 @@
           <e p="DDOL.cs" t="Include" />
           <e p="DevPreload.cs" t="Include" />
           <e p="Enemies" t="Include">
+            <e p="EnemyFireProjectile.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
             <e p="EnemyMeleeAttack.cs" t="Include" />
             <e p="EnemyMovement.cs" t="Include" />
+            <e p="EnemyProjectile.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
+            <e p="SpawnMinions.cs" t="Include" />
           </e>
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
@@ -357,12 +360,15 @@
             <e p="BaseWeapon.cs" t="Include" />
             <e p="Boomerang.cs" t="Include" />
             <e p="EggBeater.cs" t="Include" />
+            <e p="FireSpreader.cs" t="Include" />
             <e p="OldWand.cs" t="Include" />
             <e p="Projectiles" t="Include">
               <e p="BaseballBatProjectile.cs" t="Include" />
               <e p="BaseProjectile.cs" t="Include" />
               <e p="BoomerangProjectile.cs" t="Include" />
+              <e p="DamageOverTime.cs" t="Include" />
               <e p="EggBeaterProjectile.cs" t="Include" />
+              <e p="FireProjectile.cs" t="Include" />
               <e p="NormalProjectile.cs" t="Include" />
               <e p="ToastProjectile.cs" t="Include" />
               <e p="WandProjectile.cs" t="Include" />
