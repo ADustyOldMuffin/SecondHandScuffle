@@ -11,12 +11,18 @@ namespace UI
         
         private void Awake()
         {
+            if(LevelManager.Instance == null)
+                return;
+            
             LevelManager.OnPlayerScoreChange += OnScoreChange;
             OnScoreChange();
         }
 
         private void OnScoreChange()
         {
+            if(LevelManager.Instance == null)
+                return;
+            
             scoreText.text = LevelManager.Instance.PlayerScore.ToString();
         }
     }

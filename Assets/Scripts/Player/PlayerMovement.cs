@@ -71,8 +71,6 @@ namespace Player
         
         private void UpdateMovementAnimation()
         {
-            Debug.Log(_movement != Vector2.zero);
-            Debug.Log(_facing);
             Play(_movement != Vector2.zero ? moving : idles);
         }
 

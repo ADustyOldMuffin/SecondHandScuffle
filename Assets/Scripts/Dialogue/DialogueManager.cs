@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Constants;
 using UnityEngine;
 using TMPro;
 using Managers;
@@ -19,6 +20,9 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        if(LevelManager.Instance == null)
+            return;
+        
         currentDialogue = startingDialogue;
         textComponent.text = currentDialogue.GetDialogue();
         LevelManager.OnPlayerScoreChange += UpdateDialogue;
@@ -31,8 +35,12 @@ public class DialogueManager : MonoBehaviour
 
     public void UpdateDialogue()
     {
-        int currentWeapon = LevelManager.Instance.Player.GetComponent<PlayerWeapon>().GetCurrentWeaponIndex();
-        Dialogue newDialogue = dialogueList[currentWeapon];
+        if(LevelManager.Instance == null || 
+           LevelManager.Instance.Player == null || 
+           !LevelManager.Instance.Player.TryGetComponent(out PlayerWeapon currentWeapon))
+            return;
+        
+        Dialogue newDialogue = dialogueList[currentWeapon.GetCurrentWeaponIndex()];
 
         textComponent.text = newDialogue.GetDialogue();
     }

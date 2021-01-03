@@ -23,7 +23,6 @@ namespace Weapons
         [SerializeField] protected AnimancerComponent animancer;
         [SerializeField] protected DirectionalAnimationSet idles;
         [SerializeField] protected DirectionalAnimationSet attacks;
-        [SerializeField] protected AudioClip attackSound;
 
         protected Vector2 Facing;
         protected bool IsAttacking;
@@ -36,9 +35,10 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            //InputManager.Instance.InputMaster.Player.VerticalAttack.performed += OnVerticalAttack;
-            //InputManager.Instance.InputMaster.Player.HorizontalAttack.performed += OnHorizontalAttack;
             InputManager.Instance.InputMaster.Player.Attack.performed += OnAttackAction;
+            Facing = Vector2.down;
+            SetAnimation();
+            LevelManager.OnPlayerDirectionChanged(Facing);
         }
 
         protected virtual void OnEnable()
@@ -46,8 +46,6 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            //InputManager.Instance.InputMaster.Player.VerticalAttack.Enable();
-            //InputManager.Instance.InputMaster.Player.HorizontalAttack.Enable();
             InputManager.Instance.InputMaster.Player.Attack.Enable();
         }
 
@@ -56,8 +54,6 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            //InputManager.Instance.InputMaster.Player.VerticalAttack.Disable();
-            //InputManager.Instance.InputMaster.Player.HorizontalAttack.Disable();
             InputManager.Instance.InputMaster.Player.Attack.Disable();
         }
 
@@ -66,8 +62,6 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            //InputManager.Instance.InputMaster.Player.VerticalAttack.performed -= OnVerticalAttack;
-            //InputManager.Instance.InputMaster.Player.HorizontalAttack.performed -= OnHorizontalAttack;
             InputManager.Instance.InputMaster.Player.Attack.performed -= OnAttackAction;
         }
 
@@ -90,28 +84,6 @@ namespace Weapons
             var set = IsAttacking ? attacks : idles;
             var clip = set.GetClip(Facing);
             animancer.Play(clip);
-        }
-
-        protected virtual void OnVerticalAttack(InputAction.CallbackContext context)
-        {
-            if (Facing.x != 0)
-                return;
-            
-            Facing = new Vector2(0, context.ReadValue<float>());
-            IsAttacking = Facing != Vector2.zero;
-            LevelManager.OnPlayerDirectionChanged(Facing);
-            SetAnimation();
-        }
-        
-        protected virtual void OnHorizontalAttack(InputAction.CallbackContext context)
-        {
-            if (Facing.y != 0)
-                return;
-            
-            Facing = new Vector2(context.ReadValue<float>(), 0);
-            IsAttacking = Facing != Vector2.zero;
-            LevelManager.OnPlayerDirectionChanged(Facing);
-            SetAnimation();
         }
 
         protected virtual void OnAttackAction(InputAction.CallbackContext context)

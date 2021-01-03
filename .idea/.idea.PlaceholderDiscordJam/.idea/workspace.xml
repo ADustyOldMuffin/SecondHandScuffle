@@ -2,43 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85dee23f-99de-4e01-b0a3-14c26ab79e81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/boombox projectile.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/boombox projectile.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/eggbeater.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/eggbeater.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/enemydies.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/enemydies.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/everyfivemutations.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/everyfivemutations.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/flamethrower.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/flamethrower.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/mutation!.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/mutation!.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/regularbullet.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/regularbullet.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/supersoaker.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/supersoaker.wav.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/toaster.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Audio/SFX/toaster.wav.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/baseballbat.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/baseballbat.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/boomerang.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/boomerang.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/cds.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/cds.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/damagetoplayer.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/damagetoplayer.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/deathsound.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/deathsound.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/homingbullet.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/homingbullet.wav.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/mutation!.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/mutation!.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Bat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Bat.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Boomerang.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Boomerang.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/EggBeater.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/EggBeater.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/FireSpreader.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/FireSpreader.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Revolver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Revolver.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Toaster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Toaster.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Walkman.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Walkman.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Wand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Wand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/BaseballBatProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/BaseballBatProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/BoomerangProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/BoomerangProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/CDProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/CDProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/EggBeaterProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/EggBeaterProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/FireProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/FireProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/RevolverProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/RevolverProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ToastProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ToastProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/WandProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/WandProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_preload.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_preload.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreText.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseballBat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseballBat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" afterDir="false" />
@@ -53,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/44/529217d0/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/d1/367240a5/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WeaponIcon.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -77,9 +58,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Constants/WeaponType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/WeaponIcon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/GameOverManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ScoreText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/EggBeaterProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/EggBeater.cs" />
@@ -88,11 +67,14 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/OldWand.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Toaster.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Walkman.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseballBat.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/ScoreText.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mUfQiZ3BgOYYpha6KMBk9G40sM" />
@@ -141,7 +123,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609553075903</updated>
-      <workItem from="1609553079265" duration="60196000" />
+      <workItem from="1609553079265" duration="63600000" />
     </task>
     <servers />
   </component>
@@ -164,5 +146,50 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\PlaceholderDiscordJam\Assets\Scripts\Managers\Levels\MainGameManager.cs" initialLine="28" containingFunctionPresentation="method 'PlayerDied'">
+            <startOffsets>
+              <option value="709" />
+            </startOffsets>
+            <endOffsets>
+              <option value="724" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\PlaceholderDiscordJam\Assets\Scripts\Managers\Levels\MainGameManager.cs" initialLine="17" containingFunctionPresentation="method 'Awake'">
+            <startOffsets>
+              <option value="376" />
+            </startOffsets>
+            <endOffsets>
+              <option value="416" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\PlaceholderDiscordJam\Assets\Scripts\Player\PlayerHealth.cs" initialLine="17" containingFunctionPresentation="method 'Awake'">
+            <startOffsets>
+              <option value="396" />
+            </startOffsets>
+            <endOffsets>
+              <option value="440" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

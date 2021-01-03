@@ -9,32 +9,33 @@ namespace Managers.Levels
     public class MainGameManager : MonoBehaviour
     {
         EnemySpawner[] enemySpawners;
+        
         private void Awake()
         {
+            if (LevelManager.Instance == null)
+                return;
+            
             LevelManager.Instance.SetPlayerScore(0);
             LevelManager.OnPlayerDeath += PlayerDied;
             enemySpawners = FindObjectsOfType<EnemySpawner>();
         }
 
-        private void PlayerDied()
+        private void OnDestroy()
         {
-            //Debug.Log("About to die for real");
-            StopSpawners();
-            //StartCoroutine(WaitAndGameOver());
-            LevelManager.Instance.LoadLevel((int)Level.GameOver);
+            LevelManager.OnPlayerDeath -= PlayerDied;
         }
 
-        private IEnumerator WaitAndGameOver()
+        private void PlayerDied()
         {
-            yield return new WaitForSeconds(2);
+            StopSpawners();
             LevelManager.Instance.LoadLevel((int)Level.GameOver);
         }
 
         private void StopSpawners()
         {
-            for(int i = 0; i < enemySpawners.Length; i++)
+            foreach (var t in enemySpawners)
             {
-                enemySpawners[i].StopSpawning();
+                t.StopSpawning();
             }
         }
     }
