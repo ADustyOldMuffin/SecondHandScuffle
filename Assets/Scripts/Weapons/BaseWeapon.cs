@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Numerics;
+using Animancer;
+using Constants;
 using Managers;
 using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
+using Vector2 = UnityEngine.Vector2;
 
 namespace Weapons
 {
@@ -13,14 +18,25 @@ namespace Weapons
         [SerializeField] protected Transform spawnPoint;
         [SerializeField] protected float fireRate = .5f;
         
-        [SerializeField] protected float _currentCooldown = 0.0f;
+        [FormerlySerializedAs("_currentCooldown")] [SerializeField] protected float currentCooldown = 0.0f;
+
+        [SerializeField] protected AnimancerComponent animancer;
+        [SerializeField] protected DirectionalAnimationSet idles;
+        [SerializeField] protected DirectionalAnimationSet attacks;
+
+        protected Vector2 Facing;
+        protected bool IsAttacking;
+
+        public WeaponType type;
+        public string weaponName;
 
         protected virtual void Awake()
         {
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.Attack.performed += OnAttack;
+            InputManager.Instance.InputMaster.Player.VerticalAttack.performed += OnVerticalAttack;
+            InputManager.Instance.InputMaster.Player.HorizontalAttack.performed += OnHorizontalAttack;
         }
 
         protected virtual void OnEnable()
@@ -28,7 +44,8 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.Attack.Enable();
+            InputManager.Instance.InputMaster.Player.VerticalAttack.Enable();
+            InputManager.Instance.InputMaster.Player.HorizontalAttack.Enable();
         }
 
         protected virtual void OnDisable()
@@ -36,7 +53,8 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.Attack.Disable();
+            InputManager.Instance.InputMaster.Player.VerticalAttack.Disable();
+            InputManager.Instance.InputMaster.Player.HorizontalAttack.Disable();
         }
 
         protected virtual void OnDestroy()
@@ -44,21 +62,72 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.Attack.performed -= OnAttack;
+            InputManager.Instance.InputMaster.Player.VerticalAttack.performed -= OnVerticalAttack;
+            InputManager.Instance.InputMaster.Player.HorizontalAttack.performed -= OnHorizontalAttack;
         }
 
         protected virtual void FixedUpdate()
         {
-            if (_currentCooldown >= 0.0f)
-                _currentCooldown -= Time.fixedDeltaTime;
+            if(IsAttacking)
+                OnAttack();
+            
+            if (currentCooldown >= 0.0f)
+                currentCooldown -= Time.fixedDeltaTime;
             else
             {
-                if (_currentCooldown < 0)
-                    _currentCooldown = 0;
+                if (currentCooldown < 0)
+                    currentCooldown = 0;
             }
         }
+
+        private void SetAnimation()
+        {
+            var set = IsAttacking ? attacks : idles;
+            var clip = set.GetClip(Facing);
+            animancer.Play(clip);
+        }
+
+        protected virtual void OnVerticalAttack(InputAction.CallbackContext context)
+        {
+            if (Facing.x != 0)
+                return;
+            
+            Facing = new Vector2(0, context.ReadValue<float>());
+            IsAttacking = Facing != Vector2.zero;
+            LevelManager.OnPlayerDirectionChanged(Facing);
+            SetAnimation();
+        }
         
-        protected virtual void OnAttack(InputAction.CallbackContext _)
+        protected virtual void OnHorizontalAttack(InputAction.CallbackContext context)
+        {
+            if (Facing.y != 0)
+                return;
+            
+            Facing = new Vector2(context.ReadValue<float>(), 0);
+            IsAttacking = Facing != Vector2.zero;
+            LevelManager.OnPlayerDirectionChanged(Facing);
+            SetAnimation();
+        }
+
+        protected virtual void OnAttackAction(InputAction.CallbackContext context)
+        {
+            var newValue = context.ReadValue<Vector2>();
+
+            if (newValue == Vector2.zero)
+            {
+                IsAttacking = false;
+            }
+            else
+            {
+                IsAttacking = true;
+                Facing = newValue;
+                LevelManager.OnPlayerDirectionChanged(Facing);
+            }
+            
+            SetAnimation();
+        }
+
+        protected virtual void OnAttack()
         {
             throw new NotImplementedException();
         }

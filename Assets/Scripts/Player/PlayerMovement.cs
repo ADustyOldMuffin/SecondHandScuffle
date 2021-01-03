@@ -13,8 +13,8 @@ namespace Player
         [SerializeField] private AnimancerComponent animancer;
         [SerializeField] private DirectionalAnimationSet idles;
         [SerializeField] private DirectionalAnimationSet moving;
-        public Vector2 Facing { get; private set; } = Vector2.down;
 
+        private Vector2 _facing;
         private Vector2 _movement;
 
         private void Awake()
@@ -24,8 +24,7 @@ namespace Player
 
             InputManager.Instance.InputMaster.Player.VerticalMovement.performed += OnVerticalMovement;
             InputManager.Instance.InputMaster.Player.HorizontalMovement.performed += OnHorizontalMovement;
-            InputManager.Instance.InputMaster.Player.VerticalLook.performed += OnHorizontalLook;
-            InputManager.Instance.InputMaster.Player.HorizontalLook.performed += OnVerticalLook;
+            LevelManager.OnPlayerDirectionChange += OnPlayerDirectionChanged;
             
             UpdateMovementAnimation();
         }
@@ -38,8 +37,7 @@ namespace Player
             animancer.Stop();
             InputManager.Instance.InputMaster.Player.VerticalMovement.performed -= OnVerticalMovement;
             InputManager.Instance.InputMaster.Player.HorizontalMovement.performed -= OnHorizontalMovement;
-            InputManager.Instance.InputMaster.Player.VerticalLook.performed -= OnHorizontalLook;
-            InputManager.Instance.InputMaster.Player.HorizontalLook.performed -= OnVerticalLook;
+            LevelManager.OnPlayerDirectionChange -= OnPlayerDirectionChanged;
         }
 
         private void FixedUpdate()
@@ -54,8 +52,6 @@ namespace Player
             
             InputManager.Instance.InputMaster.Player.VerticalMovement.Enable();
             InputManager.Instance.InputMaster.Player.HorizontalMovement.Enable();
-            InputManager.Instance.InputMaster.Player.VerticalLook.Enable();
-            InputManager.Instance.InputMaster.Player.HorizontalLook.Enable();
         }
 
         private void OnDisable()
@@ -65,19 +61,25 @@ namespace Player
             
             InputManager.Instance.InputMaster.Player.VerticalMovement.Disable();
             InputManager.Instance.InputMaster.Player.HorizontalMovement.Disable();
-            InputManager.Instance.InputMaster.Player.VerticalLook.Disable();
-            InputManager.Instance.InputMaster.Player.HorizontalLook.Disable();
         }
 
         private void Play(DirectionalAnimationSet animationSet)
         {
-            var clip = animationSet.GetClip(Facing);
+            var clip = animationSet.GetClip(_facing);
             animancer.Play(clip);
         }
         
         private void UpdateMovementAnimation()
         {
+            Debug.Log(_movement != Vector2.zero);
+            Debug.Log(_facing);
             Play(_movement != Vector2.zero ? moving : idles);
+        }
+
+        private void OnPlayerDirectionChanged(Vector2 direction)
+        {
+            _facing = direction;
+            UpdateMovementAnimation();
         }
 
         private void OnHorizontalMovement(InputAction.CallbackContext context)
@@ -89,18 +91,6 @@ namespace Player
         private void OnVerticalMovement(InputAction.CallbackContext context)
         {
             _movement.y = context.ReadValue<float>();
-            UpdateMovementAnimation();
-        }
-
-        private void OnHorizontalLook(InputAction.CallbackContext context)
-        {
-            Facing = new Vector2(0, context.ReadValue<float>());
-            UpdateMovementAnimation();
-        }
-
-        private void OnVerticalLook(InputAction.CallbackContext context)
-        {
-            Facing = new Vector2(context.ReadValue<float>(), 0);
             UpdateMovementAnimation();
         }
     }

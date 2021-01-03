@@ -7,15 +7,14 @@ namespace Weapons
 {
     public class BaseballBat : BaseWeapon
     {
-        protected override void OnAttack(InputAction.CallbackContext _)
+        protected override void OnAttack()
         {
-            if (_currentCooldown > 0.0f)
+            if (currentCooldown > 0.0f)
                 return;
             
-            var player = LevelManager.Instance.Player.GetComponent<PlayerMovement>();
             var proj = Instantiate(projectile, spawnPoint.position, transform.rotation);
-            proj.GetComponent<BaseProjectile>().SetMovingDirection(player.Facing);
-            _currentCooldown = fireRate;
+            proj.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
+            currentCooldown = fireRate;
         }
     }
 }

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eceeb59a892d074db28203df8e4cd3a, type: 3}
+  m_Name: Boomerang_Attack_Set
+  m_EditorClassIdentifier: 
+  _Up: {fileID: 7400000, guid: 47dcbb60fc970494dadb4bc77173e730, type: 2}
+  _Right: {fileID: 7400000, guid: 269bc60dc2b52c440adc706cfe14ad5d, type: 2}
+  _Down: {fileID: 7400000, guid: 5f30ee0e7b1ed69489a38e1a47de4a03, type: 2}
+  _Left: {fileID: 7400000, guid: 7a652a537d997a24d8d649794cb90e43, type: 2}

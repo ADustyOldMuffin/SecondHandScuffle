@@ -11,14 +11,13 @@ namespace Weapons
         private bool _attacking = false;
         private GameObject _projectile;
         
-        protected override void OnAttack(InputAction.CallbackContext _)
+        protected override void OnAttack()
         {
-
             if (!_attacking)
             {
                 var player = LevelManager.Instance.Player.GetComponent<PlayerMovement>();
                 _projectile = Instantiate(projectile, spawnPoint.position, transform.rotation);
-                _projectile.GetComponent<BaseProjectile>().SetMovingDirection(player.Facing);
+                _projectile.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
                 _attacking = true;
             }
             else

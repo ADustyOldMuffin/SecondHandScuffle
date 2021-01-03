@@ -35,8 +35,7 @@ namespace Weapons.Projectiles
 
         private static void DamageEnemy(GameObject enemy)
         {
-            var playerFacing = LevelManager.Instance.Player.GetComponent<PlayerMovement>().Facing;
-            enemy.GetComponent<EnemyHealth>().Damage(StartDamageAmount, 2f, playerFacing);
+            enemy.GetComponent<EnemyHealth>().Damage(StartDamageAmount, 2f, Vector2.zero);
         }
     }
 }

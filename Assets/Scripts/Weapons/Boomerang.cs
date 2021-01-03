@@ -28,15 +28,14 @@ namespace Weapons
             LevelManager.OnPlayerWeaponReturn -= OnBoomerangReturn;
         }
 
-        protected override void OnAttack(InputAction.CallbackContext _)
+        protected override void OnAttack()
         {
             if (!_hasReturned)
                 return;
             
-            var player = LevelManager.Instance.Player.GetComponent<PlayerMovement>();
             _projectile = Instantiate(projectile, spawnPoint.position, transform.rotation);
-            _projectile.GetComponent<BaseProjectile>().SetMovingDirection(player.Facing);
-            _currentCooldown = fireRate;
+            _projectile.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
+            currentCooldown = fireRate;
             spriteRenderer.enabled = _hasReturned =false;
         }
 

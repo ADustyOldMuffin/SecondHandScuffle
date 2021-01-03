@@ -22,34 +22,26 @@
                     "interactions": "Press(behavior=2)"
                 },
                 {
-                    "name": "Attack",
-                    "type": "Button",
-                    "id": "cc3d05e6-a6b3-4c4b-8f17-8a7aeba9990c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "VerticalLook",
+                    "name": "VerticalAttack",
                     "type": "Value",
                     "id": "817f39d7-084b-49f6-9cdc-8044ccefba21",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press(behavior=2)"
                 },
                 {
-                    "name": "HorizontalLook",
+                    "name": "HorizontalAttack",
                     "type": "Value",
                     "id": "96beef70-12c6-4991-969a-8201f2f6b9b4",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press(behavior=2)"
                 },
                 {
-                    "name": "AttackHold",
-                    "type": "Button",
-                    "id": "47dc57df-dfa6-46ca-a4bb-179066e018d6",
-                    "expectedControlType": "Button",
+                    "name": "Attack",
+                    "type": "Value",
+                    "id": "73d7fe98-6378-4e84-81f5-248972d6b359",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "Press(behavior=2)"
                 }
@@ -122,24 +114,13 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "fd5dbe20-f93e-42db-979a-342a6359be93",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "UpDown",
                     "id": "d0697346-cc84-418d-99dc-be9f664fe97f",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "VerticalLook",
+                    "action": "VerticalAttack",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -150,7 +131,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "VerticalLook",
+                    "action": "VerticalAttack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -161,7 +142,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "VerticalLook",
+                    "action": "VerticalAttack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -172,7 +153,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizontalLook",
+                    "action": "HorizontalAttack",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -183,7 +164,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizontalLook",
+                    "action": "HorizontalAttack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -194,20 +175,64 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "HorizontalLook",
+                    "action": "HorizontalAttack",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "2b58b4eb-4263-4a9b-aee1-4ece76ae9ab5",
-                    "path": "<Keyboard>/space",
+                    "name": "2D Vector",
+                    "id": "d8e9dd2f-3b3e-4d09-b403-5111c4d4da95",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AttackHold",
-                    "isComposite": false,
+                    "action": "Attack",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "fd76fa70-e220-43c2-ae82-f1bd11571e01",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "eb4e6549-c490-4250-affc-b216d9a18816",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "7fbedbe6-1a6f-46d4-ab7c-8a14bd7a1f70",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "6683e44d-87bb-41d5-b603-27744103a79a",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

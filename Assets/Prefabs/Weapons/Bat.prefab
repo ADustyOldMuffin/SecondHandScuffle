@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7195909089111133913}
   - component: {fileID: 568425281838479929}
   - component: {fileID: 3929997751742080940}
+  - component: {fileID: 1393293810073428299}
+  - component: {fileID: 7796419833193181441}
   m_Layer: 0
   m_Name: Bat
   m_TagString: Untagged
@@ -99,9 +101,45 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 8725307562205349446}
   fireRate: 0.8
-  _currentCooldown: 0
+  currentCooldown: 0
+  animancer: {fileID: 7796419833193181441}
+  idles: {fileID: 11400000, guid: 74d451fdff5bc124d8a1d31a85ca713d, type: 2}
+  attacks: {fileID: 11400000, guid: 900ba691204dc4a4fb80dd54043110ea, type: 2}
   type: 7
   weaponName: Baseball Bat
+--- !u!95 &1393293810073428299
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747230381073024392}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7796419833193181441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747230381073024392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad50f81b1d25c441943c37a89ba23f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 1393293810073428299}
+  _ActionOnDisable: 0
 --- !u!1 &8949878915339759430
 GameObject:
   m_ObjectHideFlags: 0

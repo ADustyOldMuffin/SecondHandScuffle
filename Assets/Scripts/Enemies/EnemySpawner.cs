@@ -51,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
         //Debug.Log("Updating spawner");
         if(mutation == 0)
         {
-            Debug.Log("Updating spawner 0");
+            //Debug.Log("Updating spawner 0");
             upperRangeOfEnemyChoice = 1;
             spawnTimerMin = 5f;
             spawnTimerMax = 16f;

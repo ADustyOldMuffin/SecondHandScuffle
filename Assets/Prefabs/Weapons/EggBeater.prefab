@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 5633023391046370724}
   - component: {fileID: 3630978585020224964}
   - component: {fileID: 2520479797255820358}
+  - component: {fileID: 2640730298099071982}
+  - component: {fileID: 2016900468906495347}
   m_Layer: 0
   m_Name: EggBeater
   m_TagString: Untagged
@@ -129,6 +131,42 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 5674194973898402642}
   fireRate: 0
-  _currentCooldown: 0
+  currentCooldown: 0
+  animancer: {fileID: 2640730298099071982}
+  idles: {fileID: 11400000, guid: 6243cfa8fc2f9e249937448969e3f283, type: 2}
+  attacks: {fileID: 11400000, guid: b80f8d3b17fb6484bb31906ece1edf9e, type: 2}
   type: 2
   weaponName: Egg Beater
+--- !u!114 &2640730298099071982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925968148915112997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad50f81b1d25c441943c37a89ba23f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 2016900468906495347}
+  _ActionOnDisable: 0
+--- !u!95 &2016900468906495347
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925968148915112997}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

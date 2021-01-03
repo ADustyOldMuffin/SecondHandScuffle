@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6290915048901103425}
   - component: {fileID: 6290915048901103424}
   - component: {fileID: 6290915048901103487}
+  - component: {fileID: 3728115929130740583}
+  - component: {fileID: 6326039619519744832}
   m_Layer: 0
   m_Name: Toaster
   m_TagString: Untagged
@@ -99,9 +101,45 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 8920291292591591066}
   fireRate: 1.2
-  _currentCooldown: 0
+  currentCooldown: 0
+  animancer: {fileID: 6326039619519744832}
+  idles: {fileID: 11400000, guid: e8abddcf4e607c24e839cff523f1d645, type: 2}
+  attacks: {fileID: 11400000, guid: cc40ec51765935843b024eaed1e1dc97, type: 2}
   type: 4
   weaponName: Toaster
+--- !u!95 &3728115929130740583
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290915048901103486}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6326039619519744832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290915048901103486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad50f81b1d25c441943c37a89ba23f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 3728115929130740583}
+  _ActionOnDisable: 0
 --- !u!1 &7761488178260571189
 GameObject:
   m_ObjectHideFlags: 0

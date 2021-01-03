@@ -35,34 +35,26 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": ""Press(behavior=2)""
                 },
                 {
-                    ""name"": ""Attack"",
-                    ""type"": ""Button"",
-                    ""id"": ""cc3d05e6-a6b3-4c4b-8f17-8a7aeba9990c"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press""
-                },
-                {
-                    ""name"": ""VerticalLook"",
+                    ""name"": ""VerticalAttack"",
                     ""type"": ""Value"",
                     ""id"": ""817f39d7-084b-49f6-9cdc-8044ccefba21"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": ""Press(behavior=2)""
                 },
                 {
-                    ""name"": ""HorizontalLook"",
+                    ""name"": ""HorizontalAttack"",
                     ""type"": ""Value"",
                     ""id"": ""96beef70-12c6-4991-969a-8201f2f6b9b4"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": ""Press(behavior=2)""
                 },
                 {
-                    ""name"": ""AttackHold"",
-                    ""type"": ""Button"",
-                    ""id"": ""47dc57df-dfa6-46ca-a4bb-179066e018d6"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""Attack"",
+                    ""type"": ""Value"",
+                    ""id"": ""73d7fe98-6378-4e84-81f5-248972d6b359"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": ""Press(behavior=2)""
                 }
@@ -135,24 +127,13 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""fd5dbe20-f93e-42db-979a-342a6359be93"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Attack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
                     ""name"": ""UpDown"",
                     ""id"": ""d0697346-cc84-418d-99dc-be9f664fe97f"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""VerticalLook"",
+                    ""action"": ""VerticalAttack"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -163,7 +144,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""VerticalLook"",
+                    ""action"": ""VerticalAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -174,7 +155,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""VerticalLook"",
+                    ""action"": ""VerticalAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -185,7 +166,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HorizontalLook"",
+                    ""action"": ""HorizontalAttack"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -196,7 +177,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HorizontalLook"",
+                    ""action"": ""HorizontalAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -207,20 +188,64 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HorizontalLook"",
+                    ""action"": ""HorizontalAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""2b58b4eb-4263-4a9b-aee1-4ece76ae9ab5"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""name"": ""2D Vector"",
+                    ""id"": ""d8e9dd2f-3b3e-4d09-b403-5111c4d4da95"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""AttackHold"",
-                    ""isComposite"": false,
+                    ""action"": ""Attack"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""fd76fa70-e220-43c2-ae82-f1bd11571e01"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""eb4e6549-c490-4250-affc-b216d9a18816"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""7fbedbe6-1a6f-46d4-ab7c-8a14bd7a1f70"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""6683e44d-87bb-41d5-b603-27744103a79a"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -231,10 +256,9 @@ public class @MasterInput : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_VerticalMovement = m_Player.FindAction("VerticalMovement", throwIfNotFound: true);
         m_Player_HorizontalMovement = m_Player.FindAction("HorizontalMovement", throwIfNotFound: true);
+        m_Player_VerticalAttack = m_Player.FindAction("VerticalAttack", throwIfNotFound: true);
+        m_Player_HorizontalAttack = m_Player.FindAction("HorizontalAttack", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
-        m_Player_VerticalLook = m_Player.FindAction("VerticalLook", throwIfNotFound: true);
-        m_Player_HorizontalLook = m_Player.FindAction("HorizontalLook", throwIfNotFound: true);
-        m_Player_AttackHold = m_Player.FindAction("AttackHold", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -286,20 +310,18 @@ public class @MasterInput : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_VerticalMovement;
     private readonly InputAction m_Player_HorizontalMovement;
+    private readonly InputAction m_Player_VerticalAttack;
+    private readonly InputAction m_Player_HorizontalAttack;
     private readonly InputAction m_Player_Attack;
-    private readonly InputAction m_Player_VerticalLook;
-    private readonly InputAction m_Player_HorizontalLook;
-    private readonly InputAction m_Player_AttackHold;
     public struct PlayerActions
     {
         private @MasterInput m_Wrapper;
         public PlayerActions(@MasterInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @VerticalMovement => m_Wrapper.m_Player_VerticalMovement;
         public InputAction @HorizontalMovement => m_Wrapper.m_Player_HorizontalMovement;
+        public InputAction @VerticalAttack => m_Wrapper.m_Player_VerticalAttack;
+        public InputAction @HorizontalAttack => m_Wrapper.m_Player_HorizontalAttack;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
-        public InputAction @VerticalLook => m_Wrapper.m_Player_VerticalLook;
-        public InputAction @HorizontalLook => m_Wrapper.m_Player_HorizontalLook;
-        public InputAction @AttackHold => m_Wrapper.m_Player_AttackHold;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -315,18 +337,15 @@ public class @MasterInput : IInputActionCollection, IDisposable
                 @HorizontalMovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalMovement;
                 @HorizontalMovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalMovement;
+                @VerticalAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalAttack;
+                @VerticalAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalAttack;
+                @VerticalAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalAttack;
+                @HorizontalAttack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalAttack;
+                @HorizontalAttack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalAttack;
+                @HorizontalAttack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalAttack;
                 @Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
-                @VerticalLook.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalLook;
-                @VerticalLook.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalLook;
-                @VerticalLook.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalLook;
-                @HorizontalLook.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalLook;
-                @HorizontalLook.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalLook;
-                @HorizontalLook.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalLook;
-                @AttackHold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackHold;
-                @AttackHold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackHold;
-                @AttackHold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackHold;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -337,18 +356,15 @@ public class @MasterInput : IInputActionCollection, IDisposable
                 @HorizontalMovement.started += instance.OnHorizontalMovement;
                 @HorizontalMovement.performed += instance.OnHorizontalMovement;
                 @HorizontalMovement.canceled += instance.OnHorizontalMovement;
+                @VerticalAttack.started += instance.OnVerticalAttack;
+                @VerticalAttack.performed += instance.OnVerticalAttack;
+                @VerticalAttack.canceled += instance.OnVerticalAttack;
+                @HorizontalAttack.started += instance.OnHorizontalAttack;
+                @HorizontalAttack.performed += instance.OnHorizontalAttack;
+                @HorizontalAttack.canceled += instance.OnHorizontalAttack;
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
-                @VerticalLook.started += instance.OnVerticalLook;
-                @VerticalLook.performed += instance.OnVerticalLook;
-                @VerticalLook.canceled += instance.OnVerticalLook;
-                @HorizontalLook.started += instance.OnHorizontalLook;
-                @HorizontalLook.performed += instance.OnHorizontalLook;
-                @HorizontalLook.canceled += instance.OnHorizontalLook;
-                @AttackHold.started += instance.OnAttackHold;
-                @AttackHold.performed += instance.OnAttackHold;
-                @AttackHold.canceled += instance.OnAttackHold;
             }
         }
     }
@@ -357,9 +373,8 @@ public class @MasterInput : IInputActionCollection, IDisposable
     {
         void OnVerticalMovement(InputAction.CallbackContext context);
         void OnHorizontalMovement(InputAction.CallbackContext context);
+        void OnVerticalAttack(InputAction.CallbackContext context);
+        void OnHorizontalAttack(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
-        void OnVerticalLook(InputAction.CallbackContext context);
-        void OnHorizontalLook(InputAction.CallbackContext context);
-        void OnAttackHold(InputAction.CallbackContext context);
     }
 }

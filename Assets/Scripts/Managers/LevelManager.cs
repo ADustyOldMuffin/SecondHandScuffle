@@ -43,6 +43,9 @@ namespace Managers
         public delegate void PlayerWeaponReturn();
         public static event PlayerWeaponReturn OnPlayerWeaponReturn;
 
+        public delegate void PlayerDirectionChange(Vector2 direction);
+        public static event PlayerDirectionChange OnPlayerDirectionChange;
+
         public int PlayerScore { get; private set; }
 
         public GameObject Player { get; private set; }
@@ -128,6 +131,12 @@ namespace Managers
                 OnPlayerWeaponReturn();
         }
 
+        public static void OnPlayerDirectionChanged(Vector2 direction)
+        {
+            if (OnPlayerDirectionChange != null)
+                OnPlayerDirectionChange(direction);
+        }
+
         public void IncreaseScore(int amount)
         {
             PlayerScore += amount;
@@ -145,7 +154,5 @@ namespace Managers
         {
             Player = player;
         }
-
-
     }
 }

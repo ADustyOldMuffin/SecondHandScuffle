@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2169139738095777465}
   - component: {fileID: 771922877239702348}
   - component: {fileID: 1666498659289563088}
+  - component: {fileID: 6710492980102166198}
+  - component: {fileID: 8467025828712634945}
   m_Layer: 0
   m_Name: Boomerang
   m_TagString: Untagged
@@ -49,7 +51,10 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 3699754128950398505}
   fireRate: 0
-  _currentCooldown: 0
+  currentCooldown: 0
+  animancer: {fileID: 6710492980102166198}
+  idles: {fileID: 11400000, guid: 772856e4981a2ea47b22a6fec84a6ca0, type: 2}
+  attacks: {fileID: 11400000, guid: 6f7701dfae39ece46aca333706ce6e4a, type: 2}
   type: 1
   weaponName: Boomerang
   spriteRenderer: {fileID: 1666498659289563088}
@@ -103,6 +108,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6710492980102166198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834389096087687230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad50f81b1d25c441943c37a89ba23f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 8467025828712634945}
+  _ActionOnDisable: 0
+--- !u!95 &8467025828712634945
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5834389096087687230}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7011911768820135258
 GameObject:
   m_ObjectHideFlags: 0

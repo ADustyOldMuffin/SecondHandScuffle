@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eceeb59a892d074db28203df8e4cd3a, type: 3}
+  m_Name: FireSpreader_Idle_Set
+  m_EditorClassIdentifier: 
+  _Up: {fileID: 7400000, guid: cd0808699ea5e774a854c5473b90995c, type: 2}
+  _Right: {fileID: 7400000, guid: 78089d63a0ebea84e8b2f24b71b2b1ad, type: 2}
+  _Down: {fileID: 7400000, guid: b01bdb48154ee6f44990fdc53f4f1414, type: 2}
+  _Left: {fileID: 7400000, guid: fc59d25dbbc341648b1500b4a408d302, type: 2}
