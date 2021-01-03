@@ -24,7 +24,7 @@ TagManager:
   - Weapon
   - UserProjectiles
   - EnemyProjectiles
-  - 
+  - FrontWall
   - 
   - 
   - 
@@ -56,4 +56,7 @@ TagManager:
     locked: 0
   - name: Obtacles
     uniqueID: 1475789793
+    locked: 0
+  - name: FrontWall
+    uniqueID: 1584112659
     locked: 0
