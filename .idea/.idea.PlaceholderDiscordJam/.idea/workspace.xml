@@ -4,7 +4,6 @@
     <list default="true" id="85dee23f-99de-4e01-b0a3-14c26ab79e81" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/FireProjectile.controller" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/FireProjectile.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Fire_Projectile.anim" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Art/Animations/Fire_Projectile.anim.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/Projectiles/firesheet-export.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/Projectiles/firesheet-export.png.meta" afterDir="false" />
@@ -24,7 +23,6 @@
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/FireProjectile.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +117,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609553075903</updated>
-      <workItem from="1609553079265" duration="47421000" />
+      <workItem from="1609553079265" duration="47753000" />
     </task>
     <servers />
   </component>
