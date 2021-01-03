@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Weapons.Projectiles
 {
-    public class BaseballBalProjectile : BaseProjectile
+    public class BaseballBatProjectile : BaseProjectile
     {
         protected override bool HurtsPlayer { get; } = false;
         protected override int DamageAmount { get; } = 1;
