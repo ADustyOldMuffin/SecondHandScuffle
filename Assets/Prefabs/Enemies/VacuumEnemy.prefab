@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 1
   stoppingDistance: 2
   isMeleeEnemy: 1
 --- !u!95 &3072567414814434107
@@ -162,6 +162,7 @@ MonoBehaviour:
   - {fileID: 6625424208667510973, guid: 3e83e8b399b09ad4b91112a94f44cf67, type: 3}
   spawnTimerMin: 2
   spawnTimerMax: 10
+  range: 6
 --- !u!61 &4530232204143233513
 BoxCollider2D:
   m_ObjectHideFlags: 0

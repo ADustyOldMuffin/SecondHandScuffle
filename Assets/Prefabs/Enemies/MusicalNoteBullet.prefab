@@ -134,6 +134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9c02073a15a3a49bda8c48305b4179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 4
   attackPower: 1
   myRigidbody: {fileID: 5957762500393494324}
