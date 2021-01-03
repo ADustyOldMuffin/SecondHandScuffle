@@ -212,14 +212,14 @@ MonoBehaviour:
   weaponIcons:
   - {fileID: 21300000, guid: 45250863ce180e348b27eddde1501e2a, type: 3}
   - {fileID: 21300000, guid: e70890f52eeba354eb3f46b3b519c07c, type: 3}
-  - {fileID: 21300000, guid: c0d9400203a5efc45907ffde0d947dce, type: 3}
+  - {fileID: 21300000, guid: 5ad7342d79742c64b9ada1d1108b566f, type: 3}
   - {fileID: 21300000, guid: d39dbe5dab457f2418db9b9e61234c41, type: 3}
   - {fileID: 21300000, guid: 433761cc8d149b941aa8186fe06529bc, type: 3}
-  - {fileID: 21300000, guid: 63937cff8ea651941a1505dfc258c8de, type: 3}
-  - {fileID: 21300000, guid: 5ad7342d79742c64b9ada1d1108b566f, type: 3}
   - {fileID: 21300000, guid: 17414a3361a47ea4ba91e332a9ed86ac, type: 3}
-  - {fileID: 21300000, guid: c8c309cfa990e0c40928ba29e0fd3bfb, type: 3}
-  _UI_Icon: {fileID: 202058013}
+  - {fileID: 21300000, guid: c0d9400203a5efc45907ffde0d947dce, type: 3}
+  - {fileID: 21300000, guid: 17414a3361a47ea4ba91e332a9ed86ac, type: 3}
+  - {fileID: 21300000, guid: 63937cff8ea651941a1505dfc258c8de, type: 3}
+  _weaponIcon: {fileID: 202058011}
 --- !u!1 &202058011
 GameObject:
   m_ObjectHideFlags: 0
@@ -7704,6 +7704,7 @@ GameObject:
   - component: {fileID: 1223493318}
   - component: {fileID: 1223493317}
   - component: {fileID: 1223493320}
+  - component: {fileID: 1223493321}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7810,6 +7811,26 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1223493321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223493316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 16
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 1
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &1228457333
 GameObject:
   m_ObjectHideFlags: 0
@@ -8076,16 +8097,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401772606}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ConfineMode: 0
-  m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 424909154}
-  m_ConfineScreenEdges: 1
-  m_Damping: 0
 --- !u!1 &1448076792
 GameObject:
   m_ObjectHideFlags: 0

@@ -100,6 +100,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 8920291292591591066}
   fireRate: 1.2
   _currentCooldown: 0
+  type: 4
+  weaponName: Toaster
 --- !u!1 &7761488178260571189
 GameObject:
   m_ObjectHideFlags: 0

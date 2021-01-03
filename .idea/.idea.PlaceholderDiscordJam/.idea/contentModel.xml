@@ -321,9 +321,15 @@
         <e p="Scripts" t="Include">
           <e p="Constants" t="Include">
             <e p="Level.cs" t="Include" />
+            <e p="MusicBox.cs" t="Include" />
+            <e p="WeaponType.cs" t="Include" />
           </e>
           <e p="DDOL.cs" t="Include" />
           <e p="DevPreload.cs" t="Include" />
+          <e p="Dialogue" t="Include">
+            <e p="Dialogue.cs" t="Include" />
+            <e p="DialogueManager.cs" t="Include" />
+          </e>
           <e p="Enemies" t="Include">
             <e p="EnemyFireProjectile.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
@@ -342,6 +348,7 @@
               <e p="MainGameManager.cs" t="Include" />
               <e p="MainMenuManager.cs" t="Include" />
             </e>
+            <e p="OpeningCinematicManger.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="PlayerHealth.cs" t="Include" />
@@ -354,6 +361,7 @@
           <e p="SingletonBehavior.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="ScoreText.cs" t="Include" />
+            <e p="WeaponIcon.cs" t="Include" />
           </e>
           <e p="Weapons" t="Include">
             <e p="BaseballBat.cs" t="Include" />

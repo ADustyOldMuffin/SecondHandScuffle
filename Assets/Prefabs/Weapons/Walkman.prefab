@@ -100,6 +100,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 4353416533521463375}
   fireRate: 0.8
   _currentCooldown: 0
+  type: 5
+  weaponName: Walkman
   diskSpread: 0.2
 --- !u!1 &3937392530989118000
 GameObject:

@@ -100,6 +100,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 7850399515963041516}
   fireRate: 0.5
   _currentCooldown: 0
+  type: 6
+  weaponName: Wand
 --- !u!1 &7632785498105206310
 GameObject:
   m_ObjectHideFlags: 0

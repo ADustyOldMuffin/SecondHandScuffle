@@ -50,6 +50,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 3699754128950398505}
   fireRate: 0
   _currentCooldown: 0
+  type: 1
+  weaponName: Boomerang
   spriteRenderer: {fileID: 1666498659289563088}
 --- !u!212 &1666498659289563088
 SpriteRenderer:

@@ -130,3 +130,5 @@ MonoBehaviour:
   spawnPoint: {fileID: 1011586908619409441}
   fireRate: 0.6
   _currentCooldown: 0
+  weaponIcon: {fileID: 21300000, guid: 45250863ce180e348b27eddde1501e2a, type: 3}
+  weaponName: Pistol

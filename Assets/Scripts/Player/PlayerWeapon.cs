@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Managers;
 using UnityEngine;
+using Weapons;
 using Random = UnityEngine.Random;
 
 namespace Player
@@ -27,6 +28,7 @@ namespace Player
             _currentWeapon.transform.position = weaponHolder.position;
             _currentWeapon.transform.rotation = weaponHolder.rotation;
             _currentMutationTime = mutationTime;
+            LevelManager.PlayerWeaponChanged(_currentWeapon.GetComponent<BaseWeapon>());
         }
 
         private void FixedUpdate()
@@ -70,6 +72,7 @@ namespace Player
                 _currentWeapon.transform.rotation = weaponHolder.rotation;
             }
 
+            LevelManager.PlayerWeaponChanged(_currentWeapon.GetComponent<BaseWeapon>());
             LevelManager.Instance.IncreaseScore(1);
         }
 

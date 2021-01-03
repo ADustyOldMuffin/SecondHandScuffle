@@ -12,6 +12,7 @@ namespace UI
         private void Awake()
         {
             LevelManager.OnPlayerScoreChange += OnScoreChange;
+            OnScoreChange();
         }
 
         private void OnScoreChange()

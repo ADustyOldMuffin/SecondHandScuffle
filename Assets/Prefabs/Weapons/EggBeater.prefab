@@ -130,3 +130,5 @@ MonoBehaviour:
   spawnPoint: {fileID: 5674194973898402642}
   fireRate: 0
   _currentCooldown: 0
+  type: 2
+  weaponName: Egg Beater

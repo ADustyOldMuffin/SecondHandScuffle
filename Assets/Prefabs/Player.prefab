@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf5299a83e94d6f85b7167fee63ea63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 6
   myRigidbody: {fileID: 2067199379860362648}
   animancer: {fileID: 2643783567012341803}
   idles: {fileID: 11400000, guid: 643c13f039797734e803969df2a837f0, type: 2}
@@ -229,7 +229,7 @@ MonoBehaviour:
   - {fileID: 3925968148915112997, guid: e1e1ab0e5d5e11d4f92915f4d7012d90, type: 3}
   - {fileID: 929627748846965041, guid: ffeb4ebf3d7c3644e867f81d9d49a627, type: 3}
   weaponHolder: {fileID: 273234653277260880}
-  mutationTime: 20
+  mutationTime: 10
   mutationSound: {fileID: 6104192643523143212}
   _currentMutationTime: 0
 --- !u!82 &6104192643523143212

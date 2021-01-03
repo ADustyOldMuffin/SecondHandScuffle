@@ -100,6 +100,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 8725307562205349446}
   fireRate: 0.8
   _currentCooldown: 0
+  type: 7
+  weaponName: Baseball Bat
 --- !u!1 &8949878915339759430
 GameObject:
   m_ObjectHideFlags: 0

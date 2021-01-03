@@ -11,6 +11,7 @@ namespace Managers.Levels
         EnemySpawner[] enemySpawners;
         private void Awake()
         {
+            LevelManager.Instance.SetPlayerScore(0);
             LevelManager.OnPlayerDeath += PlayerDied;
             enemySpawners = FindObjectsOfType<EnemySpawner>();
         }

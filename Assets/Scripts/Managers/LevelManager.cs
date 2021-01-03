@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Constants;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Weapons;
 
 namespace Managers
 {
@@ -32,6 +33,9 @@ namespace Managers
 
         public delegate void PlayerHurtAction();
         public static event PlayerHurtAction OnPlayerHurt;
+        
+        public delegate void PlayerWeaponChange(BaseWeapon weapon);
+        public static event PlayerWeaponChange OnPlayerWeaponChange;
 
         public delegate void PlayerScoreChange();
         public static event PlayerScoreChange OnPlayerScoreChange;
@@ -111,7 +115,13 @@ namespace Managers
             if (OnPlayerScoreChange != null)
                 OnPlayerScoreChange();
         }
-        
+
+        public static void PlayerWeaponChanged(BaseWeapon weapon)
+        {
+            if (OnPlayerWeaponChange != null)
+                OnPlayerWeaponChange(weapon);
+        }
+
         public static void PlayerWeaponReturned()
         {
             if (OnPlayerWeaponReturn != null)

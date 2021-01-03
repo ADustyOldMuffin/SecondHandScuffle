@@ -130,3 +130,5 @@ MonoBehaviour:
   spawnPoint: {fileID: 2043989948296447339}
   fireRate: 0.5
   _currentCooldown: 0
+  type: 3
+  weaponName: Fire Spreader
