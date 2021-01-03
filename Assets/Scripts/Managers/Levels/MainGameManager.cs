@@ -17,7 +17,7 @@ namespace Managers.Levels
 
         private void PlayerDied()
         {
-            Debug.Log("About to die for real");
+            //Debug.Log("About to die for real");
             StopSpawners();
             //StartCoroutine(WaitAndGameOver());
             LevelManager.Instance.LoadLevel((int)Level.GameOver);

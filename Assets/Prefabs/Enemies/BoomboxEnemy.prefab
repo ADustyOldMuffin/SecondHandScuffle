@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3270965441895297283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.11, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3270965442076929098}
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 3270965442076929207}
   - component: {fileID: 3270965442076929200}
   - component: {fileID: 4102116214626056732}
+  - component: {fileID: 8366465378299649672}
   m_Layer: 10
   m_Name: BoomboxEnemy
   m_TagString: Enemy
@@ -113,7 +114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3270965442076929201}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.48, y: -3.31, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3270965441895297282}
@@ -239,3 +240,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dad07016b076de4ca4469975cc51ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  projectile: {fileID: -7839479601897941267, guid: a74298062b106c840abddb4a5a10de2e,
+    type: 3}
+--- !u!61 &8366465378299649672
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270965442076929201}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010439813, y: -0.18449175}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7981645, y: 0.5335491}
+  m_EdgeRadius: 0
