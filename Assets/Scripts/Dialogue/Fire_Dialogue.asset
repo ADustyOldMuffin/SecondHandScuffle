@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
   m_Name: Fire_Dialogue
   m_EditorClassIdentifier: 
-  dialogue: 'Fire Extinguisher: It''s getting hot in here!'
+  dialogue: "Fire Extinguisher: \u201CHot, hot, hot! Why do I spit fire? I wanted
+    to be an extinguisher! Did you do this, boss? More importantly, why aren\u2019t
+    you after those baddies yet? Go, go, go, before I overheat!\u201D"

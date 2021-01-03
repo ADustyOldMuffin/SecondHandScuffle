@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
   m_Name: Supersoaker_Dialogue
   m_EditorClassIdentifier: 
-  dialogue: 'Super Soaker: Splash Splash'
+  dialogue: "Super Soaker: \u201CGet your swimsuit on, \u2018cause it\u2019s water
+    gun time! Like metaphorically do it. Please don\u2019t actually do it, we\u2019ve
+    got bad dudes to soak! The only one changin\u2019 here should be yours truly!\u201D\r\n"

@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
-  m_Name: Boomerang_Dialogue
+  m_Name: Wand_Dialogue 1
   m_EditorClassIdentifier: 
-  dialogue: "Boomerang: \u201CLet's get these drongos! Well, at least you can\u2019t
-    get rid of me now!\u201D"
+  dialogue: "Wand: \"Witchcraft! Sorcery! Magic! Truly the best trope. Aside from
+    a silent protagonist. What? Can\u2019t hear ya. No matter, we shall slay our
+    foes with our arcane forces with or without words!\""

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
   m_Name: Revolver_Dialogue
   m_EditorClassIdentifier: 
-  dialogue: 'Revolver: Let''s give this a shot'
+  dialogue: "Revolver:  \u201CLet\u2019s get movin\u2019 before I switch to somethin\u2019
+    else, soldier! No time to explain! Go, go, GO!\u201D"

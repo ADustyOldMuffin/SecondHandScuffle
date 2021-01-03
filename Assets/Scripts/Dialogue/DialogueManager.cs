@@ -12,9 +12,11 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI textComponent;
     [SerializeField] Dialogue startingDialogue;
-    [SerializeField] Dialogue[] dialogueList;
+    [SerializeField] Dialogue[][] dialogueList;
 
     Dialogue currentDialogue;
+
+    bool firstTime = true;
 
 
     // Start is called before the first frame update
@@ -30,17 +32,27 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        if (firstTime)
+        {
+            textComponent.text = dialogueList[0][0].GetDialogue();
+            firstTime = false;
+        }
         UpdateDialogue();
     }
 
     public void UpdateDialogue()
     {
+<<<<<<< Updated upstream
         if(LevelManager.Instance == null || 
            LevelManager.Instance.Player == null || 
            !LevelManager.Instance.Player.TryGetComponent(out PlayerWeapon currentWeapon))
             return;
         
         Dialogue newDialogue = dialogueList[currentWeapon.GetCurrentWeaponIndex()];
+=======
+        int currentWeapon = LevelManager.Instance.Player.GetComponent<PlayerWeapon>().GetCurrentWeaponIndex();
+        Dialogue newDialogue = dialogueList[currentWeapon][Random.Range(0,dialogueList[currentWeapon].Length)];
+>>>>>>> Stashed changes
 
         textComponent.text = newDialogue.GetDialogue();
     }

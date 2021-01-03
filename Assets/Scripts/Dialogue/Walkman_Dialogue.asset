@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
   m_Name: Walkman_Dialogue
   m_EditorClassIdentifier: 
-  dialogue: 'Walkman: Disco lover?'
+  dialogue: "Walkman: \u201CWhat do we got in here today? A bunch of greatest hits
+    collections. Blegh. The only thing \u201Cgreatest hits\u201D are good for is
+    rackin\u2019 up mega damage on these clowns!\u201D\r\n"

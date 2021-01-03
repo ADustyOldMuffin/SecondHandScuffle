@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
-  m_Name: Boomerang_Dialogue
+  m_Name: Fire_Dialogue 1
   m_EditorClassIdentifier: 
-  dialogue: "Boomerang: \u201CLet's get these drongos! Well, at least you can\u2019t
-    get rid of me now!\u201D"
+  dialogue: "Fire Extinguisher: \u201CLet\u2019s spice things up! Roasted vacuum
+    is on the menu tonight, boss. Would that be vegan? Much to think about. Much
+    to think about.\u201D\r\n"
