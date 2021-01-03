@@ -15,7 +15,8 @@ namespace Managers.Levels
 
         private void PlayerDied()
         {
-            StartCoroutine(WaitAndGameOver());
+            Debug.Log("About to die for real");
+            LevelManager.Instance.LoadLevel((int)Level.GameOver);
         }
 
         private IEnumerator WaitAndGameOver()

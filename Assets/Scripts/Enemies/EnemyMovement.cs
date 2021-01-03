@@ -75,7 +75,7 @@ namespace Enemies
 
         public void PushBackAfterMeleeAttack()
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, -1 * moveSpeed * 10 * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, -1 * moveSpeed * Time.deltaTime);
 
         }
 
