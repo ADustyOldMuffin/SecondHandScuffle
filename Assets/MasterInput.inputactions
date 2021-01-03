@@ -44,6 +44,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "AttackHold",
+                    "type": "Button",
+                    "id": "47dc57df-dfa6-46ca-a4bb-179066e018d6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
                 }
             ],
             "bindings": [
@@ -189,6 +197,17 @@
                     "action": "HorizontalLook",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2b58b4eb-4263-4a9b-aee1-4ece76ae9ab5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AttackHold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

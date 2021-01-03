@@ -57,6 +57,14 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""AttackHold"",
+                    ""type"": ""Button"",
+                    ""id"": ""47dc57df-dfa6-46ca-a4bb-179066e018d6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)""
                 }
             ],
             ""bindings"": [
@@ -202,6 +210,17 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""action"": ""HorizontalLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2b58b4eb-4263-4a9b-aee1-4ece76ae9ab5"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackHold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -215,6 +234,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_VerticalLook = m_Player.FindAction("VerticalLook", throwIfNotFound: true);
         m_Player_HorizontalLook = m_Player.FindAction("HorizontalLook", throwIfNotFound: true);
+        m_Player_AttackHold = m_Player.FindAction("AttackHold", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -269,6 +289,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_VerticalLook;
     private readonly InputAction m_Player_HorizontalLook;
+    private readonly InputAction m_Player_AttackHold;
     public struct PlayerActions
     {
         private @MasterInput m_Wrapper;
@@ -278,6 +299,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @VerticalLook => m_Wrapper.m_Player_VerticalLook;
         public InputAction @HorizontalLook => m_Wrapper.m_Player_HorizontalLook;
+        public InputAction @AttackHold => m_Wrapper.m_Player_AttackHold;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -302,6 +324,9 @@ public class @MasterInput : IInputActionCollection, IDisposable
                 @HorizontalLook.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalLook;
                 @HorizontalLook.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalLook;
                 @HorizontalLook.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnHorizontalLook;
+                @AttackHold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackHold;
+                @AttackHold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackHold;
+                @AttackHold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttackHold;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -321,6 +346,9 @@ public class @MasterInput : IInputActionCollection, IDisposable
                 @HorizontalLook.started += instance.OnHorizontalLook;
                 @HorizontalLook.performed += instance.OnHorizontalLook;
                 @HorizontalLook.canceled += instance.OnHorizontalLook;
+                @AttackHold.started += instance.OnAttackHold;
+                @AttackHold.performed += instance.OnAttackHold;
+                @AttackHold.canceled += instance.OnAttackHold;
             }
         }
     }
@@ -332,5 +360,6 @@ public class @MasterInput : IInputActionCollection, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnVerticalLook(InputAction.CallbackContext context);
         void OnHorizontalLook(InputAction.CallbackContext context);
+        void OnAttackHold(InputAction.CallbackContext context);
     }
 }

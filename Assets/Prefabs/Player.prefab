@@ -219,9 +219,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapons:
-  - {fileID: 6290915048901103486, guid: 35b8d55859bf50e45b27364bfec433c7, type: 3}
+  - {fileID: 3925968148915112997, guid: e1e1ab0e5d5e11d4f92915f4d7012d90, type: 3}
   - {fileID: 4299141832617873128, guid: 7c9041bcafa24124791d3c2d1e2833b9, type: 3}
   - {fileID: 5834389096087687230, guid: 80de62b00f5358646ae23e439bbc0ce8, type: 3}
+  - {fileID: 6290915048901103486, guid: 35b8d55859bf50e45b27364bfec433c7, type: 3}
+  - {fileID: 6290915048901103486, guid: 35b8d55859bf50e45b27364bfec433c7, type: 3}
   - {fileID: 6290915048901103486, guid: 35b8d55859bf50e45b27364bfec433c7, type: 3}
   weaponHolder: {fileID: 273234653277260880}
   mutationTime: 20

@@ -353,12 +353,16 @@
             <e p="ScoreText.cs" t="Include" />
           </e>
           <e p="Weapons" t="Include">
+            <e p="BaseballBat.cs" t="Include" />
             <e p="BaseWeapon.cs" t="Include" />
             <e p="Boomerang.cs" t="Include" />
+            <e p="EggBeater.cs" t="Include" />
             <e p="OldWand.cs" t="Include" />
             <e p="Projectiles" t="Include">
+              <e p="BaseballBatProjectile.cs" t="Include" />
               <e p="BaseProjectile.cs" t="Include" />
               <e p="BoomerangProjectile.cs" t="Include" />
+              <e p="EggBeaterProjectile.cs" t="Include" />
               <e p="NormalProjectile.cs" t="Include" />
               <e p="ToastProjectile.cs" t="Include" />
               <e p="WandProjectile.cs" t="Include" />

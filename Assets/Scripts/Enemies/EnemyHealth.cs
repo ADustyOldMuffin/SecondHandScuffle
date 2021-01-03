@@ -10,7 +10,7 @@ namespace Enemies
 
         private int _currentHealth;
 
-        public void Damage(int amount)
+        public void Damage(int amount, float knockBack = 0.0f, Vector2 direction = default)
         {
             if (_currentHealth - amount <= 0)
             {
