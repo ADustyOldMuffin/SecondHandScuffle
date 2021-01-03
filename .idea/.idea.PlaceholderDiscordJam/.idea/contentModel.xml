@@ -329,6 +329,7 @@
           <e p="Dialogue" t="Include">
             <e p="Dialogue.cs" t="Include" />
             <e p="DialogueManager.cs" t="Include" />
+            <e p="ObjectDialogue.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
             <e p="EnemyFireProjectile.cs" t="Include" />

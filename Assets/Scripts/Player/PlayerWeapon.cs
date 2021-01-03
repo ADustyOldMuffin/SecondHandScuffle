@@ -20,7 +20,7 @@ namespace Player
         private int _currentWeaponIndex;
         [SerializeField] private float _currentMutationTime;
 
-        private void Awake()
+        private void Start()
         {
             _currentWeapon = Instantiate(weapons.First(), weaponHolder);
             _currentWeaponIndex = 0;

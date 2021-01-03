@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85dee23f-99de-4e01-b0a3-14c26ab79e81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BookEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BookEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BoomboxEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BoomboxEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BroomEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BroomEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/DustBunnyEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/DustBunnyEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Generic Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Generic Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MusicalNoteBullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/MusicalNoteBullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/VacuumEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/VacuumEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/WardrobeEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/WardrobeEnemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMeleeAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/firefront.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/firefront.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +40,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/ToastProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/WandProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Constants/WeaponType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/WeaponIcon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/GameOverManager.cs" />
@@ -65,10 +57,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/ScoreText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMeleeAttack.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeapon.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mUfQiZ3BgOYYpha6KMBk9G40sM" />
@@ -140,5 +133,37 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs</url>
+          <line>39</line>
+          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\PlaceholderDiscordJam\Assets\Scripts\Dialogue\DialogueManager.cs" initialLine="49" containingFunctionPresentation="method 'UpdateDialogue'">
+            <startOffsets>
+              <option value="957" />
+            </startOffsets>
+            <endOffsets>
+              <option value="978" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs</url>
+          <line>27</line>
+          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\PlaceholderDiscordJam\Assets\Scripts\Dialogue\DialogueManager.cs" initialLine="27" containingFunctionPresentation="method 'Awake'">
+            <startOffsets>
+              <option value="563" />
+            </startOffsets>
+            <endOffsets>
+              <option value="614" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
