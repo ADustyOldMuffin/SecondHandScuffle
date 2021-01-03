@@ -33,7 +33,7 @@ namespace Enemies
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             UpdateTargeting();
             MoveTowardsTarget();
