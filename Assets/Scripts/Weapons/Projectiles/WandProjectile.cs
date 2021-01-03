@@ -26,6 +26,11 @@ namespace Weapons.Projectiles
             StartCoroutine(PlayTargetAcquiredClip());
         }
 
+        private void OnDestroy()
+        {
+            animancer.Stop();
+        }
+
         protected override void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Enemy") &&

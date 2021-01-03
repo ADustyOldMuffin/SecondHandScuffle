@@ -135,8 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   myRigidbody: {fileID: 8823184438897938800}
-  damageDistance: 0.1
-  turnAmount: 1
+  damageDistance: 0.9
   animancer: {fileID: 2177786685976871232}
   targetAcquiredClip: {fileID: 7400000, guid: ecda8df7ce5c211429ced5e09f75b0f9, type: 2}
 --- !u!50 &8823184438897938800

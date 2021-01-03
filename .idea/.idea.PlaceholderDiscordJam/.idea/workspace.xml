@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85dee23f-99de-4e01-b0a3-14c26ab79e81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PlaceholderDiscordJam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/weapon-placeholder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprites/Weapon Sprites/weapon-placeholder.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BookEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BookEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BroomEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/BroomEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/WandProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/WandProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/WandProjectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/WandProjectile.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +33,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/BaseProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/RevolverProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/ToastProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Boomerang.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/BoomerangProjectile.cs" />
@@ -40,9 +44,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Walkman.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/OldWand.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/NormalProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/WandProjectile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainMenuManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/WandProjectile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mUfQiZ3BgOYYpha6KMBk9G40sM" />
@@ -87,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609553075903</updated>
-      <workItem from="1609553079265" duration="35957000" />
+      <workItem from="1609553079265" duration="38683000" />
     </task>
     <servers />
   </component>

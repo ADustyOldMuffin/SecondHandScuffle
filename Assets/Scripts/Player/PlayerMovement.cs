@@ -2,6 +2,7 @@
 using Animancer;
 using Managers;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Player
 {
@@ -21,35 +22,24 @@ namespace Player
             if (InputManager.Instance is null)
                 return;
 
-            InputManager.Instance.InputMaster.Player.VerticalMovement.performed +=
-                context =>
-                {
-                    _movement.y = context.ReadValue<float>();
-                    UpdateMovementAnimation();
-                };
-
-            InputManager.Instance.InputMaster.Player.HorizontalMovement.performed +=
-                context =>
-                {
-                    _movement.x = context.ReadValue<float>();
-                    UpdateMovementAnimation();
-                };
-
-            InputManager.Instance.InputMaster.Player.VerticalLook.performed +=
-                context =>
-                {
-                    Facing = new Vector2(0, context.ReadValue<float>());
-                    UpdateMovementAnimation();
-                };
-            
-            InputManager.Instance.InputMaster.Player.HorizontalLook.performed +=
-                context =>
-                {
-                    Facing = new Vector2(context.ReadValue<float>(), 0);
-                    UpdateMovementAnimation();
-                };
+            InputManager.Instance.InputMaster.Player.VerticalMovement.performed += OnVerticalMovement;
+            InputManager.Instance.InputMaster.Player.HorizontalMovement.performed += OnHorizontalMovement;
+            InputManager.Instance.InputMaster.Player.VerticalLook.performed += OnHorizontalLook;
+            InputManager.Instance.InputMaster.Player.HorizontalLook.performed += OnVerticalLook;
             
             UpdateMovementAnimation();
+        }
+
+        private void OnDestroy()
+        {
+            if (InputManager.Instance is null)
+                return;
+            
+            animancer.Stop();
+            InputManager.Instance.InputMaster.Player.VerticalMovement.performed -= OnVerticalMovement;
+            InputManager.Instance.InputMaster.Player.HorizontalMovement.performed -= OnHorizontalMovement;
+            InputManager.Instance.InputMaster.Player.VerticalLook.performed -= OnHorizontalLook;
+            InputManager.Instance.InputMaster.Player.HorizontalLook.performed -= OnVerticalLook;
         }
 
         private void FixedUpdate()
@@ -88,6 +78,30 @@ namespace Player
         private void UpdateMovementAnimation()
         {
             Play(_movement != Vector2.zero ? moving : idles);
+        }
+
+        private void OnHorizontalMovement(InputAction.CallbackContext context)
+        {
+            _movement.x = context.ReadValue<float>();
+            UpdateMovementAnimation();
+        }
+
+        private void OnVerticalMovement(InputAction.CallbackContext context)
+        {
+            _movement.y = context.ReadValue<float>();
+            UpdateMovementAnimation();
+        }
+
+        private void OnHorizontalLook(InputAction.CallbackContext context)
+        {
+            Facing = new Vector2(0, context.ReadValue<float>());
+            UpdateMovementAnimation();
+        }
+
+        private void OnVerticalLook(InputAction.CallbackContext context)
+        {
+            Facing = new Vector2(context.ReadValue<float>(), 0);
+            UpdateMovementAnimation();
         }
     }
 }

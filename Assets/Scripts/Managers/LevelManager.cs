@@ -92,6 +92,7 @@ namespace Managers
 
         public static void PlayerDied()
         {
+            InputManager.Instance.InputMaster.Player.Disable();
             if (OnPlayerDeath != null)
                 OnPlayerDeath();
         }
