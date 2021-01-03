@@ -9,11 +9,23 @@ using Managers;
 public class WeaponIcon : MonoBehaviour
 {
     [SerializeField] Sprite[] weaponIcons;
-    [SerializeField] Image UI_Icon;
+    [SerializeField] Image _UI_Icon;
 
-    // Update is called once per frame
-    public void UpdateIcon(int iconIndex)
+
+    void Awake()
     {
-        UI_Icon.sprite = weaponIcons[iconIndex];
+        LevelManager.OnPlayerScoreChange += UpdateIcon;
+    }
+
+    void Start()
+    {
+        UpdateIcon();
+    }
+    public void UpdateIcon()
+    {
+        int currentWeapon = LevelManager.Instance.Player.GetComponent<PlayerWeapon>().GetCurrentWeaponIndex();
+        Sprite newIcon = weaponIcons[currentWeapon];
+
+        _UI_Icon.sprite = newIcon;
     }
 }

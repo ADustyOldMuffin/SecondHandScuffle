@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Managers;
+using Player;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -19,12 +21,18 @@ public class DialogueManager : MonoBehaviour
     {
         currentDialogue = startingDialogue;
         textComponent.text = currentDialogue.GetDialogue();
-
+        LevelManager.OnPlayerScoreChange += UpdateDialogue;
     }
 
-    public void UpdateDialogue(int index)
+    void Start()
     {
-        Dialogue newDialogue = dialogueList[index];
+        UpdateDialogue();
+    }
+
+    public void UpdateDialogue()
+    {
+        int currentWeapon = LevelManager.Instance.Player.GetComponent<PlayerWeapon>().GetCurrentWeaponIndex();
+        Dialogue newDialogue = dialogueList[currentWeapon];
 
         textComponent.text = newDialogue.GetDialogue();
     }

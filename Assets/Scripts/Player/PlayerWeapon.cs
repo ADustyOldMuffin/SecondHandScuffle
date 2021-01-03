@@ -17,9 +17,6 @@ namespace Player
         private readonly List<int> _chosenIndexes = new List<int>();
         private int _currentWeaponIndex;
         [SerializeField] private float _currentMutationTime;
-        [SerializeField] private WeaponIcon _UI_icon;
-        [SerializeField] private DialogueManager _WeaponDialogue;
-
 
         private void Awake()
         {
@@ -29,13 +26,6 @@ namespace Player
             _currentWeapon.transform.position = weaponHolder.position;
             _currentWeapon.transform.rotation = weaponHolder.rotation;
             _currentMutationTime = mutationTime;
-
-        }
-
-        private void Start()
-        {
-            _UI_icon.UpdateIcon(_currentWeaponIndex);
-            _WeaponDialogue.UpdateDialogue(_currentWeaponIndex);
         }
 
         private void FixedUpdate()
@@ -76,14 +66,15 @@ namespace Player
                 _currentWeaponIndex = newIndex;
                 _currentWeapon.transform.position = weaponHolder.position;
                 _currentWeapon.transform.rotation = weaponHolder.rotation;
-                //update the icon
-                _UI_icon.UpdateIcon(_currentWeaponIndex);
-                _WeaponDialogue.UpdateDialogue(_currentWeaponIndex);
             }
 
             LevelManager.Instance.IncreaseScore(1);
         }
 
+        public int GetCurrentWeaponIndex()
+        {
+            return _currentWeaponIndex;
+        }
 
 
     }

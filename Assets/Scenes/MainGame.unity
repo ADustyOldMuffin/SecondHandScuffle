@@ -218,7 +218,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 63937cff8ea651941a1505dfc258c8de, type: 3}
   - {fileID: 21300000, guid: 5ad7342d79742c64b9ada1d1108b566f, type: 3}
   - {fileID: 21300000, guid: 17414a3361a47ea4ba91e332a9ed86ac, type: 3}
-  UI_Icon: {fileID: 202058013}
+  - {fileID: 21300000, guid: c8c309cfa990e0c40928ba29e0fd3bfb, type: 3}
+  _UI_Icon: {fileID: 202058013}
 --- !u!1 &202058011
 GameObject:
   m_ObjectHideFlags: 0
@@ -7243,6 +7244,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
         type: 3}
+      propertyPath: spawnTimerMax
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
+        type: 3}
+      propertyPath: spawnTimerMin
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
+        type: 3}
       propertyPath: Enemies.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -8182,6 +8193,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
         type: 3}
+      propertyPath: spawnTimerMax
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
+        type: 3}
+      propertyPath: spawnTimerMin
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
+        type: 3}
       propertyPath: Enemies.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -8490,6 +8511,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
+        type: 3}
+      propertyPath: spawnTimerMax
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
+        type: 3}
+      propertyPath: spawnTimerMin
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 403334349821228264, guid: ec744f1092e47044984ea410f395dc95,
         type: 3}
@@ -9228,6 +9259,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
         type: 3}
+      propertyPath: spawnTimerMax
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
+        type: 3}
+      propertyPath: spawnTimerMin
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 403334349821228055, guid: ec744f1092e47044984ea410f395dc95,
+        type: 3}
       propertyPath: Enemies.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -9634,6 +9675,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 526d4978b7ae47042bfefe83121df69d, type: 2}
   - {fileID: 11400000, guid: 34d10738d91c11d4680147009e73b05f, type: 2}
   - {fileID: 11400000, guid: 2ff500155c6c5654ab3b63943deca5a8, type: 2}
+  - {fileID: 11400000, guid: 680bdd3d6245d8a4197e0e7f18077d85, type: 2}
 --- !u!1 &2115470775
 GameObject:
   m_ObjectHideFlags: 0
