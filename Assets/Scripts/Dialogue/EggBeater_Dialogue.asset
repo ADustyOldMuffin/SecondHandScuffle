@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
   m_Name: EggBeater_Dialogue
   m_EditorClassIdentifier: 
-  dialogue: 'Egg beater: Whipping up some real fun!'
+  dialogue: "Egg beater: \u201CWhy, I\u2019d have to say\u2026 this new form is\u2026
+    EGG-cellent! Hehe\u2026 well, at least with my spinny bits, the rest of these
+    goons won\u2019t be hard to beat.\u201D\r\n"

@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
-  m_Name: ConductorsWand_Dialogue
+  m_Name: Bat_Dialogue 2
   m_EditorClassIdentifier: 
-  dialogue: 'Conductor''s Wand: And a 1, 2, 3, 4'
+  dialogue: "Bat: \u201DYou catch the big game last night, tiger? Yeah, me neither.
+    Was there a game? Who cares, we got some ghouls to school! Batter up!\u201D\r\n"

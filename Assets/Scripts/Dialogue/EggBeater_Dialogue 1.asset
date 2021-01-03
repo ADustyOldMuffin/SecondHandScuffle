@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
-  m_Name: Boomerang_Dialogue
+  m_Name: EggBeater_Dialogue 1
   m_EditorClassIdentifier: 
-  dialogue: "Boomerang: \u201CLet's get these drongos! Well, at least you can\u2019t
-    get rid of me now!\u201D"
+  dialogue: "Egg beater: \u201CAchoo! Huh\u2026 looks like we\u2019re in a bit of
+    a scramble now, aren\u2019t we? Try gettin\u2019 me up close and personal with
+    these hunks of junk, eggs won\u2019t be the only things I beat!\u201D"

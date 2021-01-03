@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
-  m_Name: Boomerang_Dialogue
+  m_Name: Wand_Dialogue 2
   m_EditorClassIdentifier: 
-  dialogue: "Boomerang: \u201CLet's get these drongos! Well, at least you can\u2019t
-    get rid of me now!\u201D"
+  dialogue: "Wand: \u201CMagic! Will we use it for good, or for evil? Wait, that
+    implies that there are moral consequences in this game. Oh no. The theories.
+    The only thing you should be theorizing is how to take care of these baddies,
+    wiz kid!\""

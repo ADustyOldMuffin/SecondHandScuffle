@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
-  m_Name: Boomerang_Dialogue
+  m_Name: Walkman_Dialogue 1
   m_EditorClassIdentifier: 
-  dialogue: "Boomerang: \u201CLet's get these drongos! Well, at least you can\u2019t
-    get rid of me now!\u201D"
+  dialogue: "Walkman: \u201CAchoo! I think one of my discs got scratched. Actually,
+    like all of them. Screw it, start throwin\u2019 \u2018em at these guys!\u201D"

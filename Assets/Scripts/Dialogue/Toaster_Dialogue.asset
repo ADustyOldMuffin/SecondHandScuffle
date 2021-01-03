@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
   m_Name: Toaster_Dialogue
   m_EditorClassIdentifier: 
-  dialogue: 'Toaster: Hello human'
+  dialogue: "Toaster: \u201CAchoo! Ugh, we\u2019re gettin\u2019 crumbs everywhere!
+    Let\u2019s hope they don\u2019t turn into dust bunnies. Until then? Let\u2019s
+    take out the rest, chef!\u201D\r"

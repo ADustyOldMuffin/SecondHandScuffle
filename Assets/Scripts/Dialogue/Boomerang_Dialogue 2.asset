@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
-  m_Name: Boomerang_Dialogue
+  m_Name: Boomerang_Dialogue 2
   m_EditorClassIdentifier: 
-  dialogue: "Boomerang: \u201CLet's get these drongos! Well, at least you can\u2019t
-    get rid of me now!\u201D"
+  dialogue: "Boomerang: \u201CYou Beauty! Look at us go! Now, this is somethin\u2019
+    I can get behind. Throw me, throw me, mate.\u201D"
