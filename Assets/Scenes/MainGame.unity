@@ -6611,8 +6611,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1219511220}
+  m_Children: []
   m_Father: {fileID: 2065437827}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7301,6 +7300,16 @@ PrefabInstance:
       propertyPath: UI_icon
       value: 
       objectReference: {fileID: 8498495}
+    - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
+      propertyPath: _UI_icon
+      value: 
+      objectReference: {fileID: 8498495}
+    - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
+      propertyPath: _WeaponDialogue
+      value: 
+      objectReference: {fileID: 2065437828}
     - target: {fileID: 1763867931160164617, guid: 439680f1d1118e64c971cadd04468592,
         type: 3}
       propertyPath: m_Name
@@ -7567,12 +7576,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 438180830}
-  m_RootOrder: 0
+  m_Father: {fileID: 2065437827}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.0040245056}
+  m_AnchoredPosition: {x: 0.000015258789, y: 21.004026}
   m_SizeDelta: {x: 700, y: 60.000008}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1219511221
@@ -9513,6 +9522,7 @@ GameObject:
   - component: {fileID: 2065437826}
   - component: {fileID: 2065437825}
   - component: {fileID: 2065437824}
+  - component: {fileID: 2065437828}
   m_Layer: 0
   m_Name: DialogueCanvas
   m_TagString: Untagged
@@ -9592,6 +9602,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 438180830}
+  - {fileID: 1219511220}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9600,6 +9611,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2065437828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065437823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b86f735adb15f429de9c7129ce728f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1219511221}
+  startingDialogue: {fileID: 11400000, guid: a07bbc4e5ef71d44998909e56cc59b38, type: 2}
+  dialogueList:
+  - {fileID: 11400000, guid: eeef062ff0159e54dbf2403fa2de7a3b, type: 2}
+  - {fileID: 11400000, guid: a25027bf10ea6c14a933d716ed3b639e, type: 2}
+  - {fileID: 11400000, guid: 1a2ce244cda265f419118941cfc38a3b, type: 2}
+  - {fileID: 11400000, guid: fc5d549be29bed341b3579e9d8b73f46, type: 2}
+  - {fileID: 11400000, guid: bfc6b2fa34077dc49a652aa9e266f8dd, type: 2}
+  - {fileID: 11400000, guid: 526d4978b7ae47042bfefe83121df69d, type: 2}
+  - {fileID: 11400000, guid: 34d10738d91c11d4680147009e73b05f, type: 2}
+  - {fileID: 11400000, guid: 2ff500155c6c5654ab3b63943deca5a8, type: 2}
 --- !u!1 &2115470775
 GameObject:
   m_ObjectHideFlags: 0
