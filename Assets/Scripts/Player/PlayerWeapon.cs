@@ -11,7 +11,8 @@ namespace Player
     {
         [SerializeField] private GameObject[] weapons;
         [SerializeField] private Transform weaponHolder;
-        [SerializeField] private float mutationTime = 20f; 
+        [SerializeField] private float mutationTime = 20f;
+        [SerializeField] private AudioSource mutationSound;
 
         private GameObject _currentWeapon;
         private readonly List<int> _chosenIndexes = new List<int>();
@@ -61,6 +62,7 @@ namespace Player
             // We only need to do all this stuff if it's a new weapon
             if (newIndex != _currentWeaponIndex)
             {
+                mutationSound.Play();
                 Destroy(_currentWeapon);
                 _currentWeapon = Instantiate(weapons[newIndex], weaponHolder);
                 _currentWeaponIndex = newIndex;
