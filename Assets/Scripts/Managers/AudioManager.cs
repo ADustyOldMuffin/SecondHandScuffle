@@ -19,15 +19,18 @@ namespace Managers
 
         private IEnumerator PlayGameBackgroundMusic()
         {
-            yield return null;
-
-            foreach (var t in songs)
+            while (true)
             {
-                musicPlayer.clip = t;
-                musicPlayer.Play();
+                yield return null;
 
-                while (musicPlayer.isPlaying)
-                    yield return null;
+                foreach (var t in songs)
+                {
+                    musicPlayer.clip = t;
+                    musicPlayer.Play();
+
+                    while (musicPlayer.isPlaying)
+                        yield return null;
+                }
             }
         }
     }
