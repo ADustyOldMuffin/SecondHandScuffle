@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5592034020968080648}
   - component: {fileID: 5289411949171908433}
   - component: {fileID: 664213917031864090}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BaseballBatProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

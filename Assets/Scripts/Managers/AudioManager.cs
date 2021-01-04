@@ -8,30 +8,42 @@ namespace Managers
     public class AudioManager : SingletonBehavior<AudioManager>
     {
         [SerializeField] private AudioSource musicPlayer;
-        [SerializeField] private AudioClip[] songs;
+        [SerializeField] private AudioClip cinematicMusic;
+        [SerializeField] private AudioClip mainMenuMusic;
+        [SerializeField] private AudioClip battleIntroMusic;
+        [SerializeField] private AudioClip battleMusic;
         
         protected override void Awake()
         {
             base.Awake();
-
-            StartCoroutine(PlayGameBackgroundMusic());
         }
 
-        private IEnumerator PlayGameBackgroundMusic()
+        public void PlayCinematicMusic()
         {
-            while (true)
-            {
+            musicPlayer.clip = cinematicMusic;
+            musicPlayer.loop = true;
+            musicPlayer.Play();
+        }
+
+        public void PlayMainMenuMusic()
+        {
+            musicPlayer.clip = mainMenuMusic;
+            musicPlayer.loop = true;
+            musicPlayer.Play();
+        }
+
+        public IEnumerator PlayBattleTheme()
+        {
+            musicPlayer.clip = battleIntroMusic;
+            musicPlayer.loop = false;
+            musicPlayer.Play();
+
+            while (musicPlayer.isPlaying)
                 yield return null;
 
-                foreach (var t in songs)
-                {
-                    musicPlayer.clip = t;
-                    musicPlayer.Play();
-
-                    while (musicPlayer.isPlaying)
-                        yield return null;
-                }
-            }
+            musicPlayer.clip = battleMusic;
+            musicPlayer.loop = true;
+            musicPlayer.Play();
         }
     }
 }

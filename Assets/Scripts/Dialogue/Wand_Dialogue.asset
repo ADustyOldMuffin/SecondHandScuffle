@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b89407322970043bc326fe0a7089c9, type: 3}
   m_Name: Wand_Dialogue
   m_EditorClassIdentifier: 
-  dialogue: "Wand: \u201CAbrakachoo! Wow, a magic sneeze? That\u2019s a once-in-a-lifetime
-    thing. Let\u2019s enchant our foes with the power of sorcery\u2026 and sneezin\u2019!\r\"\n"
+  dialogue: "Wand: \u201CAbrakachoo! Wow, a magic sneeze? That\u2019s a once in a
+    lifetime thing. Let\u2019s enchant our foes with the power of sorcery, and sneezin!\r\""

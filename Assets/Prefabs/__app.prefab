@@ -85,9 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicPlayer: {fileID: 384662919833075285}
-  sfxPlayer: {fileID: 0}
-  songs:
-  - {fileID: 8300000, guid: c76ef2c228a960b4cb7b33e072a1f9b1, type: 3}
+  cinematicMusic: {fileID: 8300000, guid: 7f1aca701eb4da6418d90350caf60307, type: 3}
+  mainMenuMusic: {fileID: 8300000, guid: fa34e706c57d9cd4daf3d5ffb0b04c69, type: 3}
+  battleIntroMusic: {fileID: 8300000, guid: 579ade665cf025e488d74b7588a071e2, type: 3}
+  battleMusic: {fileID: 8300000, guid: 783c64398ba621e4a82e6af493aad8e9, type: 3}
 --- !u!114 &7700437442125384330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d4d7642b194192b5035fec4cd9241f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoadOnStart: 3
+  levelToLoadOnStart: 2
 --- !u!82 &384662919833075285
 AudioSource:
   m_ObjectHideFlags: 0

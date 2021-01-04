@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Boomerang_Dialogue 1
   m_EditorClassIdentifier: 
   dialogue: "Boomerang: \u201CAchoo! Nothing beats spinning at high velocity. Toss
-    me already, mate! I promise I\u2019ll be back...\u201D"
+    me already, mate! I promise I\u2019ll be back\u201D"

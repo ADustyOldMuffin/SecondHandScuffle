@@ -20,6 +20,14 @@ namespace Managers.Levels
             enemySpawners = FindObjectsOfType<EnemySpawner>();
         }
 
+        private void Start()
+        {
+            if (AudioManager.Instance == null)
+                return;
+
+            StartCoroutine(AudioManager.Instance.PlayBattleTheme());
+        }
+
         private void OnDestroy()
         {
             LevelManager.OnPlayerDeath -= PlayerDied;
