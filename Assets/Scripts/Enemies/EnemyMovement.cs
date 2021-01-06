@@ -61,6 +61,7 @@ namespace Enemies
         void MoveTowardsTarget()
         {
             var newPosition = Vector2.MoveTowards(transform.position, target.transform.position, moveSpeed * Time.fixedDeltaTime);
+            newPosition = PixelMovementUtility.PixelPerfectClamp(newPosition, 16);
             myRGB.MovePosition(newPosition);
         }
 

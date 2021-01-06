@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Daniel Hix\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Daniel Hix\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_PlaceholderDiscordJam.-350210827.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Daniel Hix\Documents\Repositories\PlaceholderDiscordJam" t="IncludeRecursive">
+    <e p="C:\Users\Daniel Hix\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_SecondHandScuffle.1659217137.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Daniel Hix\Documents\Repositories\SecondHandScuffle" t="IncludeRecursive">
       <e p="Animancer.csproj" t="IncludeRecursive" />
       <e p="Animancer.Examples.csproj" t="IncludeRecursive" />
       <e p="Animancer.FSM.csproj" t="IncludeRecursive" />
@@ -352,6 +352,7 @@
             <e p="OpeningCinematicManger.cs" t="Include" />
             <e p="OpeningManager.cs" t="Include" />
           </e>
+          <e p="PixelMovementUtility.cs" t="Include" />
           <e p="Player" t="Include">
             <e p="PlayerHealth.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
@@ -422,7 +423,7 @@
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="PlaceholderDiscordJam.sln" t="IncludeFlat" />
+      <e p="SecondHandScuffle.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>

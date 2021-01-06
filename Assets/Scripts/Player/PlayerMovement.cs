@@ -13,6 +13,7 @@ namespace Player
         [SerializeField] private AnimancerComponent animancer;
         [SerializeField] private DirectionalAnimationSet idles;
         [SerializeField] private DirectionalAnimationSet moving;
+        [SerializeField] private SpriteRenderer spriteRenderer;
 
         private Vector2 _facing;
         private Vector2 _movement;
@@ -42,7 +43,11 @@ namespace Player
 
         private void FixedUpdate()
         {
-            myRigidbody.MovePosition(myRigidbody.position + _movement * (moveSpeed * Time.fixedDeltaTime));
+            var newMove = PixelMovementUtility.PixelPerfectClamp(_movement * (moveSpeed * Time.fixedDeltaTime), spriteRenderer.sprite.pixelsPerUnit);
+            var oldPosition =
+                PixelMovementUtility.PixelPerfectClamp(myRigidbody.position, spriteRenderer.sprite.pixelsPerUnit);
+            
+            myRigidbody.MovePosition(oldPosition + newMove);
         }
 
         private void OnEnable()
