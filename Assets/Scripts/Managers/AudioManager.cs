@@ -21,6 +21,10 @@ namespace Managers
 
         private void Start()
         {
+            // This isn't working locally as it seems to set the floats to random values
+            // For now until a fix can be found/confirmed it's only in the editor it's better just just default them
+            PlayerPrefs.DeleteAll();
+            
             if(!PlayerPrefs.HasKey("SFXVolume"))
                 PlayerPrefs.SetFloat("SFXVolume", 1.0f);
             
