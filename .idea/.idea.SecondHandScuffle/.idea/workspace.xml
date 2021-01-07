@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4c94d1d-4a4d-487b-9e45-7e6fa9e0b695" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/MusicClip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/MusicClip.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/OptionsMenuManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/OptionsMenuManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/MasterVolume.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/MasterVolume.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Options.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Options.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/MusicBox.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/MusicBox.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetMusicVolume.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetMusicVolume.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetSFXVolume.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetSFXVolume.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609962605885</updated>
       <workItem from="1609962617796" duration="1500000" />
-      <workItem from="1609985747782" duration="3742000" />
+      <workItem from="1609985747782" duration="4476000" />
     </task>
     <servers />
   </component>
