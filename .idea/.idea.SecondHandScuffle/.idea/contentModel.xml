@@ -321,7 +321,7 @@
         <e p="Scripts" t="Include">
           <e p="Constants" t="Include">
             <e p="Level.cs" t="Include" />
-            <e p="MusicBox.cs" t="Include" />
+            <e p="MusicClip.cs" t="Include" />
             <e p="WeaponType.cs" t="Include" />
           </e>
           <e p="DDOL.cs" t="Include" />
@@ -348,6 +348,7 @@
             <e p="Levels" t="Include">
               <e p="MainGameManager.cs" t="Include" />
               <e p="MainMenuManager.cs" t="Include" />
+              <e p="OptionsMenuManager.cs" t="Include" />
             </e>
             <e p="OpeningCinematicManger.cs" t="Include" />
             <e p="OpeningManager.cs" t="Include" />
@@ -359,8 +360,6 @@
             <e p="PlayerWeapon.cs" t="Include" />
           </e>
           <e p="PlayerHealthBar.cs" t="Include" />
-          <e p="SetMusicVolume.cs" t="Include" />
-          <e p="SetSFXVolume.cs" t="Include" />
           <e p="SingletonBehavior.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="ScoreText.cs" t="Include" />
