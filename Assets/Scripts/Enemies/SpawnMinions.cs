@@ -7,7 +7,7 @@ public class SpawnMinions : MonoBehaviour
 {
 
     [SerializeField] GameObject[] minions;
-
+    public Animator myAnimator;
     [SerializeField] float spawnTimerMin = 2f;
     [SerializeField] float spawnTimerMax = 10f;
     [SerializeField] float range = 6f;
@@ -21,7 +21,7 @@ public class SpawnMinions : MonoBehaviour
 
             yield return new WaitForSecondsRealtime(Random.Range(spawnTimerMin, spawnTimerMax));
             InRange();
-            if (spawn && inRange) { SpawnEnemies(); }
+            if (spawn && inRange) { myAnimator.SetTrigger("isSpawning"); }
 
         }
     }
@@ -32,12 +32,18 @@ public class SpawnMinions : MonoBehaviour
         spawn = false;
     }
 
-    private void SpawnEnemies()
+    public void Attack()
+    {
+        SpawnMinion();
+    }
+
+    private void SpawnMinion()
     {
         GameObject minion = Instantiate(minions[Random.Range(0, minions.Length)],
                 transform.position,
                 transform.rotation) as GameObject;
 
+        //minion's parent is the minion spawner. if the spawner dies, so do it's children
         minion.transform.parent = transform;
 
     }

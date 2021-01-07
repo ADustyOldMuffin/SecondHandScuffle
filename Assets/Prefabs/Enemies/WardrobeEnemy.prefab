@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 5083326703933139196}
   - component: {fileID: 5083326703933139197}
   - component: {fileID: 5083326703933139194}
-  - component: {fileID: 4164347286904909842}
   - component: {fileID: 2228324857410008816}
+  - component: {fileID: 4164347286904909842}
   - component: {fileID: -6817748147587278638}
   m_Layer: 10
   m_Name: WardrobeEnemy
@@ -127,6 +127,25 @@ MonoBehaviour:
   moveSpeed: 1
   stoppingDistance: 2
   isMeleeEnemy: 1
+--- !u!114 &2228324857410008816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083326703933139195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bbc6d6d02f9baa4a963bbea378f8dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minions:
+  - {fileID: 6006571378466959188, guid: 2ba9d1ec7a2540d418c50e098c5c345d, type: 3}
+  - {fileID: 6625424208667510973, guid: 3e83e8b399b09ad4b91112a94f44cf67, type: 3}
+  myAnimator: {fileID: 4164347286904909842}
+  spawnTimerMin: 2
+  spawnTimerMax: 10
+  range: 6
 --- !u!95 &4164347286904909842
 Animator:
   serializedVersion: 3
@@ -146,24 +165,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2228324857410008816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5083326703933139195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bbc6d6d02f9baa4a963bbea378f8dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minions:
-  - {fileID: 6006571378466959188, guid: 2ba9d1ec7a2540d418c50e098c5c345d, type: 3}
-  - {fileID: 6625424208667510973, guid: 3e83e8b399b09ad4b91112a94f44cf67, type: 3}
-  spawnTimerMin: 2
-  spawnTimerMax: 10
-  range: 6
 --- !u!61 &-6817748147587278638
 BoxCollider2D:
   m_ObjectHideFlags: 0
