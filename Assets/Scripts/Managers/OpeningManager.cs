@@ -12,5 +12,11 @@ namespace Managers
             
             AudioManager.Instance.PlayCinematicMusic();
         }
+        
+        public void SkipOpeningAnimation(int mainMenu)
+        {
+            LevelManager.Instance.LoadLevel(mainMenu);
+        }
+
     }
 }
