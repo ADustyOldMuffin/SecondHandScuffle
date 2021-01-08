@@ -31,13 +31,14 @@ namespace Managers
             if(!PlayerPrefs.HasKey("MusicVolume"))
                 PlayerPrefs.SetFloat("MusicVolume", 1.0f);
 
+            musicPlayer.pitch = .5f;
+
             SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume", 1.0f));
             SetSfxVolume(PlayerPrefs.GetFloat("SFXVolume", 1.0f));
         }
 
         public void SetMusicVolume(float value)
         {
-            Debug.Log(value);
             PlayerPrefs.SetFloat("MusicVolume", LinearToDecibels(value));
             mixer.SetFloat("MusicVolume", LinearToDecibels(value));
             
@@ -46,7 +47,6 @@ namespace Managers
 
         public void SetSfxVolume(float value)
         {
-            Debug.Log(value);
             PlayerPrefs.SetFloat("SFXVolume", LinearToDecibels(value));
             mixer.SetFloat("SFXVolume", LinearToDecibels(value));
             
@@ -102,7 +102,7 @@ namespace Managers
             musicPlayer.loop = true;
             musicPlayer.Play();
         }
-
+        
         private static float LinearToDecibels(float value)
         {
             return Mathf.Log10(value) * 20;

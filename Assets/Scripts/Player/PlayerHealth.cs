@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Managers;
 using UnityEngine;
 
@@ -8,10 +9,12 @@ namespace Player
     {
         [SerializeField] private int startingHealth;
         [SerializeField] private float graceTime = 2.0f;
+        [SerializeField] private bool killPlayer = false;
 
         private int _currentHealth = 0;
         private bool _isInvincible = false;
         private float _currentGraceTime;
+        private bool _isDead = false;
 
         private void Awake()
         {
@@ -24,6 +27,9 @@ namespace Player
 
         private void FixedUpdate()
         {
+            if(killPlayer && !_isDead)
+                KillPlayer();
+            
             if (!_isInvincible)
                 return;
             
@@ -37,12 +43,21 @@ namespace Player
         {
             if (_currentHealth - amount <= 0)
             {
-                LevelManager.PlayerDied();
+                KillPlayer();
             }
 
             _currentHealth -= amount;
             _currentGraceTime = graceTime;
             _isInvincible = true;
+        }
+
+        private void KillPlayer()
+        {
+            if (_isDead)
+                return;
+            
+            LevelManager.PlayerDied();
+            _isDead = true;
         }
 
         public void ResetPlayerHealth()

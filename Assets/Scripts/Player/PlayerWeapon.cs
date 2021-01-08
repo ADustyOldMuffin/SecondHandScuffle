@@ -64,7 +64,6 @@ namespace Player
             // We only need to do all this stuff if it's a new weapon
             if (newIndex != _currentWeaponIndex)
             {
-                mutationSound.Play();
                 Destroy(_currentWeapon);
                 _currentWeapon = Instantiate(weapons[newIndex], weaponHolder);
                 _currentWeaponIndex = newIndex;

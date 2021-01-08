@@ -2,8 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using Constants;
+using Lean.Gui;
+using Lean.Transition;
+using Lean.Transition.Extras;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Managers.Levels
@@ -14,12 +18,16 @@ namespace Managers.Levels
 
 
         //pause menu
-        public static bool gameIsPaused = false;
-        public GameObject PauseMenuUI;
+        public static bool GameIsPaused = false;
+        public GameObject pauseMenuUI;
 
         //volume sliders
         [SerializeField] private Slider musicVolumeSlider;
         [SerializeField] private Slider sfxVolumeSlider;
+        
+        [Header("Lean Animations")]
+        [SerializeField] private Transform highlightCircle;
+        [SerializeField] private CanvasGroup gameOverScreen;
 
         private void Awake()
         {
@@ -58,7 +66,15 @@ namespace Managers.Levels
         private void PlayerDied()
         {
             StopSpawners();
-            LevelManager.Instance.LoadLevel((int)Level.GameOver);
+            GameIsPaused = true;
+            highlightCircle.localScaleTransition_XY(new Vector2(2f, 2f), 2f, LeanEase.Decelerate)
+                .JoinDelayTransition(2)
+                .localScaleTransition_XY(Vector2.zero, .5f, LeanEase.Accelerate)
+                .JoinDelayTransition(.5f);
+
+            gameOverScreen.alphaTransition(1, 1)
+                .interactableTransition(true, 1)
+                .blocksRaycastsTransition(true, 1);
         }
 
         private void StopSpawners()
@@ -78,7 +94,7 @@ namespace Managers.Levels
         //need to set up keybinding for pause menu. P and Space?
         private void OnPauseKey()
         {
-            if (gameIsPaused)
+            if (GameIsPaused)
             {
                 Resume();
             }
@@ -90,22 +106,22 @@ namespace Managers.Levels
 
         private void Resume()
         {
-            PauseMenuUI.SetActive(false);
+            pauseMenuUI.SetActive(false);
             Time.timeScale = 1f;
-            gameIsPaused = false;
+            GameIsPaused = false;
         }
         private void Pause()
         {
-            PauseMenuUI.SetActive(true);
+            pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
-            gameIsPaused = true;
+            GameIsPaused = true;
         }
 
         //necessary for to halt spawners, player movement, etc
         //not currenlty implemented
         public bool IsGamePaused()
         {
-            return gameIsPaused;
+            return GameIsPaused;
         }
 
         public void ClosePauseMenu()
