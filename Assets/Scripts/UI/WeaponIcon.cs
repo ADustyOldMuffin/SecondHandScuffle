@@ -1,28 +1,33 @@
-﻿using System;
+﻿using Managers;
 using UnityEngine;
-
-using Managers;
+using UnityEngine.UI;
 using Weapons;
-using Image = UnityEngine.UIElements.Image;
 
-public class WeaponIcon : MonoBehaviour
+namespace UI
 {
-    [SerializeField] Sprite[] weaponIcons;
-    [SerializeField] GameObject _weaponIcon;
-
-
-    private void Awake()
+    public class WeaponIcon : MonoBehaviour
     {
-        LevelManager.OnPlayerWeaponChange += OnWeaponChangedUpdate;
-    }
+        [SerializeField] private Image weaponIcon;
 
-    private void OnDestroy()
-    {
-        LevelManager.OnPlayerWeaponChange -= OnWeaponChangedUpdate;
-    }
+        private void Awake()
+        {
+            if (EventBus.Instance is null)
+                return;
+        
+            EventBus.Instance.OnWeaponChange += OnWeaponChange;
+        }
 
-    private void OnWeaponChangedUpdate(BaseWeapon weapon)
-    {
-        _weaponIcon.GetComponent<UnityEngine.UI.Image>().sprite = weaponIcons[(int)weapon.type];
+        private void OnDisable()
+        {
+            if (EventBus.Instance is null)
+                return;
+
+            EventBus.Instance.OnWeaponChange -= OnWeaponChange;
+        }
+
+        private void OnWeaponChange(BaseWeapon oldWeapon, BaseWeapon newWeapon)
+        {
+            weaponIcon.sprite = newWeapon.weaponIcon;
+        }
     }
 }

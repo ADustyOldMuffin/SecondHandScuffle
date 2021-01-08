@@ -9,15 +9,7 @@ namespace Managers.Levels
     {
         private void Start()
         {
-            if (AudioManager.Instance == null)
-                return;
-            
-            AudioManager.Instance.PlayMainMenuMusic();
-        }
-
-        public void LoadSceneMenu(int menu)
-        {
-            LevelManager.Instance.LoadLevel(menu);
+            AudioManager.Instance?.PlayMainMenuMusic();
         }
     }
 }

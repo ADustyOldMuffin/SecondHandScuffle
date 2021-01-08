@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Constants;
-using Lean.Gui;
-using Lean.Transition;
-using Lean.Transition.Extras;
+﻿using Lean.Transition;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Managers.Levels
@@ -31,11 +23,8 @@ namespace Managers.Levels
 
         private void Awake()
         {
-            if (LevelManager.Instance == null)
-                return;
+            EventBus.Instance.OnPlayerDeath += OnPlayerDeath;
             
-            LevelManager.Instance.SetPlayerScore(0);
-            LevelManager.OnPlayerDeath += PlayerDied;
             //can't get this to work. wip. learning input system. I did add P and space as pause options.
             //InputManager.Instance.InputMaster.UI.Pause.performed += OnPauseKey;
             enemySpawners = FindObjectsOfType<EnemySpawner>();
@@ -43,27 +32,16 @@ namespace Managers.Levels
             if (AudioManager.Instance == null)
                 return;
 
-            musicVolumeSlider.value = AudioManager.Instance.GetMusicLinearVolume();
-            sfxVolumeSlider.value = AudioManager.Instance.GetSfxLinearVolume();
+            musicVolumeSlider.value = AudioManager.GetMusicLinearVolume();
+            sfxVolumeSlider.value = AudioManager.GetSfxLinearVolume();
         }
 
-        private void Start()
+        private void OnDisable()
         {
-            if (AudioManager.Instance == null)
-                return;
-
-            StartCoroutine(AudioManager.Instance.PlayBattleTheme());
+            EventBus.Instance.OnPlayerDeath -= OnPlayerDeath;
         }
 
-        
-
-
-        private void OnDestroy()
-        {
-            LevelManager.OnPlayerDeath -= PlayerDied;
-        }
-
-        private void PlayerDied()
+        private void OnPlayerDeath()
         {
             StopSpawners();
             GameIsPaused = true;
@@ -75,6 +53,11 @@ namespace Managers.Levels
             gameOverScreen.alphaTransition(1, 1)
                 .interactableTransition(true, 1)
                 .blocksRaycastsTransition(true, 1);
+        }
+
+        private void Start()
+        {
+            StartCoroutine(AudioManager.Instance?.PlayBattleTheme());
         }
 
         private void StopSpawners()
@@ -127,12 +110,6 @@ namespace Managers.Levels
         public void ClosePauseMenu()
         {
             Resume();
-        }
-
-        //used for restart and main menu buttons
-        public void LoadScene(int level)
-        {
-            LevelManager.Instance.LoadLevel(level);
         }
 
         public void OnMusicVolumeChanged()

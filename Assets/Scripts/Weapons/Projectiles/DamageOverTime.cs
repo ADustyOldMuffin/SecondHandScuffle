@@ -30,7 +30,7 @@ namespace Weapons.Projectiles
             {
                 _currentTime = 0.0f;
                 _ticksPassed += 1;
-                _enemy.Damage(DamagePerTick, 0.5f, new Vector2(Random.Range(-1, 2), Random.Range(-1, 2)));
+                _enemy.ChangeHealth(-DamagePerTick);
             }
             
             if(_ticksPassed >= Ticks)

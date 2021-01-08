@@ -8,11 +8,14 @@ namespace Managers.Levels
     {
         public class OpeningCinematicManger : MonoBehaviour
         {
+            private void Start()
+            {
+                AudioManager.Instance?.PlayCinematicMusic();
+            }
+            
             public void LoadSceneMenu(int menu)
             {
-                LevelManager.Instance.LoadLevel(menu);
+                EventBus.Instance?.ChangeLevel(menu);
             }
-
-
         }
     }

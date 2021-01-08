@@ -56,7 +56,7 @@ namespace Player
             if (_isDead)
                 return;
             
-            LevelManager.PlayerDied();
+            EventBus.Instance?.PlayerDied();
             _isDead = true;
         }
 

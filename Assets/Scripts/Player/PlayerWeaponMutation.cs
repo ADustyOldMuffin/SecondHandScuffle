@@ -8,17 +8,16 @@ using Random = UnityEngine.Random;
 
 namespace Player
 {
-    public class PlayerWeapon : MonoBehaviour
+    public class PlayerWeaponMutation : MonoBehaviour
     {
         [SerializeField] private GameObject[] weapons;
         [SerializeField] private Transform weaponHolder;
         [SerializeField] private float mutationTime = 20f;
-        [SerializeField] private AudioSource mutationSound;
 
         private GameObject _currentWeapon;
         private readonly List<int> _chosenIndexes = new List<int>();
         private int _currentWeaponIndex;
-        [SerializeField] private float _currentMutationTime;
+        private float _currentMutationTime;
 
         private void Start()
         {
@@ -28,7 +27,6 @@ namespace Player
             _currentWeapon.transform.position = weaponHolder.position;
             _currentWeapon.transform.rotation = weaponHolder.rotation;
             _currentMutationTime = mutationTime;
-            LevelManager.PlayerWeaponChanged(_currentWeapon.GetComponent<BaseWeapon>());
         }
 
         private void FixedUpdate()
@@ -45,6 +43,7 @@ namespace Player
         private void SetNewRandomWeapon()
         {
             var newIndex = _currentWeaponIndex;
+            var oldWeapon = _currentWeapon.GetComponent<BaseWeapon>();
             
             // If we've rotated through all of them then just pick one, if not pick a new one
             if (_chosenIndexes.Count == weapons.Length)
@@ -71,16 +70,7 @@ namespace Player
                 _currentWeapon.transform.rotation = weaponHolder.rotation;
             }
 
-            LevelManager.PlayerWeaponChanged(_currentWeapon.GetComponent<BaseWeapon>());
-            LevelManager.Instance.IncreaseScore(1);
+            EventBus.Instance?.WeaponChanged(oldWeapon, _currentWeapon.GetComponent<BaseWeapon>());
         }
-
-        public int GetCurrentWeaponIndex()
-        {
-            return _currentWeaponIndex;
-        }
-
-
     }
-
 }

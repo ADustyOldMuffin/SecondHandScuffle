@@ -23,8 +23,6 @@ public class DialogueManager : MonoBehaviour
     {
         if(LevelManager.Instance == null)
             return;
-        
-        LevelManager.OnPlayerWeaponChange += UpdateDialogue;
     }
 
     public void UpdateDialogue(BaseWeapon weapon)
@@ -32,7 +30,7 @@ public class DialogueManager : MonoBehaviour
 
         if (LevelManager.Instance == null || 
            LevelManager.Instance.Player == null || 
-           !LevelManager.Instance.Player.TryGetComponent(out PlayerWeapon currentWeapon))
+           !LevelManager.Instance.Player.TryGetComponent(out PlayerWeaponMutation currentWeapon))
             return;
 
         Dialogue newDialogue;

@@ -23,13 +23,13 @@ namespace Weapons.Projectiles
             if (other.CompareTag("Player") && _currentTravelTime > moveAwayForTime)
             {
                 // We do this because we'll need to update the UI and so we can just do the player and the UI in an event.
-                LevelManager.PlayerWeaponReturned();
+                EventBus.Instance?.WeaponProjectileReturned(gameObject);
                 Destroy(gameObject);
             }
             else if (!HurtsPlayer && other.CompareTag("Enemy"))
             {
                 // If it's an enemy, then we're just going to damage them.
-                other.GetComponent<EnemyHealth>().Damage(DamageAmount);
+                other.GetComponent<EnemyHealth>().ChangeHealth(-DamageAmount);
             }
         }
 

@@ -29,6 +29,7 @@ namespace Weapons
 
         public WeaponType type;
         public string weaponName;
+        public Sprite weaponIcon;
         [SerializeField]  public Dialogue[] objectDialogue;
 
         protected virtual void Awake()
@@ -39,7 +40,6 @@ namespace Weapons
             InputManager.Instance.InputMaster.Player.Attack.performed += OnAttackAction;
             Facing = Vector2.down;
             SetAnimation();
-            LevelManager.OnPlayerDirectionChanged(Facing);
         }
 
         protected virtual void OnEnable()
@@ -99,7 +99,6 @@ namespace Weapons
             {
                 IsAttacking = true;
                 Facing = newValue;
-                LevelManager.OnPlayerDirectionChanged(Facing);
             }
             
             SetAnimation();

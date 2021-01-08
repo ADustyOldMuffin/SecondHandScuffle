@@ -18,14 +18,20 @@ namespace Weapons
         {
             base.Awake();
 
-            LevelManager.OnPlayerWeaponReturn += OnBoomerangReturn;
+            if (EventBus.Instance is null)
+                return;
+
+            EventBus.Instance.OnPlayerProjectileReturn += OnBoomerangReturn;
         }
 
-        protected override void OnDestroy()
+        protected override void OnDisable()
         {
-            base.OnDestroy();
+            base.OnDisable();
+            
+            if (EventBus.Instance is null)
+                return;
 
-            LevelManager.OnPlayerWeaponReturn -= OnBoomerangReturn;
+            EventBus.Instance.OnPlayerProjectileReturn -= OnBoomerangReturn;
         }
 
         protected override void OnAttack()
@@ -39,7 +45,7 @@ namespace Weapons
             spriteRenderer.enabled = _hasReturned =false;
         }
 
-        private void OnBoomerangReturn()
+        private void OnBoomerangReturn(GameObject _)
         {
             spriteRenderer.enabled = _hasReturned =true;
         }

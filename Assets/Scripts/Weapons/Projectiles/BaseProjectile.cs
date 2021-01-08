@@ -18,14 +18,17 @@ namespace Weapons.Projectiles
         {
             if (HurtsPlayer && other.CompareTag("Player"))
             {
-                // We do this because we'll need to update the UI and so we can just do the player and the UI in an event.
-                LevelManager.HurtPlayer(DamageAmount);
+                if (LevelManager.Instance is null)
+                    return;
+
+                // The value is subtracted because we want to damage the player.
+                EventBus.Instance?.ChangePlayerHealthRequest(-DamageAmount);
                 Destroy(gameObject);
             }
             else if (!HurtsPlayer && other.CompareTag("Enemy"))
             {
                 // If it's an enemy, then we're just going to damage them.
-                other.GetComponent<EnemyHealth>().Damage(DamageAmount);
+                other.GetComponent<EnemyHealth>().ChangeHealth(-DamageAmount);
                 Destroy(gameObject);
             }
         }

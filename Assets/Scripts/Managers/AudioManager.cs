@@ -53,12 +53,12 @@ namespace Managers
             PlayerPrefs.Save();
         }
 
-        public float GetMusicLinearVolume()
+        public static float GetMusicLinearVolume()
         {
             return DecibelsToLinear(PlayerPrefs.GetFloat("MusicVolume"));
         }
 
-        public float GetSfxLinearVolume()
+        public static float GetSfxLinearVolume()
         {
             return DecibelsToLinear(PlayerPrefs.GetFloat("SFXVolume"));
         }

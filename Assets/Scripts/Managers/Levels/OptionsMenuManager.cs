@@ -13,25 +13,24 @@ namespace Managers.Levels
         private void Start()
         {
             if (AudioManager.Instance == null)
-                return;
-
-            musicVolumeSlider.value = AudioManager.Instance.GetMusicLinearVolume();
-            sfxVolumeSlider.value = AudioManager.Instance.GetSfxLinearVolume();
+                return; 
+            musicVolumeSlider.value = AudioManager.GetMusicLinearVolume();
+            sfxVolumeSlider.value = AudioManager.GetSfxLinearVolume();
         }
 
         public void OnMusicVolumeChanged()
         {
-            AudioManager.Instance.SetMusicVolume(musicVolumeSlider.value);
+            AudioManager.Instance?.SetMusicVolume(musicVolumeSlider.value);
         }
 
         public void OnSfxVolumeChanged()
         {
-            AudioManager.Instance.SetSfxVolume(musicVolumeSlider.value);
+            AudioManager.Instance?.SetSfxVolume(musicVolumeSlider.value);
         }
 
         public void OnBackButtonPressed()
         {
-            LevelManager.Instance.ChangeLevel(Level.MainMenu);
+            LevelManager.Instance?.ChangeLevel(Level.MainMenu);
         }
     }
 }

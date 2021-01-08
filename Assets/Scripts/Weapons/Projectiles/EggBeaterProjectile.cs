@@ -11,31 +11,9 @@ namespace Weapons.Projectiles
         protected override bool HurtsPlayer { get; } = false;
         protected override int DamageAmount { get; } = 1;
 
-        private const int StartDamageAmount = 3;
-
         protected override void OnCollisionEnter2D(Collision2D other)
         {
             return;
-        }
-
-        protected override void OnTriggerEnter2D(Collider2D other)
-        {
-            if (HurtsPlayer || !other.CompareTag("Enemy")) return;
-            
-            // If it's an enemy, then we're just going to damage them.
-            DamageEnemy(other.gameObject);
-        }
-
-        private void OnTriggerStay2D(Collider2D other)
-        {
-            if (!other.CompareTag("Enemy")) return;
-            
-            DamageEnemy(other.gameObject);
-        }
-
-        private static void DamageEnemy(GameObject enemy)
-        {
-            enemy.GetComponent<EnemyHealth>().Damage(StartDamageAmount, 2f, Vector2.zero);
         }
     }
 }

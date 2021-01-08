@@ -7,25 +7,30 @@ namespace Enemies
 {
     public class EnemyHealth : MonoBehaviour
     {
-        [SerializeField] private int enemyHealth;
+        [SerializeField] private int maxHealth;
 
         private int _currentHealth;
 
-        private void Awake()
+        private void Start()
         {
-            _currentHealth = enemyHealth;
+            _currentHealth = maxHealth;
         }
 
-        public void Damage(int amount, float knockBack = 0.0f, Vector2 direction = default)
+        private void Update()
         {
-            if (_currentHealth - amount <= 0)
-            {
+            if (_currentHealth <= 0)
                 StartCoroutine(Die());
-                return;
+        }
+
+        public void ChangeHealth(int amount)
+        {
+            if (amount < 0)
+            {
+                // We were damaged
+                StartCoroutine(Damaged());
             }
 
-            _currentHealth -= amount;
-            StartCoroutine(Damaged());
+            _currentHealth += amount;
         }
 
         private IEnumerator Die()
