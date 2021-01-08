@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6188740523664178134}
   - component: {fileID: 6188740523664178133}
   - component: {fileID: 6188740523664178132}
+  - component: {fileID: 4853381674124354976}
   - component: {fileID: 6188740523664178131}
   - component: {fileID: 3072567414814434107}
-  - component: {fileID: 2208684577687371507}
   - component: {fileID: 4530232204143233513}
   m_Layer: 10
   m_Name: VacuumEnemy
@@ -112,6 +112,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 1
+--- !u!114 &4853381674124354976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188740523664178130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9510f3be96911042bc3178ca8725e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minions: []
 --- !u!114 &6188740523664178131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,23 +159,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2208684577687371507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6188740523664178130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bbc6d6d02f9baa4a963bbea378f8dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minions:
-  - {fileID: 6625424208667510973, guid: 3e83e8b399b09ad4b91112a94f44cf67, type: 3}
-  spawnTimerMin: 2
-  spawnTimerMax: 10
-  range: 6
 --- !u!61 &4530232204143233513
 BoxCollider2D:
   m_ObjectHideFlags: 0
