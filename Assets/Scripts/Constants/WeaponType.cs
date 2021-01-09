@@ -9,6 +9,7 @@
         Toaster = 4,
         Walkman = 5,
         Wand = 6,
-        BaseballBat = 7 
+        BaseballBat = 7,
+        SuperSoaker = 8
     }
 }
