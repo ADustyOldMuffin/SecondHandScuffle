@@ -57,7 +57,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7734699362308992599}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.55, y: -0.361, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -125,7 +125,7 @@ Animator:
   m_GameObject: {fileID: 7734699362308992599}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c86df230dce1bc841ac7ac4b4bf21c83, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -166,8 +166,8 @@ MonoBehaviour:
   fireRate: 0.5
   currentCooldown: 0
   animancer: {fileID: 8423180591396803382}
-  idles: {fileID: 0}
-  attacks: {fileID: 0}
+  idles: {fileID: 11400000, guid: 071ac15d00643e94589e703cedae4bcc, type: 2}
+  attacks: {fileID: 11400000, guid: 16f3dea4ada5d7e4ca5ac6dd1d1ac2b2, type: 2}
   type: 8
   weaponName: Super Soaker
   weaponIcon: {fileID: 0}
