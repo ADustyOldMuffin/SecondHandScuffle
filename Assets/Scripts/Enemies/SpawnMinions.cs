@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Managers;
+using Managers.Levels;
 
 public class SpawnMinions : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class SpawnMinions : MonoBehaviour
     [SerializeField] float range = 6f;
     private bool inRange = false;
     bool spawn = true;
+    MainGameManager gameManager;
+
+    void Awake()
+    {
+        gameManager = FindObjectOfType<MainGameManager>();
+    }
 
     IEnumerator Start()
     {
@@ -21,7 +28,7 @@ public class SpawnMinions : MonoBehaviour
 
             yield return new WaitForSecondsRealtime(Random.Range(spawnTimerMin, spawnTimerMax));
             InRange();
-            if (spawn && inRange) { myAnimator.SetTrigger("isSpawning"); }
+            if (spawn && inRange && !gameManager.IsGamePaused()) { myAnimator.SetTrigger("isSpawning"); }
 
         }
     }

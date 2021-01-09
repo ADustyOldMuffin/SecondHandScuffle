@@ -254,7 +254,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
             ""id"": ""58430452-a140-41aa-99fe-ae55e9363395"",
             ""actions"": [
                 {
-                    ""name"": ""Pause"",
+                    ""name"": ""TogglePause"",
                     ""type"": ""Button"",
                     ""id"": ""30c0ac1d-36b9-4520-ae06-8f9ea293cfe5"",
                     ""expectedControlType"": ""Button"",
@@ -262,7 +262,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Mute"",
+                    ""name"": ""ToggleMute"",
                     ""type"": ""Button"",
                     ""id"": ""ab664ead-e00e-491a-9825-5183e6ec5b0c"",
                     ""expectedControlType"": ""Button"",
@@ -278,7 +278,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pause"",
+                    ""action"": ""TogglePause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -289,7 +289,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pause"",
+                    ""action"": ""TogglePause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -300,7 +300,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Mute"",
+                    ""action"": ""ToggleMute"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -318,8 +318,8 @@ public class @MasterInput : IInputActionCollection, IDisposable
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-        m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
-        m_UI_Mute = m_UI.FindAction("Mute", throwIfNotFound: true);
+        m_UI_TogglePause = m_UI.FindAction("TogglePause", throwIfNotFound: true);
+        m_UI_ToggleMute = m_UI.FindAction("ToggleMute", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -434,14 +434,14 @@ public class @MasterInput : IInputActionCollection, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private IUIActions m_UIActionsCallbackInterface;
-    private readonly InputAction m_UI_Pause;
-    private readonly InputAction m_UI_Mute;
+    private readonly InputAction m_UI_TogglePause;
+    private readonly InputAction m_UI_ToggleMute;
     public struct UIActions
     {
         private @MasterInput m_Wrapper;
         public UIActions(@MasterInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Pause => m_Wrapper.m_UI_Pause;
-        public InputAction @Mute => m_Wrapper.m_UI_Mute;
+        public InputAction @TogglePause => m_Wrapper.m_UI_TogglePause;
+        public InputAction @ToggleMute => m_Wrapper.m_UI_ToggleMute;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -451,22 +451,22 @@ public class @MasterInput : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_UIActionsCallbackInterface != null)
             {
-                @Pause.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPause;
-                @Mute.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMute;
-                @Mute.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMute;
-                @Mute.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMute;
+                @TogglePause.started -= m_Wrapper.m_UIActionsCallbackInterface.OnTogglePause;
+                @TogglePause.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnTogglePause;
+                @TogglePause.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnTogglePause;
+                @ToggleMute.started -= m_Wrapper.m_UIActionsCallbackInterface.OnToggleMute;
+                @ToggleMute.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnToggleMute;
+                @ToggleMute.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnToggleMute;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
-                @Mute.started += instance.OnMute;
-                @Mute.performed += instance.OnMute;
-                @Mute.canceled += instance.OnMute;
+                @TogglePause.started += instance.OnTogglePause;
+                @TogglePause.performed += instance.OnTogglePause;
+                @TogglePause.canceled += instance.OnTogglePause;
+                @ToggleMute.started += instance.OnToggleMute;
+                @ToggleMute.performed += instance.OnToggleMute;
+                @ToggleMute.canceled += instance.OnToggleMute;
             }
         }
     }
@@ -481,7 +481,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
     }
     public interface IUIActions
     {
-        void OnPause(InputAction.CallbackContext context);
-        void OnMute(InputAction.CallbackContext context);
+        void OnTogglePause(InputAction.CallbackContext context);
+        void OnToggleMute(InputAction.CallbackContext context);
     }
 }

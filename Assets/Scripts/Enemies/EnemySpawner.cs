@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Managers;
+using Managers.Levels;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -11,14 +12,20 @@ public class EnemySpawner : MonoBehaviour
 
     bool spawn = true;
     int upperRangeOfEnemyChoice = 1;
+    MainGameManager gameManager;
+
+    void Awake()
+    {
+        gameManager = FindObjectOfType<MainGameManager>();
+    }
 
     IEnumerator Start()
     {
         while (spawn)
         {
-
+            Debug.Log(spawn + " " + !gameManager.IsGamePaused());
             yield return new WaitForSecondsRealtime(Random.Range(spawnTimerMin, spawnTimerMax));
-            if (spawn) { SpawnEnemies(); }
+            if (spawn && !gameManager.IsGamePaused()) { Debug.Log("spawning");  SpawnEnemies(); }
 
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Lean.Transition;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 namespace Managers.Levels
 {
@@ -23,17 +24,25 @@ namespace Managers.Levels
 
         private void Awake()
         {
-            if (AudioManager.Instance is null || EventBus.Instance is null)
+            if (InputManager.Instance is null)
                 return;
-            
-            EventBus.Instance.OnPlayerDeath += OnPlayerDeath;
-            
-            //can't get this to work. wip. learning input system. I did add P and space as pause options.
-            //InputManager.Instance.InputMaster.UI.Pause.performed += OnPauseKey;
+
+            EventBus.Instance.OnPlayerDeath += OnPlayerDeath;           
+
+            InputManager.Instance.InputMaster.UI.TogglePause.performed += OnPauseKey;
+
             enemySpawners = FindObjectsOfType<EnemySpawner>();
 
             musicVolumeSlider.value = AudioManager.GetMusicLinearVolume();
             sfxVolumeSlider.value = AudioManager.GetSfxLinearVolume();
+        }
+
+        private void OnEnable()
+        {
+            if (InputManager.Instance is null)
+                return;
+
+            InputManager.Instance.InputMaster.UI.TogglePause.Enable();
         }
 
         private void OnDisable()
@@ -42,6 +51,10 @@ namespace Managers.Levels
                 return;
             
             EventBus.Instance.OnPlayerDeath -= OnPlayerDeath;
+
+            if (InputManager.Instance is null)
+                return;
+            InputManager.Instance.InputMaster.UI.TogglePause.Disable();
         }
 
         private void OnPlayerDeath()
@@ -78,7 +91,7 @@ namespace Managers.Levels
 
 
         //need to set up keybinding for pause menu. P and Space?
-        private void OnPauseKey()
+        private void OnPauseKey(InputAction.CallbackContext context)
         {
             if (GameIsPaused)
             {
@@ -113,6 +126,13 @@ namespace Managers.Levels
         public void ClosePauseMenu()
         {
             Resume();
+        }
+
+        public void LoadLevelFromPauseMenu(int level)
+        {
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+            EventBus.Instance?.ChangeLevel(level);
         }
 
         public void OnMusicVolumeChanged()

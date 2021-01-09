@@ -241,7 +241,7 @@
             "id": "58430452-a140-41aa-99fe-ae55e9363395",
             "actions": [
                 {
-                    "name": "Pause",
+                    "name": "TogglePause",
                     "type": "Button",
                     "id": "30c0ac1d-36b9-4520-ae06-8f9ea293cfe5",
                     "expectedControlType": "Button",
@@ -249,7 +249,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Mute",
+                    "name": "ToggleMute",
                     "type": "Button",
                     "id": "ab664ead-e00e-491a-9825-5183e6ec5b0c",
                     "expectedControlType": "Button",
@@ -265,7 +265,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pause",
+                    "action": "TogglePause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -276,7 +276,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pause",
+                    "action": "TogglePause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -287,7 +287,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Mute",
+                    "action": "ToggleMute",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
