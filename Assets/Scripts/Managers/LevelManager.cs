@@ -68,5 +68,13 @@ namespace Managers
         {
             Player = player;
         }
+
+        public int GetPlayerCurrentHealth()
+        {
+            if (Player is null || !Player.TryGetComponent(out PlayerHealth health))
+                return 0;
+
+            return health.GetPlayerHealth();
+        }
     }
 }

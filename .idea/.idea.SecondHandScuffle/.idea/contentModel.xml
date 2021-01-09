@@ -719,6 +719,7 @@
             <e p="EnemyProjectile.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
             <e p="SpawnMinions.cs" t="Include" />
+            <e p="SpawnMinionsOnDeath.cs" t="Include" />
           </e>
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
@@ -744,6 +745,7 @@
           <e p="SyncTransformWithTarget.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="CutoutMask.cs" t="Include" />
+            <e p="HealthGUI.cs" t="Include" />
             <e p="WeaponIcon.cs" t="Include" />
           </e>
           <e p="Weapons" t="Include">
