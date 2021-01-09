@@ -23,14 +23,14 @@ namespace Managers.Levels
 
         private void Awake()
         {
+            if (AudioManager.Instance is null || EventBus.Instance is null)
+                return;
+            
             EventBus.Instance.OnPlayerDeath += OnPlayerDeath;
             
             //can't get this to work. wip. learning input system. I did add P and space as pause options.
             //InputManager.Instance.InputMaster.UI.Pause.performed += OnPauseKey;
             enemySpawners = FindObjectsOfType<EnemySpawner>();
-
-            if (AudioManager.Instance == null)
-                return;
 
             musicVolumeSlider.value = AudioManager.GetMusicLinearVolume();
             sfxVolumeSlider.value = AudioManager.GetSfxLinearVolume();
