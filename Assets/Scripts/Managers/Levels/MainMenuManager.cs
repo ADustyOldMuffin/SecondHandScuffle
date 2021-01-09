@@ -11,5 +11,10 @@ namespace Managers.Levels
         {
             AudioManager.Instance?.PlayMainMenuMusic();
         }
+
+        public void LoadLevelFromMenu(int level)
+        {
+            EventBus.Instance?.ChangeLevel(level);
+        }
     }
 }
