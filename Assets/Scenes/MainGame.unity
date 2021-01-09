@@ -1540,6 +1540,17 @@ PrefabInstance:
       propertyPath: _WeaponDialogue
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
+      propertyPath: weapons.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
+      propertyPath: weapons.Array.data[8]
+      value: 
+      objectReference: {fileID: 7734699362308992599, guid: 921292d59b266ce4f8faf9cc7e83fc0f,
+        type: 3}
     - target: {fileID: 1763867931160164617, guid: 439680f1d1118e64c971cadd04468592,
         type: 3}
       propertyPath: m_Name

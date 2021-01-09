@@ -176,9 +176,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   myRigidbody: {fileID: 2067199379860362648}
-  animancer: {fileID: 2643783567012341803}
-  idles: {fileID: 11400000, guid: 643c13f039797734e803969df2a837f0, type: 2}
-  moving: {fileID: 11400000, guid: 65fc4f2038d79914f9187a50ac7277ac, type: 2}
   spriteRenderer: {fileID: 0}
 --- !u!114 &5269804195241282793
 MonoBehaviour:
@@ -230,10 +227,9 @@ MonoBehaviour:
   - {fileID: 1747230381073024392, guid: 04c9c5f03bbf3c04cb140861f287bc5e, type: 3}
   - {fileID: 3925968148915112997, guid: e1e1ab0e5d5e11d4f92915f4d7012d90, type: 3}
   - {fileID: 929627748846965041, guid: ffeb4ebf3d7c3644e867f81d9d49a627, type: 3}
+  - {fileID: 7734699362308992599, guid: 921292d59b266ce4f8faf9cc7e83fc0f, type: 3}
   weaponHolder: {fileID: 273234653277260880}
   mutationTime: 10
-  mutationSound: {fileID: 0}
-  _currentMutationTime: 0
 --- !u!1 &1763867932049647614
 GameObject:
   m_ObjectHideFlags: 0
