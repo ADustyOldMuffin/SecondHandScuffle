@@ -27,7 +27,7 @@ TagManager:
   - EnemyProjectiles
   - FrontWall
   - Icon
-  - 
+  - TransitionScreen
   - 
   - 
   - 
@@ -66,4 +66,7 @@ TagManager:
     locked: 0
   - name: Icon
     uniqueID: 1977501627
+    locked: 0
+  - name: TransitionScreen
+    uniqueID: 3118849235
     locked: 0

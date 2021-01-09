@@ -7,14 +7,11 @@ namespace Managers.Levels
 {
     public class MainMenuManager : MonoBehaviour
     {
+
         private void Start()
         {
             AudioManager.Instance?.PlayMainMenuMusic();
         }
 
-        public void LoadLevelFromMenu(int level)
-        {
-            EventBus.Instance?.ChangeLevel(level);
-        }
     }
 }

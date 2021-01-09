@@ -27,10 +27,5 @@ namespace Managers.Levels
         {
             AudioManager.Instance?.SetSfxVolume(musicVolumeSlider.value);
         }
-
-        public void OnBackButtonPressed()
-        {
-            LevelManager.Instance?.ChangeLevel(Level.MainMenu);
-        }
     }
 }

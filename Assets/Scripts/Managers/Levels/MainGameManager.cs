@@ -22,6 +22,8 @@ namespace Managers.Levels
         [SerializeField] private Transform highlightCircle;
         [SerializeField] private CanvasGroup gameOverScreen;
 
+        public SceneTransitionLoader sceneTransitionLoader;
+
         private void Awake()
         {
             if (InputManager.Instance is null)
@@ -133,7 +135,8 @@ namespace Managers.Levels
         {
             Time.timeScale = 1f;
             GameIsPaused = false;
-            EventBus.Instance?.ChangeLevel(level);
+            pauseMenuUI.SetActive(false);
+            sceneTransitionLoader.TransitionToNewScene(level);
         }
 
         public void OnMusicVolumeChanged()
