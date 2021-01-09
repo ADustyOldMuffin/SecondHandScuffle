@@ -38,6 +38,9 @@ namespace Managers.Levels
 
         private void OnDisable()
         {
+            if (AudioManager.Instance is null || EventBus.Instance is null)
+                return;
+            
             EventBus.Instance.OnPlayerDeath -= OnPlayerDeath;
         }
 

@@ -33,8 +33,10 @@ namespace Managers
 
         private void Start()
         {
-            if (levelToLoadOnStart == Level.None)
+            if (levelToLoadOnStart == Level.None || EventBus.Instance is null)
                 return;
+
+            EventBus.Instance.OnLevelChangeRequest += ChangeLevel;
             
             EventBus.Instance?.ChangeLevel(levelToLoadOnStart);
         }
