@@ -55,6 +55,7 @@ namespace Managers.Levels
             if (InputManager.Instance is null)
                 return;
             InputManager.Instance.InputMaster.UI.TogglePause.Disable();
+            InputManager.Instance.InputMaster.UI.TogglePause.performed -= OnPauseKey;
         }
 
         private void OnPlayerDeath()
