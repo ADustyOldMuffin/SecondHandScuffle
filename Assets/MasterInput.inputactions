@@ -282,6 +282,17 @@
                 },
                 {
                     "name": "",
+                    "id": "10771843-9869-45bf-b2fa-a1f8bd1712ea",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TogglePause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "755d7a34-8cd2-434f-9d24-5558d85b3f3b",
                     "path": "<Keyboard>/m",
                     "interactions": "",
