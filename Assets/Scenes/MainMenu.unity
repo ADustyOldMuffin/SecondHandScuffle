@@ -1211,6 +1211,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransitionCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2696976031378191240, guid: aef02b4a3b131f749aa0d31273e69b4a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2696976031378191247, guid: aef02b4a3b131f749aa0d31273e69b4a,
         type: 3}
       propertyPath: m_Pivot.x
