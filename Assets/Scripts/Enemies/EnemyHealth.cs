@@ -19,7 +19,10 @@ namespace Enemies
         private void Update()
         {
             if (_currentHealth <= 0)
+            {
+                //Debug.Log("I'm dying");
                 StartCoroutine(Die());
+            }
         }
 
         public void ChangeHealth(int amount)
