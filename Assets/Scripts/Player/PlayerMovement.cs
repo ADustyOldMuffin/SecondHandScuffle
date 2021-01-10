@@ -1,6 +1,4 @@
-﻿using System;
-using Animancer;
-using Managers;
+﻿using Managers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,12 +6,11 @@ namespace Player
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] private float moveSpeed = 3f;
+        [SerializeField] private float moveSpeed = 3f, tweenTime = 0.25f;
         [SerializeField] private Rigidbody2D myRigidbody;
         [SerializeField] private SpriteRenderer spriteRenderer;
 
-        private Vector2 _facing;
-        private Vector2 _movement;
+        public Vector2 Movement { get; private set; }
 
         private void Start()
         {
@@ -22,11 +19,22 @@ namespace Player
 
             InputManager.Instance.InputMaster.Player.VerticalMovement.performed += OnVerticalMovement;
             InputManager.Instance.InputMaster.Player.HorizontalMovement.performed += OnHorizontalMovement;
+            EventBus.Instance.OnPlayerPushRequest += OnPlayerPushRequest;
+        }
+
+        private void OnPlayerPushRequest(Vector2 direction, float amount)
+        {
+            // We don't want to move if we're already moving.
+            if (LeanTween.isTweening(gameObject))
+                return;
+            
+            var movement = (Vector2)transform.position + (direction * amount);
+            LeanTween.move(gameObject, movement, tweenTime).setEase(LeanTweenType.easeOutBack);
         }
 
         private void FixedUpdate()
         {
-            var newMove = PixelMovementUtility.PixelPerfectClamp(_movement * (moveSpeed * Time.fixedDeltaTime), spriteRenderer.sprite.pixelsPerUnit);
+            var newMove = PixelMovementUtility.PixelPerfectClamp(Movement * (moveSpeed * Time.fixedDeltaTime), spriteRenderer.sprite.pixelsPerUnit);
             var oldPosition =
                 PixelMovementUtility.PixelPerfectClamp(myRigidbody.position, spriteRenderer.sprite.pixelsPerUnit);
             
@@ -52,16 +60,17 @@ namespace Player
 
             InputManager.Instance.InputMaster.Player.VerticalMovement.performed -= OnVerticalMovement;
             InputManager.Instance.InputMaster.Player.HorizontalMovement.performed -= OnHorizontalMovement;
+            EventBus.Instance.OnPlayerPushRequest -= OnPlayerPushRequest;
         }
 
         private void OnHorizontalMovement(InputAction.CallbackContext context)
         {
-            _movement.x = context.ReadValue<float>();
+            Movement = new Vector2(context.ReadValue<float>(), 0);
         }
 
         private void OnVerticalMovement(InputAction.CallbackContext context)
         {
-            _movement.y = context.ReadValue<float>();
+            Movement = new Vector2(0,context.ReadValue<float>());
         }
     }
 }

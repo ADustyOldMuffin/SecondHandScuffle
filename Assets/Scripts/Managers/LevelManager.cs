@@ -21,7 +21,7 @@ namespace Managers
         /// </summary>
         private static readonly Dictionary<Level, string> Levels = new Dictionary<Level, string>()
         {
-            {Level.Test, "TestScene"},
+            {Level.Test, "TestingRange"},
             {Level.OpeningAnimation, "OpeningAnimation"},
             {Level.MainMenu, "MainMenu"},
             {Level.Options, "Options"},
@@ -64,6 +64,11 @@ namespace Managers
             yield return new WaitForEndOfFrame();
             
             // Do anything else that needs to be done after loading a level
+            if (PlayerCameraManager.Instance is null)
+                throw new Exception("Player Camera Manager is null, but it shouldn't be!");
+            
+            var sceneCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+            PlayerCameraManager.Instance.SetCamera(sceneCamera);
         }
 
         public void SetPlayer(GameObject player)
@@ -77,6 +82,14 @@ namespace Managers
                 return 0;
 
             return health.GetPlayerHealth();
+        }
+
+        public Vector2 GetCurrentPlayerFacingDirection()
+        {
+            if (Player is null || !Player.TryGetComponent(out PlayerAnimation playerAnimation))
+                return Vector2.down;
+
+            return playerAnimation.Facing;
         }
     }
 }

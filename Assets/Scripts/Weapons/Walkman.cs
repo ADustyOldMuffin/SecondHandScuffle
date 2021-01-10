@@ -9,7 +9,8 @@ namespace Weapons
     public class Walkman : BaseWeapon
     {
         [SerializeField] private float diskSpread = .2f;
-        protected override void OnAttack()
+
+        protected override void OnAttackAction(InputAction.CallbackContext context)
         {
             if (currentCooldown > 0.0f)
                 return;

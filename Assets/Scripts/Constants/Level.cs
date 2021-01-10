@@ -8,6 +8,6 @@
         MainMenu = 3,
         Options = 4,
         MainGame = 5,
-        GameOver = 6
+        GameOver = 6,
     }
 }

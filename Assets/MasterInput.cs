@@ -259,7 +259,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""id"": ""30c0ac1d-36b9-4520-ae06-8f9ea293cfe5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""ToggleMute"",
@@ -267,7 +267,7 @@ public class @MasterInput : IInputActionCollection, IDisposable
                     ""id"": ""ab664ead-e00e-491a-9825-5183e6ec5b0c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [

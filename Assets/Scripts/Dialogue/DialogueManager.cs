@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
     public void UpdateDialogue(BaseWeapon weapon)
     {
 
-        if (LevelManager.Instance == null || 
+        /*if (LevelManager.Instance == null || 
            LevelManager.Instance.Player == null || 
            !LevelManager.Instance.Player.TryGetComponent(out PlayerWeaponMutation currentWeapon))
             return;
@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
         {
             newDialogue = weapon.objectDialogue[Random.Range(0, weapon.objectDialogue.Length)];
         }
-        textComponent.text = newDialogue.GetDialogue();
+        textComponent.text = newDialogue.GetDialogue();*/
 
     }
 

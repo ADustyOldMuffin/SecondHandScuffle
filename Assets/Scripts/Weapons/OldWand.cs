@@ -7,14 +7,9 @@ namespace Weapons
 {
     public class OldWand : BaseWeapon
     {
-        protected override void OnAttack()
+        protected override void OnAttackAction(InputAction.CallbackContext context)
         {
-            if (currentCooldown > 0.0f)
-                return;
-            
-            var proj = Instantiate(projectile, spawnPoint.position, transform.rotation);
-            proj.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
-            currentCooldown = fireRate;
+            throw new System.NotImplementedException();
         }
     }
 }

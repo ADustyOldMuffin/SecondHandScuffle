@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Managers;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace UI
@@ -33,15 +34,17 @@ namespace UI
             EventBus.Instance.OnPlayerHealthChange += OnPlayerHealthChange;
         }
 
-
         private void OnDisable()
         {
+            if (EventBus.Instance is null)
+                return;
+            
             EventBus.Instance.OnPlayerHealthChange -= OnPlayerHealthChange;
         }
 
         private void OnPlayerHealthChange(int newValue)
         {
-            _currentHealth = newValue;
+            _currentHealth += newValue;
             UpdateHearts();
         }
 
@@ -54,47 +57,48 @@ namespace UI
                 var heartRect = newHeart.GetComponent<RectTransform>();
                 heartRect.SetParent(container);
                 heartRect.anchoredPosition = heartPosition;
+                heartRect.localScale = new Vector3(1, 1, 1);
                 hearts.Add(newHeart);
 
                 if (hearts.Count % maxHeartsPerRow == 0)
                 {
                     heartPosition.x = initialPosition.x;
-                    heartPosition.y += initialPosition.y;
+                    heartPosition.y += spacingY;
                 }
                 else
                 {
-                    heartPosition.x += initialPosition.x;
+                    heartPosition.x += spacingX;
                 }
             }
         }
         
         private void UpdateHearts()
         {
-            var empty = false;
-            var i = 0;
+            var currentHeart = hearts.Count;
 
-            foreach (var heartImage in hearts.Select(heart => heart.GetComponent<Image>()))
+            for (var i = 0; i < hearts.Count; i++)
             {
-                if (empty)
+                var heartImage = hearts[i].GetComponent<Image>();
+
+                if (_currentHealth < (currentHeart * healthPerHeart) - (healthPerHeart - 1))
                 {
-                    heartImage.sprite = images[0];
+                    heartImage.sprite = images[images.Length - 1];
                 }
                 else
                 {
-                    i += 1;
-                    if (_currentHealth >= i * healthPerHeart)
+                    if (_currentHealth >= currentHeart * healthPerHeart)
                     {
-                        heartImage.sprite = images[images.Length - 1];
+                        heartImage.sprite = images[0];
                     }
                     else
                     {
-                        var currentHeartHealth = (healthPerHeart - (healthPerHeart * i - _currentHealth));
-                        var healthPerImage = Mathf.RoundToInt(healthPerHeart / images.Length);
-                        var imageIndex = currentHeartHealth / healthPerImage;
+                        var currentHeartHealth = (healthPerHeart - (healthPerHeart * currentHeart - _currentHealth));
+                        var imageIndex = healthPerHeart - currentHeartHealth;
                         heartImage.sprite = images[imageIndex];
-                        empty = true;
                     }
                 }
+                
+                currentHeart -= 1;
             }
         }
     }

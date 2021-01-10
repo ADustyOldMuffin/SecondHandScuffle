@@ -10,6 +10,7 @@ namespace Player
         [SerializeField] private int startingHealth;
         [SerializeField] private float graceTime = 2.0f;
         [SerializeField] private bool killPlayer = false;
+        [SerializeField] private bool canDie = true;
 
         private int _currentHealth = 0;
         private bool _isInvincible = false;
@@ -20,9 +21,12 @@ namespace Player
         {
             //start at full health
             _currentHealth = startingHealth;
+
+            if (LevelManager.Instance == null)
+                return;
             
-            if(LevelManager.Instance != null)
-                LevelManager.Instance.SetPlayer(gameObject);
+            LevelManager.Instance.SetPlayer(gameObject);
+            EventBus.Instance.OnPlayerHealthChangeRequest += OnPlayerHealthChange;
         }
 
         private void FixedUpdate()
@@ -39,16 +43,14 @@ namespace Player
             _currentGraceTime -= Time.fixedDeltaTime;
         }
 
-        public void DamagePlayer(int amount)
+        public void OnPlayerHealthChange(int amount)
         {
-            if (_currentHealth - amount <= 0)
+            if (_currentHealth + amount <= 0 && canDie)
             {
                 KillPlayer();
             }
 
-            _currentHealth -= amount;
-            _currentGraceTime = graceTime;
-            _isInvincible = true;
+            _currentHealth += amount;
         }
 
         private void KillPlayer()

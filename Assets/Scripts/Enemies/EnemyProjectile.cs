@@ -28,14 +28,7 @@ using Player;
         }
 
  
-        void OnTriggerEnter2D(Collider2D other)
-        {
-            if (other.tag == "Player")
-            {
-                other.gameObject.GetComponent<PlayerHealth>().DamagePlayer(attackPower);
-                Destroy(gameObject);
-            }
-        }
+        
 
 
 

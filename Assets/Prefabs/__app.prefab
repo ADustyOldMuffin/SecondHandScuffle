@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7700437442125384330}
   - component: {fileID: 384662919833075285}
   - component: {fileID: 7694070711568931100}
+  - component: {fileID: 5618155024070959807}
   m_Layer: 0
   m_Name: __app
   m_TagString: Untagged
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d4d7642b194192b5035fec4cd9241f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoadOnStart: 3
+  levelToLoadOnStart: 1
 --- !u!82 &384662919833075285
 AudioSource:
   m_ObjectHideFlags: 0
@@ -213,3 +214,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e415f21d7af4ca4807d9d2d4819b21a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5618155024070959807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011911535660286025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f0774917d841a29f8f7b7bf92dae6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowCameraShake: 1

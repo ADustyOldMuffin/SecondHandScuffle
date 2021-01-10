@@ -45,7 +45,23 @@ namespace Managers
         /// <summary>
         /// Called when a projectile the player threw is returned.
         /// </summary>
+        /// /// <para>Will be called with <c>(GameObject projectileGameObject).</c></para>
         public event Action<GameObject> OnPlayerProjectileReturn;
+
+        /// <summary>
+        /// Called when something wants to shake the camera.
+        /// </summary>
+        public event Action<string> OnCameraShakeRequest;
+
+        /// <summary>
+        /// Called when something wants to shake the camera in a specific direction
+        /// </summary>
+        public event Action<string, Vector2> OnCameraShakeDirectionRequest;
+        
+        /// <summary>
+        /// Called when something wants to push the player.
+        /// </summary>
+        public event Action<Vector2, float> OnPlayerPushRequest;
 
         /// <summary>
         /// Invoke <see cref="OnPlayerDeath"/>.
@@ -55,7 +71,10 @@ namespace Managers
             OnPlayerDeath?.Invoke();
         }
 
-        
+        /// <summary>
+        /// Invoke <see cref="OnPlayerHealthChangeRequest"/>
+        /// </summary>
+        /// <param name="changeAmount">The amount you wish to change the player's health by</param>
         public void ChangePlayerHealthRequest(int changeAmount)
         {
             OnPlayerHealthChange?.Invoke(changeAmount);
@@ -96,6 +115,35 @@ namespace Managers
         public void WeaponProjectileReturned(GameObject projectile)
         {
             OnPlayerProjectileReturn?.Invoke(projectile);
+        }
+
+        /// <summary>
+        /// Invoke <see cref="OnCameraShakeRequest"/>
+        /// </summary>
+        /// <param name="presetName">The name of the preset you wish to use.</param>
+        public void ShakeCameraRequest(string presetName)
+        {
+            OnCameraShakeRequest?.Invoke(presetName);
+        }
+
+        /// <summary>
+        /// Invoke <see cref="OnCameraShakeDirectionRequest"/>
+        /// </summary>
+        /// <param name="presetName">The name of the preset you wish to use.</param>
+        /// <param name="direction">The direction the shake should be in.</param>
+        public void ShakeCameraRequest(string presetName, Vector2 direction)
+        {
+            OnCameraShakeDirectionRequest?.Invoke(presetName, direction);
+        }
+
+        /// <summary>
+        /// Invoke <see cref="OnPlayerPushRequest"/>
+        /// </summary>
+        /// <param name="direction">The direction to push the player.</param>
+        /// <param name="amount">The amount to push the player.</param>
+        public void PlayerPushRequest(Vector2 direction, float amount)
+        {
+            OnPlayerPushRequest?.Invoke(direction, amount);
         }
     }
 }

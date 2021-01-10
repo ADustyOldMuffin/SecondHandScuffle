@@ -16,21 +16,17 @@ namespace Weapons
         
         [SerializeField] protected GameObject projectile;
         [SerializeField] protected Transform spawnPoint;
-        [SerializeField] protected float fireRate = .5f;
-        
-        [FormerlySerializedAs("_currentCooldown")] [SerializeField] protected float currentCooldown = 0.0f;
-
+        [SerializeField] protected float fireRate = 0.5f, knockBackDistance = 0.1f, currentCooldown = 0.0f;
         [SerializeField] protected AnimancerComponent animancer;
-        [SerializeField] protected DirectionalAnimationSet idles;
-        [SerializeField] protected DirectionalAnimationSet attacks;
-
+        [SerializeField] protected DirectionalAnimationSet idles, attacks;
+        
         protected Vector2 Facing;
-        protected bool IsAttacking;
 
         public WeaponType type;
         public string weaponName;
         public Sprite weaponIcon;
-        [SerializeField]  public Dialogue[] objectDialogue;
+        
+        protected abstract void OnAttackAction(InputAction.CallbackContext context);
 
         protected virtual void Awake()
         {
@@ -38,8 +34,7 @@ namespace Weapons
                 return;
             
             InputManager.Instance.InputMaster.Player.Attack.performed += OnAttackAction;
-            Facing = Vector2.down;
-            SetAnimation();
+            Facing = LevelManager.Instance.GetCurrentPlayerFacingDirection();
         }
 
         protected virtual void OnEnable()
@@ -64,49 +59,6 @@ namespace Weapons
                 return;
             
             InputManager.Instance.InputMaster.Player.Attack.performed -= OnAttackAction;
-        }
-
-        protected virtual void FixedUpdate()
-        {
-            if(IsAttacking)
-                OnAttack();
-            
-            if (currentCooldown >= 0.0f)
-                currentCooldown -= Time.fixedDeltaTime;
-            else
-            {
-                if (currentCooldown < 0)
-                    currentCooldown = 0;
-            }
-        }
-
-        private void SetAnimation()
-        {
-            var set = IsAttacking ? attacks : idles;
-            var clip = set.GetClip(Facing);
-            animancer.Play(clip);
-        }
-
-        protected virtual void OnAttackAction(InputAction.CallbackContext context)
-        {
-            var newValue = context.ReadValue<Vector2>();
-
-            if (newValue == Vector2.zero)
-            {
-                IsAttacking = false;
-            }
-            else
-            {
-                IsAttacking = true;
-                Facing = newValue;
-            }
-            
-            SetAnimation();
-        }
-
-        protected virtual void OnAttack()
-        {
-            throw new NotImplementedException();
         }
     }
 }

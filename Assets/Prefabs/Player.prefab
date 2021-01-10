@@ -175,8 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
+  tweenTime: 0.3
   myRigidbody: {fileID: 2067199379860362648}
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 8619684885597764275}
 --- !u!114 &5269804195241282793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +193,7 @@ MonoBehaviour:
   startingHealth: 6
   graceTime: 2
   killPlayer: 0
+  canDie: 1
 --- !u!114 &2643783567012341803
 MonoBehaviour:
   m_ObjectHideFlags: 0

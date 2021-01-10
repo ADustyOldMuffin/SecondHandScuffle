@@ -14,6 +14,11 @@ namespace Weapons
         private GameObject _projectile;
         private bool _hasReturned = true;
 
+        protected override void OnAttackAction(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
+        }
+
         protected override void Awake()
         {
             base.Awake();
@@ -32,17 +37,6 @@ namespace Weapons
                 return;
 
             EventBus.Instance.OnPlayerProjectileReturn -= OnBoomerangReturn;
-        }
-
-        protected override void OnAttack()
-        {
-            if (!_hasReturned)
-                return;
-            
-            _projectile = Instantiate(projectile, spawnPoint.position, transform.rotation);
-            _projectile.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
-            currentCooldown = fireRate;
-            spriteRenderer.enabled = _hasReturned =false;
         }
 
         private void OnBoomerangReturn(GameObject _)
