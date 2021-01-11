@@ -26,22 +26,21 @@ namespace Player
             if (LeanTween.isTweening(gameObject))
                 return;
             
-            var movement = (Vector2)transform.position + (direction * amount);
+            var movement = GetMovement() + (direction * amount);
             LeanTween.move(gameObject, movement, tweenTime).setEase(LeanTweenType.easeOutBack);
         }
 
         private void FixedUpdate()
         {
+            if (LeanTween.isTweening(gameObject))
+                return;
+            
             Movement = InputManager.Instance.InputMaster.Player.Movement.ReadValue<Vector2>();
             Movement = Vector2Int.RoundToInt(Movement);
 
-            Debug.Log(Movement);
+            var moveTo = GetMovement();
             
-            var newMove = PixelMovementUtility.PixelPerfectClamp(Movement * (moveSpeed * Time.fixedDeltaTime), spriteRenderer.sprite.pixelsPerUnit);
-            var oldPosition =
-                PixelMovementUtility.PixelPerfectClamp(myRigidbody.position, spriteRenderer.sprite.pixelsPerUnit);
-            
-            myRigidbody.MovePosition(oldPosition + newMove);
+            myRigidbody.MovePosition(moveTo);
         }
 
         private void OnEnable()
@@ -59,6 +58,18 @@ namespace Player
             
             InputManager.Instance.InputMaster.Player.Movement.Disable();
             EventBus.Instance.OnPlayerPushRequest -= OnPlayerPushRequest;
+        }
+
+        private Vector2 GetPixelPerfectVector(Vector2 vector)
+        {
+            return PixelMovementUtility.PixelPerfectClamp(vector, spriteRenderer.sprite.pixelsPerUnit);
+        }
+
+        private Vector2 GetMovement()
+        {
+            var newMove = GetPixelPerfectVector(Movement * (moveSpeed * Time.fixedDeltaTime));
+            var oldPosition = GetPixelPerfectVector(myRigidbody.position);
+            return oldPosition + newMove;
         }
     }
 }

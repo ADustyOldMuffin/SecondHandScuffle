@@ -14,7 +14,7 @@ namespace Weapons
     {
         protected override void OnAttackActionStarted(InputAction.CallbackContext context)
         {
-            //Debug.Log("Started!");
+            FireWeapon();
         }
 
         protected override void OnAttackActionCancelled(InputAction.CallbackContext context)
@@ -25,6 +25,13 @@ namespace Weapons
         protected override void OnAttackAction(InputAction.CallbackContext context)
         {
             //Debug.Log("Holding!");
+        }
+
+        private void FireWeapon()
+        {
+            var proj = Instantiate(projectile, spawnPoint.position, transform.rotation);
+            proj.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
+            EventBus.Instance.ShakeCameraRequest("PlayerGunShot_Shake", -Facing);
         }
     }
 }

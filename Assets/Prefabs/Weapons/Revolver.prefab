@@ -131,7 +131,7 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 1011586908619409441}
   fireRate: 0.6
-  knockBackDistance: 0.1
+  knockBackDistance: 0.25
   currentCooldown: 0
   animancer: {fileID: 2601836694575526793}
   idles: {fileID: 11400000, guid: 7d356be361ff1164f98fc0f1219380c4, type: 2}
