@@ -3009,6 +3009,7 @@ MonoBehaviour:
   sfxVolumeSlider: {fileID: 6010975855435114369}
   highlightCircle: {fileID: 914180036}
   gameOverScreen: {fileID: 1376900158}
+  sceneTransitionLoader: {fileID: 0}
 --- !u!4 &1469092181
 Transform:
   m_ObjectHideFlags: 0
