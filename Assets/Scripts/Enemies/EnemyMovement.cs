@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
+using Managers;
 
 namespace Enemies
 {
@@ -12,6 +13,7 @@ namespace Enemies
         [SerializeField] float stoppingDistance = 2f;
         Rigidbody2D myRGB;
         Vector2 aim;
+        public Animator myAnimator;
 
         //[Tooltip("if enemy is melee true, if not melee false")]
         //[SerializeField] bool isMeleeEnemy = true;
@@ -107,10 +109,36 @@ namespace Enemies
 
         private void FacethePlayer()
         {
-            Debug.Log(Mathf.Sign(target.transform.position.x - transform.position.x).ToString());
+            //Debug.Log(Mathf.Sign(target.transform.position.x - transform.position.x).ToString());
             transform.localScale = new Vector2(Mathf.Sign(target.transform.position.x - transform.position.x),1);
             //transform.localScale = new Vector2(Mathf.Sign(myRGB.velocity.x), 1);
 
         }
+
+        [SerializeField] public float thrust = .1f;
+        [SerializeField] public float knockTime = .1f;
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("PlayerProjectile"))
+            {
+                Vector2 difference = new Vector2(
+                    (transform.position.x - LevelManager.Instance.Player.transform.position.x), 
+                    (transform.position.y - LevelManager.Instance.Player.transform.position.y));
+                difference = difference * thrust;
+                Debug.Log(difference.ToString());
+                myRGB.AddForce(difference, ForceMode2D.Impulse);
+                StartCoroutine(KnockCo());
+            }
+        }
+
+        private IEnumerator KnockCo()
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRGB.velocity = Vector2.zero;
+            myAnimator.SetBool("hasBeenHit", false);
+
+        }
+
     }
 }

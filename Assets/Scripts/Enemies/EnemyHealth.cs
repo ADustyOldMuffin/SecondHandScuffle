@@ -8,6 +8,8 @@ namespace Enemies
     public class EnemyHealth : MonoBehaviour
     {
         [SerializeField] private int maxHealth;
+        public Animator myAnimator;
+        public EnemyMovement myMovement;
 
         private int _currentHealth;
 
@@ -46,6 +48,8 @@ namespace Enemies
         private IEnumerator Damaged()
         {
             // TODO Maybe play a damaged animation?
+            myAnimator.SetBool("hasBeenHit", true);
+            //myMovement.KnockBack();
             yield return null;
         }
     }
