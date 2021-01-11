@@ -14,6 +14,16 @@ namespace Weapons
         private GameObject _projectile;
         private bool _hasReturned = true;
 
+        protected override void OnAttackActionStarted(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void OnAttackActionCancelled(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
+        }
+
         protected override void OnAttackAction(InputAction.CallbackContext context)
         {
             throw new NotImplementedException();

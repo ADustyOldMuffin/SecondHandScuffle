@@ -131,16 +131,14 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 1011586908619409441}
   fireRate: 0.6
+  knockBackDistance: 0.1
   currentCooldown: 0
   animancer: {fileID: 2601836694575526793}
   idles: {fileID: 11400000, guid: 7d356be361ff1164f98fc0f1219380c4, type: 2}
   attacks: {fileID: 11400000, guid: dbd1a06c5767a4949a9a316813955309, type: 2}
   type: 0
   weaponName: Pistol
-  objectDialogue:
-  - {fileID: 11400000, guid: eeef062ff0159e54dbf2403fa2de7a3b, type: 2}
-  - {fileID: 11400000, guid: 1e2779186e4071b47ab2534c7d3d3ea9, type: 2}
-  - {fileID: 11400000, guid: 983abbee711590946aebec6a710cb83c, type: 2}
+  weaponIcon: {fileID: 21300000, guid: fcfbb0ee0c651724c945f9555b255ae4, type: 3}
 --- !u!95 &5710530039019400402
 Animator:
   serializedVersion: 3

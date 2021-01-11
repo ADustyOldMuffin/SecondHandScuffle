@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 5269804195241282793}
   - component: {fileID: 2643783567012341803}
   - component: {fileID: 710500471630046280}
+  - component: {fileID: 204056133794196150}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -232,6 +233,22 @@ MonoBehaviour:
   - {fileID: 7734699362308992599, guid: 921292d59b266ce4f8faf9cc7e83fc0f, type: 3}
   weaponHolder: {fileID: 273234653277260880}
   mutationTime: 10
+--- !u!114 &204056133794196150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763867931160164617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c51ad1793c433695b5c35ab68c5494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idles: {fileID: 11400000, guid: 643c13f039797734e803969df2a837f0, type: 2}
+  moving: {fileID: 11400000, guid: 65fc4f2038d79914f9187a50ac7277ac, type: 2}
+  animancer: {fileID: 2643783567012341803}
+  movementComponent: {fileID: 3831114935052951551}
 --- !u!1 &1763867932049647614
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,16 @@ namespace Weapons
 {
     public class SuperSoaker : BaseWeapon
     {
+        protected override void OnAttackActionStarted(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void OnAttackActionCancelled(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
+        }
+
         protected override void OnAttackAction(InputAction.CallbackContext context)
         {
             throw new NotImplementedException();

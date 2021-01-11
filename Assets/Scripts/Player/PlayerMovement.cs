@@ -17,8 +17,6 @@ namespace Player
             if (InputManager.Instance is null)
                 return;
 
-            InputManager.Instance.InputMaster.Player.VerticalMovement.performed += OnVerticalMovement;
-            InputManager.Instance.InputMaster.Player.HorizontalMovement.performed += OnHorizontalMovement;
             EventBus.Instance.OnPlayerPushRequest += OnPlayerPushRequest;
         }
 
@@ -34,6 +32,11 @@ namespace Player
 
         private void FixedUpdate()
         {
+            Movement = InputManager.Instance.InputMaster.Player.Movement.ReadValue<Vector2>();
+            Movement = Vector2Int.RoundToInt(Movement);
+
+            Debug.Log(Movement);
+            
             var newMove = PixelMovementUtility.PixelPerfectClamp(Movement * (moveSpeed * Time.fixedDeltaTime), spriteRenderer.sprite.pixelsPerUnit);
             var oldPosition =
                 PixelMovementUtility.PixelPerfectClamp(myRigidbody.position, spriteRenderer.sprite.pixelsPerUnit);
@@ -46,8 +49,7 @@ namespace Player
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.VerticalMovement.Enable();
-            InputManager.Instance.InputMaster.Player.HorizontalMovement.Enable();
+            InputManager.Instance.InputMaster.Player.Movement.Enable();
         }
 
         private void OnDisable()
@@ -55,22 +57,8 @@ namespace Player
             if (InputManager.Instance is null)
                 return;
             
-            InputManager.Instance.InputMaster.Player.VerticalMovement.Disable();
-            InputManager.Instance.InputMaster.Player.HorizontalMovement.Disable();
-
-            InputManager.Instance.InputMaster.Player.VerticalMovement.performed -= OnVerticalMovement;
-            InputManager.Instance.InputMaster.Player.HorizontalMovement.performed -= OnHorizontalMovement;
+            InputManager.Instance.InputMaster.Player.Movement.Disable();
             EventBus.Instance.OnPlayerPushRequest -= OnPlayerPushRequest;
-        }
-
-        private void OnHorizontalMovement(InputAction.CallbackContext context)
-        {
-            Movement = new Vector2(context.ReadValue<float>(), 0);
-        }
-
-        private void OnVerticalMovement(InputAction.CallbackContext context)
-        {
-            Movement = new Vector2(0,context.ReadValue<float>());
         }
     }
 }

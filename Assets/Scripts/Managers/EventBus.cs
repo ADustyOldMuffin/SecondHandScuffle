@@ -145,5 +145,10 @@ namespace Managers
         {
             OnPlayerPushRequest?.Invoke(direction, amount);
         }
+
+        public void PlayerFacingDirectionChange(Vector2 newDirection)
+        {
+            OnFacingDirectionChange?.Invoke(newDirection);
+        }
     }
 }

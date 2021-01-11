@@ -26,6 +26,8 @@ namespace Weapons
         public string weaponName;
         public Sprite weaponIcon;
         
+        protected abstract void OnAttackActionStarted(InputAction.CallbackContext context);
+        protected abstract void OnAttackActionCancelled(InputAction.CallbackContext context);
         protected abstract void OnAttackAction(InputAction.CallbackContext context);
 
         protected virtual void Awake()
@@ -33,8 +35,23 @@ namespace Weapons
             if (InputManager.Instance is null)
                 return;
             
+            InputManager.Instance.InputMaster.Player.Attack.started += OnAttackActionStarted;
             InputManager.Instance.InputMaster.Player.Attack.performed += OnAttackAction;
+            InputManager.Instance.InputMaster.Player.Attack.canceled += OnAttackActionCancelled;
             Facing = LevelManager.Instance.GetCurrentPlayerFacingDirection();
+            
+            EventBus.Instance.OnFacingDirectionChange += OnFacingDirectionChange;
+        }
+
+        private void Start()
+        {
+            SetIdleAnimation();
+        }
+
+        private void OnFacingDirectionChange(Vector2 newDirection)
+        {
+            Facing = newDirection;
+            SetIdleAnimation();
         }
 
         protected virtual void OnEnable()
@@ -51,14 +68,16 @@ namespace Weapons
                 return;
             
             InputManager.Instance.InputMaster.Player.Attack.Disable();
-        }
-
-        protected virtual void OnDestroy()
-        {
-            if (InputManager.Instance is null)
-                return;
             
+            InputManager.Instance.InputMaster.Player.Attack.started -= OnAttackActionStarted;
             InputManager.Instance.InputMaster.Player.Attack.performed -= OnAttackAction;
+            InputManager.Instance.InputMaster.Player.Attack.canceled -= OnAttackActionCancelled;
+        }
+        
+        private void SetIdleAnimation()
+        {
+            var clip = idles.GetClip(Facing);
+            animancer.Play(clip);
         }
     }
 }

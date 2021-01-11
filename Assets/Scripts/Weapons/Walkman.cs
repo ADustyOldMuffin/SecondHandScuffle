@@ -10,6 +10,16 @@ namespace Weapons
     {
         [SerializeField] private float diskSpread = .2f;
 
+        protected override void OnAttackActionStarted(InputAction.CallbackContext context)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override void OnAttackActionCancelled(InputAction.CallbackContext context)
+        {
+            throw new System.NotImplementedException();
+        }
+
         protected override void OnAttackAction(InputAction.CallbackContext context)
         {
             if (currentCooldown > 0.0f)

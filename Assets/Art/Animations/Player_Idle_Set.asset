@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eceeb59a892d074db28203df8e4cd3a, type: 3}
   m_Name: Player_Idle_Set
   m_EditorClassIdentifier: 
-  _Up: {fileID: 7400000, guid: f4077f176b469c84b9d5bf8d5e64028c, type: 2}
+  _Up: {fileID: 7400000, guid: ae201aca6fbbbf844bba1ff810f1efca, type: 2}
   _Right: {fileID: 7400000, guid: 36bd96ef60360f44cad429ad46a2e221, type: 2}
   _Down: {fileID: 7400000, guid: f4077f176b469c84b9d5bf8d5e64028c, type: 2}
   _Left: {fileID: 7400000, guid: 94cb3567ff5e9b644954ee353d803479, type: 2}
