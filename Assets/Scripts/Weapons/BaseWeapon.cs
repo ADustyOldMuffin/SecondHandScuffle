@@ -13,14 +13,15 @@ namespace Weapons
 {
     public abstract class BaseWeapon : MonoBehaviour
     {
-        
+        [SerializeField] protected int clipSize;
         [SerializeField] protected GameObject projectile;
         [SerializeField] protected Transform spawnPoint;
-        [SerializeField] protected float fireRate = 0.5f, knockBackDistance = 0.1f, currentCooldown = 0.0f;
+        [SerializeField] protected float fireRate = 0.5f, knockBackDistance = 0.0f, currentCooldown = 0.0f, reloadTime = 0.0f;
         [SerializeField] protected AnimancerComponent animancer;
         [SerializeField] protected DirectionalAnimationSet idles, attacks;
         
         protected Vector2 Facing;
+        protected int ammoCount;
 
         public WeaponType type;
         public string weaponName;
@@ -43,7 +44,7 @@ namespace Weapons
             EventBus.Instance.OnFacingDirectionChange += OnFacingDirectionChange;
         }
 
-        private void Start()
+        protected virtual void Start()
         {
             SetIdleAnimation();
         }
