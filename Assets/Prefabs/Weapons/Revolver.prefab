@@ -127,12 +127,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c1c1e7b2c641caa11f9f7ce289f692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clipSize: 6
   projectile: {fileID: 3466454029520823727, guid: 69ce97f5c57bfe542923299c759e41aa,
     type: 3}
   spawnPoint: {fileID: 1011586908619409441}
-  fireRate: 0.6
-  knockBackDistance: 0.25
+  fireRate: 0.1
+  knockBackDistance: 0
   currentCooldown: 0
+  reloadTime: 3
   animancer: {fileID: 2601836694575526793}
   idles: {fileID: 11400000, guid: 7d356be361ff1164f98fc0f1219380c4, type: 2}
   attacks: {fileID: 11400000, guid: dbd1a06c5767a4949a9a316813955309, type: 2}

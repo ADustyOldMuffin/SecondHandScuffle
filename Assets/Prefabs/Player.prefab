@@ -248,7 +248,6 @@ MonoBehaviour:
   idles: {fileID: 11400000, guid: 643c13f039797734e803969df2a837f0, type: 2}
   moving: {fileID: 11400000, guid: 65fc4f2038d79914f9187a50ac7277ac, type: 2}
   animancer: {fileID: 2643783567012341803}
-  movementComponent: {fileID: 3831114935052951551}
 --- !u!1 &1763867932049647614
 GameObject:
   m_ObjectHideFlags: 0
