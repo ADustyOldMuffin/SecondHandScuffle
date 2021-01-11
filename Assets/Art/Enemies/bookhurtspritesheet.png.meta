@@ -1,16 +1,28 @@
 fileFormatVersion: 2
-guid: f9f377b5aab7c33488eda316b07b5a2c
+guid: 82ff4d7e460421b46b7f24b8001908bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 863514904457239182
-    second: booksheet_0
+      213: 6420864594152595939
+    second: bookhurtspritesheet_0
   - first:
-      213: 8966580184310224148
-    second: booksheet_1
+      213: 8781277635542170370
+    second: bookhurtspritesheet_1
   - first:
-      213: -2490356785387626591
-    second: booksheet_2
+      213: 6294484965542391675
+    second: bookhurtspritesheet_2
+  - first:
+      213: -7633037345699107554
+    second: bookhurtspritesheet_3
+  - first:
+      213: 2444915820763385098
+    second: bookhurtspritesheet_4
+  - first:
+      213: -2948195267422638039
+    second: bookhurtspritesheet_5
+  - first:
+      213: -8977408297377903692
+    second: bookhurtspritesheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -132,13 +144,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: booksheet_0
+      name: bookhurtspritesheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 58
         width: 16
-        height: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8add620b32dbfb00800000000000000
-      internalID: 863514904457239182
+      spriteID: 3e12955445e7b1950800000000000000
+      internalID: 6420864594152595939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: booksheet_1
+      name: bookhurtspritesheet_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 20
+        y: 58
         width: 16
-        height: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4151edfab21bf6c70800000000000000
-      internalID: 8966580184310224148
+      spriteID: 20bb29cfb7d5dd970800000000000000
+      internalID: 8781277635542170370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: booksheet_2
+      name: bookhurtspritesheet_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 40
+        y: 58
         width: 16
-        height: 16
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,8 +200,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1af9cfab2b9707dd0800000000000000
-      internalID: -2490356785387626591
+      spriteID: b7fe03ff9b08a5750800000000000000
+      internalID: 6294484965542391675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bookhurtspritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 58
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d6054c9f0021690800000000000000
+      internalID: -7633037345699107554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bookhurtspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 58
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0d855a3cf51ee120800000000000000
+      internalID: 2444915820763385098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bookhurtspritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92039c44608e517d0800000000000000
+      internalID: -2948195267422638039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bookhurtspritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 36
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb4527c7b6d96380800000000000000
+      internalID: -8977408297377903692
       vertices: []
       indices: 
       edges: []

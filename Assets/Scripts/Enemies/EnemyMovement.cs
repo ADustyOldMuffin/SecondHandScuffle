@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
-using Managers;
 
 namespace Enemies
 {
@@ -17,6 +16,9 @@ namespace Enemies
         //[Tooltip("if enemy is melee true, if not melee false")]
         //[SerializeField] bool isMeleeEnemy = true;
 
+        //cached reference to player
+        PlayerHealth target;
+
         void Awake()
         {
             UpdateTargeting();
@@ -27,7 +29,6 @@ namespace Enemies
         // Start is called before the first frame update
         void Start()
         {
-            FacePlayer();
             MoveTowardsTarget();
         }
 
@@ -40,18 +41,18 @@ namespace Enemies
                 CheckToStopAndAttack();
             }
             **/
-                FacePlayer();
-                UpdateTargeting();
-                MoveTowardsTarget();
+            FacethePlayer();
+            UpdateTargeting();
+            MoveTowardsTarget();
         }
 
         void UpdateTargeting()
         {
-            if (FindObjectOfType<PlayerHealth>() != null)
+            if (GameObject.FindObjectOfType<PlayerHealth>() != null)
             {
                 //find player in scene by player health script
-                //target = FindObjectOfType<PlayerHealth>();
-                aim = (LevelManager.Instance.Player.transform.position - transform.position).normalized * currenMoveSpeed * Time.deltaTime;
+                target = FindObjectOfType<PlayerHealth>();
+                aim = (target.transform.position - transform.position).normalized * currenMoveSpeed * Time.deltaTime;
             }
             else //if no enemy stop
             {
@@ -62,7 +63,7 @@ namespace Enemies
 
         void MoveTowardsTarget()
         {
-            var newPosition = Vector2.MoveTowards(transform.position, LevelManager.Instance.Player.transform.position, currenMoveSpeed * Time.fixedDeltaTime);
+            var newPosition = Vector2.MoveTowards(transform.position, target.transform.position, currenMoveSpeed * Time.fixedDeltaTime);
             newPosition = PixelMovementUtility.PixelPerfectClamp(newPosition, 16);
             myRGB.MovePosition(newPosition);
         }
@@ -81,11 +82,11 @@ namespace Enemies
             {
                 currenMoveSpeed = baseMoveSpeed;
             }
-        }**/
-
+        }
+        **/
         public void PushBackAfterMeleeAttack()
         {
-            transform.position = Vector2.MoveTowards(transform.position, LevelManager.Instance.Player.transform.position, -1 * currenMoveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, -1 * currenMoveSpeed * Time.deltaTime);
 
         }
 
@@ -104,8 +105,11 @@ namespace Enemies
         }
         **/
 
-        private void FacePlayer()
+        private void FacethePlayer()
         {
+            Debug.Log(Mathf.Sign(target.transform.position.x - transform.position.x).ToString());
+            transform.localScale = new Vector2(Mathf.Sign(target.transform.position.x - transform.position.x),1);
+            //transform.localScale = new Vector2(Mathf.Sign(myRGB.velocity.x), 1);
 
         }
     }
