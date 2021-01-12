@@ -11,6 +11,7 @@ namespace Enemies
         [SerializeField] float baseMoveSpeed = 5f;
         private float currenMoveSpeed;
         [SerializeField] float stoppingDistance = 2f;
+        [SerializeField] private bool chasePlayer = true;
         Rigidbody2D myRGB;
         Vector2 aim;
         public Animator myAnimator;
@@ -65,6 +66,9 @@ namespace Enemies
 
         void MoveTowardsTarget()
         {
+            if (!chasePlayer)
+                return;
+            
             var newPosition = Vector2.MoveTowards(transform.position, target.transform.position, currenMoveSpeed * Time.fixedDeltaTime);
             newPosition = PixelMovementUtility.PixelPerfectClamp(newPosition, 16);
             myRGB.MovePosition(newPosition);

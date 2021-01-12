@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4c94d1d-4a4d-487b-9e45-7e6fa9e0b695" name="Default Changelist" comment="">
+    <list default="true" id="49eade06-9ed1-421e-b50c-5803b7a1a968" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MasterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MasterInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Constants/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Constants/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/HealthGUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthGUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingRange.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingRange.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,47 +21,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/PixelMovementUtility.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Constants/MusicClip.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/SyncTransformWithPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/SyncTransformWithTarget.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/PlayerHealthChangeEventArgs.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/WeaponChangeEventArgs.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/FacingDirectionChangeEventArgs.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/LevelChangeEventArgs.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Events/LevelChangeRequestEventArgs.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainMenuManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/OptionsMenuManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/OpeningManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/OpeningCinematicManger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponMutation.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/CutoutMask.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/WeaponIcon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventBus.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyHealth.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/BaseProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/BoomerangProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/DamageOverTime.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/EggBeaterProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Projectiles/WandProjectile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Boomerang.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemySpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/HealthGUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Constants/Level.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/IState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/StateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/States/MoveToTarget.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/Entities/BaseEntity.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/Entities/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Entities/BaseEntity.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/States/SearchForTarget.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" />
     </changedPaths>
   </component>
-  <component name="ProjectId" id="1mi3Up6wwKdVwgwg1ce8hpOBozD" />
+  <component name="ProjectId" id="1mw67La4GpdvFcHPUjNsBuNg8AQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -85,10 +64,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23024">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8144">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23024" />
+      <option name="pid" value="8144" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -98,13 +77,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a4c94d1d-4a4d-487b-9e45-7e6fa9e0b695" name="Default Changelist" comment="" />
-      <created>1609962605885</created>
+      <changelist id="49eade06-9ed1-421e-b50c-5803b7a1a968" name="Default Changelist" comment="" />
+      <created>1610392140806</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609962605885</updated>
-      <workItem from="1609962617796" duration="1500000" />
-      <workItem from="1609985747782" duration="34494000" />
+      <updated>1610392140806</updated>
+      <workItem from="1610392145571" duration="11331000" />
     </task>
     <servers />
   </component>
@@ -123,7 +101,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -132,17 +109,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/HealthGUI.cs</url>
-          <line>99</line>
-          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\SecondHandScuffle\Assets\Scripts\UI\HealthGUI.cs" initialLine="99" containingFunctionPresentation="method 'UpdateHearts'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\SecondHandScuffle\Assets\Scripts\States\MoveToTarget.cs" initialLine="38" containingFunctionPresentation="method 'Tick'">
             <startOffsets>
-              <option value="3138" />
+              <option value="1112" />
             </startOffsets>
             <endOffsets>
-              <option value="3156" />
+              <option value="1143" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

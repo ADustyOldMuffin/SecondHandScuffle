@@ -19,14 +19,14 @@
                     "id": "1cff8075-4e1d-4736-894b-44b7e58555c5",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "Hold"
+                    "interactions": "Hold(duration=0.35)"
                 },
                 {
                     "name": "Look",
                     "type": "Value",
                     "id": "185f10b9-78fe-4bb0-bbbf-229eb2159c09",
                     "expectedControlType": "Vector2",
-                    "processors": "NormalizeVector2",
+                    "processors": "",
                     "interactions": "Press(behavior=2)"
                 }
             ],
