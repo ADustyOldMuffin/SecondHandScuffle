@@ -52,14 +52,14 @@ TagManager:
   - name: Enemy
     uniqueID: 3476200879
     locked: 0
+  - name: Obtacles
+    uniqueID: 1475789793
+    locked: 0
   - name: Player
     uniqueID: 1535124273
     locked: 0
   - name: InFrontOfPlayer_NoCollision
     uniqueID: 652906011
-    locked: 0
-  - name: Obtacles
-    uniqueID: 1475789793
     locked: 0
   - name: FrontWall
     uniqueID: 1584112659
