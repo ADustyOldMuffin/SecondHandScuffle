@@ -6107,6 +6107,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2067199379860362648, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 439680f1d1118e64c971cadd04468592, type: 3}
 --- !u!4 &444445659 stripped
@@ -6669,6 +6674,7 @@ MonoBehaviour:
   _pc2D: {fileID: 1685288976}
   ShakePresets:
   - {fileID: 11400000, guid: 6acdbf3a2c8593f40a79cee639ab80cc, type: 2}
+  - {fileID: 11400000, guid: f52c31f15de3a5840859551484cb414c, type: 2}
   ConstantShakePresets: []
   StartConstantShakePreset: {fileID: 0}
   CurrentConstantShakePreset: {fileID: 0}

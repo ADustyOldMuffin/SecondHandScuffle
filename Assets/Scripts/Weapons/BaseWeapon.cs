@@ -17,6 +17,7 @@ namespace Weapons
         [SerializeField] protected GameObject projectile;
         [SerializeField] protected Transform spawnPoint;
         [SerializeField] protected float fireRate = 0.5f, knockBackDistance = 0.0f, currentCooldown = 0.0f, reloadTime = 0.0f;
+        [SerializeField] protected string shakePresetName;
         [SerializeField] protected AnimancerComponent animancer;
         [SerializeField] protected DirectionalAnimationSet idles, attacks;
         

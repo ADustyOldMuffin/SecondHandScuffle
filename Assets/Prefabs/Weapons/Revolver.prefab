@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: -2043905176079681292}
   - component: {fileID: 5710530039019400402}
   - component: {fileID: 2601836694575526793}
+  - component: {fileID: 6973032396975186879}
   m_Layer: 12
   m_Name: Revolver
   m_TagString: Untagged
@@ -135,6 +136,7 @@ MonoBehaviour:
   knockBackDistance: 0
   currentCooldown: 0
   reloadTime: 3
+  shakePresetName: 
   animancer: {fileID: 2601836694575526793}
   idles: {fileID: 11400000, guid: 7d356be361ff1164f98fc0f1219380c4, type: 2}
   attacks: {fileID: 11400000, guid: dbd1a06c5767a4949a9a316813955309, type: 2}
@@ -174,3 +176,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Animator: {fileID: 5710530039019400402}
   _ActionOnDisable: 0
+--- !u!114 &6973032396975186879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299141832617873128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0e9ee5fbf340c4999cf643cf40ff76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipSize: 6
+  projectile: {fileID: 3466454029520823727, guid: 69ce97f5c57bfe542923299c759e41aa,
+    type: 3}
+  spawnPoint: {fileID: 1011586908619409441}
+  fireRate: 0.25
+  knockBackDistance: 0
+  currentCooldown: 0
+  reloadTime: 1.5
+  shakePresetName: PlayerGunShot_Shake
+  animancer: {fileID: 2601836694575526793}
+  idles: {fileID: 11400000, guid: 7d356be361ff1164f98fc0f1219380c4, type: 2}
+  attacks: {fileID: 11400000, guid: dbd1a06c5767a4949a9a316813955309, type: 2}
+  type: 0
+  weaponName: Revolver
+  weaponIcon: {fileID: 21300000, guid: fcfbb0ee0c651724c945f9555b255ae4, type: 3}

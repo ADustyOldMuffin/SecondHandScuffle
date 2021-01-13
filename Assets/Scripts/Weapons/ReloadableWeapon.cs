@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using Managers;
-using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Interactions;
 using Weapons.Projectiles;
 
 namespace Weapons
 {
-    public class Revolver : BaseWeapon
+    public class ReloadableWeapon : BaseWeapon
     {
         private bool _isFiring = false;
         private bool _canFire = true;
@@ -54,7 +50,8 @@ namespace Weapons
             
             var proj = Instantiate(projectile, spawnPoint.position, transform.rotation);
             proj.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
-            EventBus.Instance.ShakeCameraRequest("PlayerGunShot_Shake", -Facing);
+            EventBus.Instance.ShakeCameraRequest(shakePresetName, -Facing);
+            EventBus.Instance.PlayerPushRequest(-Facing, knockBackDistance);
             currentCooldown = fireRate;
             ammoCount -= 1;
 

@@ -1003,7 +1003,9 @@
             <e p="PlayerWeaponMutation.cs" t="Include" />
           </e>
           <e p="PlayerHealthBar.cs" t="Include" />
+          <e p="PositionRendererSorter.cs" t="Include" />
           <e p="SingletonBehavior.cs" t="Include" />
+          <e p="SortRelativeToPlayer.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
           <e p="States" t="Include">
             <e p="Idle.cs" t="Include" />
@@ -1036,6 +1038,7 @@
               <e p="WandProjectile.cs" t="Include" />
               <e p="WaterProjectile.cs" t="Include" />
             </e>
+            <e p="ReloadableWeapon.cs" t="Include" />
             <e p="Revolver.cs" t="Include" />
             <e p="SuperSoaker.cs" t="Include" />
             <e p="Toaster.cs" t="Include" />

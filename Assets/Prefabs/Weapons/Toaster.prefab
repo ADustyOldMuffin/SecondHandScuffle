@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6290915048901103425}
   - component: {fileID: 6290915048901103424}
-  - component: {fileID: 6290915048901103487}
   - component: {fileID: 3728115929130740583}
   - component: {fileID: 6326039619519744832}
+  - component: {fileID: 818617189358240400}
   m_Layer: 0
   m_Name: Toaster
   m_TagString: Untagged
@@ -85,32 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6290915048901103487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6290915048901103486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd692c4fb3b1464f8da80fa5287f1d64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 3398582381986195328, guid: dee837bff2ffb864f92a756dd5136d06,
-    type: 3}
-  spawnPoint: {fileID: 8920291292591591066}
-  fireRate: 1.2
-  currentCooldown: 0
-  animancer: {fileID: 6326039619519744832}
-  idles: {fileID: 11400000, guid: e8abddcf4e607c24e839cff523f1d645, type: 2}
-  attacks: {fileID: 11400000, guid: cc40ec51765935843b024eaed1e1dc97, type: 2}
-  type: 4
-  weaponName: Toaster
-  objectDialogue:
-  - {fileID: 11400000, guid: bfc6b2fa34077dc49a652aa9e266f8dd, type: 2}
-  - {fileID: 11400000, guid: bdb979e14a2fe404f896f82f7ce7f3e0, type: 2}
-  - {fileID: 11400000, guid: 6659922c1b41f2a458c69c39a8465933, type: 2}
 --- !u!95 &3728115929130740583
 Animator:
   serializedVersion: 3
@@ -144,6 +118,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Animator: {fileID: 3728115929130740583}
   _ActionOnDisable: 0
+--- !u!114 &818617189358240400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6290915048901103486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0e9ee5fbf340c4999cf643cf40ff76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipSize: 2
+  projectile: {fileID: 3398582381986195328, guid: dee837bff2ffb864f92a756dd5136d06,
+    type: 3}
+  spawnPoint: {fileID: 8920291292591591066}
+  fireRate: 1
+  knockBackDistance: 0
+  currentCooldown: 0
+  reloadTime: 2
+  shakePresetName: PlayerToasterShot_Shake
+  animancer: {fileID: 6326039619519744832}
+  idles: {fileID: 11400000, guid: e8abddcf4e607c24e839cff523f1d645, type: 2}
+  attacks: {fileID: 11400000, guid: cc40ec51765935843b024eaed1e1dc97, type: 2}
+  type: 4
+  weaponName: Toaster
+  weaponIcon: {fileID: 21300000, guid: eb38e5bede69b14418794dfb717f0c19, type: 3}
 --- !u!1 &7761488178260571189
 GameObject:
   m_ObjectHideFlags: 0

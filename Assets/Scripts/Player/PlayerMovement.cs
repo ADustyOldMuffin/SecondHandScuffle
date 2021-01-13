@@ -22,19 +22,18 @@ namespace Player
 
         private void OnPlayerPushRequest(Vector2 direction, float amount)
         {
-            // We don't want to move if we're already moving.
+            /*// We don't want to move if we're already moving.
             if (LeanTween.isTweening(gameObject))
                 return;
             
             var movement = GetMovement() + (direction * amount);
-            LeanTween.move(gameObject, movement, tweenTime).setEase(LeanTweenType.easeOutBack);
+            LeanTween.move(gameObject, movement, tweenTime).setEase(LeanTweenType.easeOutBack);*/
+            Debug.Log(direction.normalized * amount);
+            myRigidbody.AddForce(direction.normalized * amount);
         }
 
         private void FixedUpdate()
         {
-            if (LeanTween.isTweening(gameObject))
-                return;
-            
             Movement = InputManager.Instance.InputMaster.Player.Movement.ReadValue<Vector2>();
             Movement = Vector2Int.RoundToInt(Movement);
 

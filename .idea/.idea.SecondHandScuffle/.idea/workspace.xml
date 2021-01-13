@@ -2,16 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49eade06-9ed1-421e-b50c-5803b7a1a968" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/States/Idle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/States/Idle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SortRelativeToPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SortRelativeToPlayer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Main Camera.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ToastProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ToastProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Revolver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Revolver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Toaster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Toaster.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingRange.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingRange.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/GameOver.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/GameOver.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainGame.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainGame.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/MainMenu.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/OpeningAnimation.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/OpeningAnimation.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/Options.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/Options.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/_preload.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Scenes/_preload.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Toaster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Toaster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +57,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/ReloadableWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Toaster.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SortRelativeToPlayer.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mw67La4GpdvFcHPUjNsBuNg8AQ" />
@@ -65,10 +89,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11460">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11460" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -84,7 +108,8 @@
       <option name="presentableId" value="Default" />
       <updated>1610392140806</updated>
       <workItem from="1610392145571" duration="12103000" />
-      <workItem from="1610495823718" duration="3714000" />
+      <workItem from="1610495823718" duration="6209000" />
+      <workItem from="1610550112974" duration="892000" />
     </task>
     <servers />
   </component>
