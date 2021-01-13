@@ -22,14 +22,13 @@ namespace States
         public float TimeStuck;
         public bool ReachedEndOfPath;
 
-        public MoveToTarget(Enemy enemy, float speed, float nextWaypointDistance, ref int currentWaypoint, Rigidbody2D rigidbody, Transform graphics)
+        public MoveToTarget(Enemy enemy, float speed, float nextWaypointDistance, Rigidbody2D rigidbody, Transform graphics)
         {
             _enemy = enemy;
             _speed = speed;
             _nextWaypointDistance = nextWaypointDistance;
             _rigidbody = rigidbody;
             _graphics = graphics;
-            _currentWaypoint = currentWaypoint;
         }
 
         public void Tick()
@@ -37,9 +36,8 @@ namespace States
             if (_enemy.CurrentPath is null)
                 return;
 
-            if (_currentWaypoint >= _enemy.CurrentPath.vectorPath.Count)
+            if (_enemy.currentIndex >= _enemy.CurrentPath.vectorPath.Count)
             {
-                Debug.Log("End of path reached.");
                 ReachedEndOfPath = true;
                 return;
             }
@@ -47,24 +45,24 @@ namespace States
             ReachedEndOfPath = false;
             
             var position = _rigidbody.position;
-            var direction = ((Vector2)_enemy.CurrentPath.vectorPath[_currentWaypoint] - position).normalized;
-            var force = direction * (_speed * Time.fixedDeltaTime);
+            var newPos = Vector2.MoveTowards(position, (Vector2) _enemy.CurrentPath.vectorPath[_enemy.currentIndex],
+                _speed * Time.fixedDeltaTime);
             
-            _rigidbody.AddForce(force);
+            _rigidbody.MovePosition(newPos);
 
-            var distance = Vector2.Distance(position, _enemy.CurrentPath.vectorPath[_currentWaypoint]);
+            var distance = Vector2.Distance(position, _enemy.CurrentPath.vectorPath[_enemy.currentIndex]);
 
+            Debug.Log(distance);
             if (distance < _nextWaypointDistance)
             {
-                Debug.Log("Increasing waypoint");
-                _currentWaypoint++;
+                _enemy.currentIndex++;
             }
 
             if (Vector2.Distance(_enemy.transform.position, _lastPosition) <= .05f)
                 TimeStuck += Time.fixedDeltaTime;
 
             _lastPosition = _enemy.transform.position;
-            _graphics.localScale = force.x >= 0.01f ? new Vector3(-1f, 1f, 1f) : new Vector3(1f, 1f, 1f);
+            //_graphics.localScale = force.x >= 0.01f ? new Vector3(-1f, 1f, 1f) : new Vector3(1f, 1f, 1f);
         }
 
         public void OnEnter()

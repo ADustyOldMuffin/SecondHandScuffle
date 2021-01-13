@@ -1006,6 +1006,7 @@
           <e p="SingletonBehavior.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
           <e p="States" t="Include">
+            <e p="Idle.cs" t="Include" />
             <e p="MoveToTarget.cs" t="Include" />
             <e p="SearchForTarget.cs" t="Include" />
           </e>

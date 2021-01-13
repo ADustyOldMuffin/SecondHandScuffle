@@ -1,4 +1,5 @@
-﻿using Pathfinding;
+﻿using System;
+using Pathfinding;
 using States;
 using UnityEngine;
 
@@ -11,12 +12,24 @@ namespace Entities
             base.Awake();
             
             var search = new SearchForTarget(this,"Player");
-            var moveToTarget = new MoveToTarget(this, moveSpeed, nextWaypointDistance, ref CurrentIndex, myRigidbody, spriteContainer);
+            var moveToTarget = new MoveToTarget(this, moveSpeed, nextWaypointDistance
+                , myRigidbody, spriteContainer);
+            var idle = new Idle();
             
-            AddTransition(search, moveToTarget, () => Target != null);
-            AddTransition(moveToTarget, search, () => moveToTarget.TimeStuck > timeTillSearchWhenStuck);
+            AddTransition(search, moveToTarget, TargetFound());
+            AddTransition(search, idle, TargetMissing());
+            //AddTransition(moveToTarget, search, IsStuck());
+            AddTransition(moveToTarget, search, TargetMissing());
+            AddTransition(idle, search, ShouldAttack());
+
+            AddAnyTransition(idle, () => !shouldAttackPlayer);
             
             StateMachine.SetState(search);
+
+            Func<bool> TargetMissing() => () => Target == null;
+            Func<bool> IsStuck() => () => moveToTarget.TimeStuck > timeTillSearchWhenStuck;
+            Func<bool> TargetFound() => () => Target != null;
+            Func<bool> ShouldAttack() => () => shouldAttackPlayer;
             
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }
@@ -27,12 +40,12 @@ namespace Entities
                 return;
 
             CurrentPath = p;
-            CurrentIndex = 0;
+            currentIndex = 0;
         }
 
         public void UpdatePath()
         {
-            if (seeker.IsDone())
+            if (seeker.IsDone() && shouldAttackPlayer && StateMachine.CurrentState.GetType() == typeof(MoveToTarget))
             {
                 seeker.StartPath(myRigidbody.position, Target.transform.position, OnPathComplete);
                 Debug.Log("Checking path!");

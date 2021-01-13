@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49eade06-9ed1-421e-b50c-5803b7a1a968" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/States/Idle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/States/Idle.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MasterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MasterInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingRange.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingRange.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +32,13 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/Entities/BaseEntity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/Entities/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Entities/BaseEntity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/States/SearchForTarget.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/States/Idle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Entities/BaseEntity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mw67La4GpdvFcHPUjNsBuNg8AQ" />
@@ -64,10 +65,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8144">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11460">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8144" />
+      <option name="pid" value="11460" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -82,7 +83,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610392140806</updated>
-      <workItem from="1610392145571" duration="11331000" />
+      <workItem from="1610392145571" duration="12103000" />
+      <workItem from="1610495823718" duration="3714000" />
     </task>
     <servers />
   </component>
@@ -101,6 +103,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -109,17 +112,17 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs</url>
-          <line>36</line>
-          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\SecondHandScuffle\Assets\Scripts\States\MoveToTarget.cs" initialLine="38" containingFunctionPresentation="method 'Tick'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Users\Daniel Hix\Documents\Repositories\SecondHandScuffle\Assets\Scripts\Entities\MeleeEnemy.cs" initialLine="48" containingFunctionPresentation="method 'UpdatePath'">
             <startOffsets>
-              <option value="1112" />
+              <option value="1623" />
             </startOffsets>
             <endOffsets>
-              <option value="1143" />
+              <option value="1705" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="7" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
