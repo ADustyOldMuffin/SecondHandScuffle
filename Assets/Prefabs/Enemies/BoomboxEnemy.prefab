@@ -94,10 +94,11 @@ GameObject:
   - component: {fileID: 3270965442076929099}
   - component: {fileID: 3270965442076929204}
   - component: {fileID: 3270965442076929205}
-  - component: {fileID: 3270965442076929207}
   - component: {fileID: 3270965442076929200}
   - component: {fileID: 4102116214626056732}
   - component: {fileID: 8366465378299649672}
+  - component: {fileID: 972473269}
+  - component: {fileID: 972473273}
   m_Layer: 10
   m_Name: BoomboxEnemy
   m_TagString: Enemy
@@ -180,20 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
---- !u!114 &3270965442076929207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3270965442076929201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseMoveSpeed: 5
-  stoppingDistance: 6
+  myAnimator: {fileID: 0}
+  myMovement: {fileID: 0}
 --- !u!95 &3270965442076929200
 Animator:
   serializedVersion: 3
@@ -220,7 +209,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3270965442076929201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dad07016b076de4ca4469975cc51ae2, type: 3}
   m_Name: 
@@ -231,7 +220,8 @@ MonoBehaviour:
     type: 3}
   range: 6
   myAnimator: {fileID: 3270965442076929200}
-  movement: {fileID: 3270965442076929207}
+  movement: {fileID: 3270965442076929207, guid: acb20289e06313f48b22c7f28558041c,
+    type: 3}
 --- !u!61 &8366465378299649672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -258,3 +248,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.79, y: 0.11}
   m_EdgeRadius: 0
+--- !u!114 &972473269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270965442076929201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &972473273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3270965442076929201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecba54db0a754a54da9d3b07a458298b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  nextWaypointDistance: 0.5
+  timeTillSearchWhenStuck: 5
+  myRigidbody: {fileID: 3270965442076929099}
+  spriteContainer: {fileID: 3270965441895297282}
+  shouldAttackPlayer: 1
+  seeker: {fileID: 972473269}
+  currentIndex: 0
+  maxDistance: 6
+  enemyProjectile: {fileID: -7839479601897941267, guid: a74298062b106c840abddb4a5a10de2e,
+    type: 3}
+  minTimeBetweenShots: 1
+  maxTimeBetweenShots: 5
+  enemyAnimator: {fileID: 3270965442076929200}
