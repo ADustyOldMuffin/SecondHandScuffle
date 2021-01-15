@@ -31,8 +31,6 @@ namespace Managers
             if(!PlayerPrefs.HasKey("MusicVolume"))
                 PlayerPrefs.SetFloat("MusicVolume", 1.0f);
 
-            musicPlayer.pitch = .5f;
-
             SetMusicVolume(PlayerPrefs.GetFloat("MusicVolume", 1.0f));
             SetSfxVolume(PlayerPrefs.GetFloat("SFXVolume", 1.0f));
         }

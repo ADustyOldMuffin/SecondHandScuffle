@@ -58,6 +58,9 @@ TagManager:
   - name: Player
     uniqueID: 1535124273
     locked: 0
+  - name: DynamicLayer
+    uniqueID: 410573485
+    locked: 0
   - name: InFrontOfPlayer_NoCollision
     uniqueID: 652906011
     locked: 0

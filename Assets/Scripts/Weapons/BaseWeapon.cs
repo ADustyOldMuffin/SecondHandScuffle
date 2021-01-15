@@ -20,9 +20,10 @@ namespace Weapons
         [SerializeField] protected string shakePresetName;
         [SerializeField] protected AnimancerComponent animancer;
         [SerializeField] protected DirectionalAnimationSet idles, attacks;
+        [SerializeField] protected AudioSource attackSound;
         
         protected Vector2 Facing;
-        protected int ammoCount;
+        protected int AmmoCount;
 
         public WeaponType type;
         public string weaponName;

@@ -19,7 +19,7 @@ namespace Weapons
         {
             base.Start();
 
-            ammoCount = clipSize;
+            AmmoCount = clipSize;
         }
 
         private void FixedUpdate()
@@ -56,9 +56,9 @@ namespace Weapons
             proj.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
             EventBus.Instance.ShakeCameraRequest("PlayerGunShot_Shake", -Facing);
             currentCooldown = fireRate;
-            ammoCount -= 1;
+            AmmoCount -= 1;
 
-            if (ammoCount == 0)
+            if (AmmoCount == 0)
                 StartCoroutine(ReloadWeapon());
 
         }
@@ -67,7 +67,7 @@ namespace Weapons
         {
             _canFire = false;
             yield return new WaitForSeconds(reloadTime);
-            ammoCount = clipSize;
+            AmmoCount = clipSize;
             _canFire = true;
         }
     }
