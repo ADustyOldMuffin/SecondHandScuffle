@@ -39,6 +39,7 @@ namespace States
             if (_enemy.currentIndex >= _enemy.CurrentPath.vectorPath.Count)
             {
                 ReachedEndOfPath = true;
+                //Debug.Log("I am sitting on target"); 
                 return;
             }
 
@@ -67,7 +68,6 @@ namespace States
 
         public void OnEnter()
         {
-
         }
 
         public void OnExit()
