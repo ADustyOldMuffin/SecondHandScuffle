@@ -18,7 +18,6 @@
             <e p="info.txt" t="Include" />
           </e>
         </e>
-        <e p="KnockBack.cs" t="Include" />
         <e p="MasterInput.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Animancer" t="Include">
@@ -978,9 +977,11 @@
             <e p="BaseEntity.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="MeleeEnemy.cs" t="Include" />
+            <e p="RangedEnemy.cs" t="Include" />
           </e>
           <e p="IState.cs" t="Include" />
           <e p="KeepToPixelUnits.cs" t="Include" />
+          <e p="KnockBack.cs" t="Include" />
           <e p="Managers" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="EventBus.cs" t="Include" />
@@ -1009,6 +1010,7 @@
           <e p="SortRelativeToPlayer.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
           <e p="States" t="Include">
+            <e p="FireRangedAttack.cs" t="Include" />
             <e p="Idle.cs" t="Include" />
             <e p="MoveToTarget.cs" t="Include" />
             <e p="SearchForTarget.cs" t="Include" />
@@ -1017,6 +1019,8 @@
           <e p="UI" t="Include">
             <e p="CutoutMask.cs" t="Include" />
             <e p="HealthGUI.cs" t="Include" />
+            <e p="IWeaponStatusUI.cs" t="Include" />
+            <e p="PistolStatusGUI.cs" t="Include" />
             <e p="SceneTransitionLoader.cs" t="Include" />
             <e p="WeaponIcon.cs" t="Include" />
           </e>

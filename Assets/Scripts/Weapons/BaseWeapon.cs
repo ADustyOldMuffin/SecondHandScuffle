@@ -23,11 +23,12 @@ namespace Weapons
         [SerializeField] protected AudioSource attackSound;
         
         protected Vector2 Facing;
-        protected int AmmoCount;
-
+        
+        public int AmmoCount { get; protected set; }
         public WeaponType type;
         public string weaponName;
         public Sprite weaponIcon;
+        public GameObject weaponStatusObject;
         
         protected abstract void OnAttackActionStarted(InputAction.CallbackContext context);
         protected abstract void OnAttackActionCancelled(InputAction.CallbackContext context);

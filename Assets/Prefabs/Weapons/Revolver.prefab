@@ -177,6 +177,8 @@ MonoBehaviour:
   type: 0
   weaponName: Revolver
   weaponIcon: {fileID: 21300000, guid: fcfbb0ee0c651724c945f9555b255ae4, type: 3}
+  weaponStatusObject: {fileID: 5136202080550692981, guid: 54e26b39c130bbb488a662bb7802e749,
+    type: 3}
 --- !u!82 &1739538372629738169
 AudioSource:
   m_ObjectHideFlags: 0

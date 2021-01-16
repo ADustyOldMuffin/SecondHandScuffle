@@ -2,25 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49eade06-9ed1-421e-b50c-5803b7a1a968" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KeepToPixelUnits.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/KeepToPixelUnits.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/IWeaponStatusUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/IWeaponStatusUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PistolStatusGUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PistolStatusGUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecondHandScuffle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/regularbullet.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/regularbullet.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/toaster.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/toaster.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/RevolverProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/RevolverProjectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ToastProjectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectiles/ToastProjectile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/InGameUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/InGameUI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Revolver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Revolver.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Toaster.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Weapons/Toaster.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/__app.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Entities/RangedEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Entities/RangedEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/EventBus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/EventBus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponMutation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponMutation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/FireRangedAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/FireRangedAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/ReloadableWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/ReloadableWeapon.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,21 +45,28 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine/Entities/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/IState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/States/SearchForTarget.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/States/Idle.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Entities/BaseEntity.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Entities/Enemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Entities/MeleeEnemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Toaster.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SortRelativeToPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/ReloadableWeapon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PixelMovementUtility.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/KeepToPixelUnits.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/IWeaponStatusUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/BaseWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/States/MoveToTarget.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/Revolver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Levels/MainGameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/StateMachine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Entities/RangedEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/States/FireRangedAttack.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWeaponMutation.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/PistolStatusGUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/ReloadableWeapon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/EventBus.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1mw67La4GpdvFcHPUjNsBuNg8AQ" />
@@ -105,7 +114,8 @@
       <workItem from="1610392145571" duration="12103000" />
       <workItem from="1610495823718" duration="6209000" />
       <workItem from="1610550112974" duration="892000" />
-      <workItem from="1610675521187" duration="1425000" />
+      <workItem from="1610675521187" duration="2551000" />
+      <workItem from="1610757166207" duration="3074000" />
     </task>
     <servers />
   </component>

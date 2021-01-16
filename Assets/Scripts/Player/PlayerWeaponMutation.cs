@@ -27,6 +27,7 @@ namespace Player
             _currentWeapon.transform.position = weaponHolder.position;
             _currentWeapon.transform.rotation = weaponHolder.rotation;
             _currentMutationTime = mutationTime;
+            EventBus.Instance.WeaponChanged(null, _currentWeapon.GetComponent<BaseWeapon>());
         }
 
         private void FixedUpdate()

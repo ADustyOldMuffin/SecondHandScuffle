@@ -1,7 +1,9 @@
 ﻿using Lean.Transition;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using Weapons;
 
 namespace Managers.Levels
 {
@@ -17,19 +19,24 @@ namespace Managers.Levels
         //volume sliders
         [SerializeField] private Slider musicVolumeSlider;
         [SerializeField] private Slider sfxVolumeSlider;
-        
+
+        [SerializeField] private Transform weaponStatusContainer;
+
         [Header("Lean Animations")]
         [SerializeField] private Transform highlightCircle;
         [SerializeField] private CanvasGroup gameOverScreen;
 
         public SceneTransitionLoader sceneTransitionLoader;
 
+        private GameObject _currentStatusObject;
+
         private void Awake()
         {
             if (InputManager.Instance is null)
                 return;
 
-            EventBus.Instance.OnPlayerDeath += OnPlayerDeath;           
+            EventBus.Instance.OnPlayerDeath += OnPlayerDeath;
+            EventBus.Instance.OnWeaponChange += OnWeaponMutation;
 
             InputManager.Instance.InputMaster.UI.TogglePause.performed += OnPauseKey;
 
@@ -72,6 +79,22 @@ namespace Managers.Levels
             gameOverScreen.alphaTransition(1, 1)
                 .interactableTransition(true, 1)
                 .blocksRaycastsTransition(true, 1);
+        }
+
+        private void OnWeaponMutation(BaseWeapon originalWeapon, BaseWeapon newWeapon)
+        {
+            if(_currentStatusObject != null)
+                Destroy(_currentStatusObject);
+            
+            Debug.Log("New weapon status!");
+
+            var newStatusObject = Instantiate(newWeapon.weaponStatusObject);
+            var rect = newStatusObject.GetComponent<RectTransform>();
+            rect.SetParent(weaponStatusContainer);
+            rect.anchoredPosition = Vector3.zero;
+            rect.localScale = Vector3.one;
+            newStatusObject.GetComponent<IWeaponStatusUI>().SetInitialStatus();
+            _currentStatusObject = newStatusObject;
         }
 
         private void Start()

@@ -63,6 +63,8 @@ namespace Managers
         /// </summary>
         public event Action<Vector2, float> OnPlayerPushRequest;
 
+        public event Action<BaseWeapon> OnWeaponStatusChange;
+
         /// <summary>
         /// Invoke <see cref="OnPlayerDeath"/>.
         /// </summary>
@@ -149,6 +151,11 @@ namespace Managers
         public void PlayerFacingDirectionChange(Vector2 newDirection)
         {
             OnFacingDirectionChange?.Invoke(newDirection);
+        }
+
+        public void WeaponStatusChanged(BaseWeapon weapon)
+        {
+            OnWeaponStatusChange?.Invoke(weapon);
         }
     }
 }
