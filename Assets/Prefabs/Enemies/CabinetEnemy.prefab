@@ -12,13 +12,12 @@ GameObject:
   - component: {fileID: 5083326703933139198}
   - component: {fileID: 5083326703933139199}
   - component: {fileID: 5083326703933139196}
-  - component: {fileID: 5083326703933139197}
-  - component: {fileID: 5083326703933139194}
-  - component: {fileID: 2228324857410008816}
   - component: {fileID: 4164347286904909842}
   - component: {fileID: -6817748147587278638}
+  - component: {fileID: 560488029}
+  - component: {fileID: 560488030}
   m_Layer: 10
-  m_Name: WardrobeEnemy
+  m_Name: CabinetEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,53 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 15
---- !u!114 &5083326703933139197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5083326703933139195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82e94aca7b058314c8a3da345c710870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPower: 1
---- !u!114 &5083326703933139194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5083326703933139195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  stoppingDistance: 2
-  isMeleeEnemy: 1
---- !u!114 &2228324857410008816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5083326703933139195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bbc6d6d02f9baa4a963bbea378f8dcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minions:
-  - {fileID: 6006571378466959188, guid: 2ba9d1ec7a2540d418c50e098c5c345d, type: 3}
-  - {fileID: 6625424208667510973, guid: 3e83e8b399b09ad4b91112a94f44cf67, type: 3}
-  myAnimator: {fileID: 4164347286904909842}
-  spawnTimerMin: 2
-  spawnTimerMax: 10
-  range: 6
+  myAnimator: {fileID: 0}
+  myMovement: {fileID: 0}
 --- !u!95 &4164347286904909842
 Animator:
   serializedVersion: 3
@@ -191,6 +145,61 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82, y: 0.08}
   m_EdgeRadius: 0
+--- !u!114 &560488029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083326703933139195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &560488030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083326703933139195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d33faae18071e6244a5922f7945b5619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  nextWaypointDistance: 3
+  timeTillSearchWhenStuck: 1
+  myRigidbody: {fileID: 5083326703933139198}
+  spriteContainer: {fileID: 5083326704231065523}
+  shouldAttackPlayer: 1
+  seeker: {fileID: 560488029}
+  currentIndex: 0
+  maxDistance: 6
+  minions:
+  - {fileID: 6006571378466959188, guid: 2ba9d1ec7a2540d418c50e098c5c345d, type: 3}
+  - {fileID: 6625424208667510973, guid: 3e83e8b399b09ad4b91112a94f44cf67, type: 3}
+  spawnTimerMin: 2
+  spawnTimerMax: 6
+  enemyAnimator: {fileID: 4164347286904909842}
 --- !u!1 &5083326704231065520
 GameObject:
   m_ObjectHideFlags: 0

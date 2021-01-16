@@ -16,10 +16,6 @@ namespace States
 
         float shotCounter;
 
-        void Awake()
-        {
-            shotCounter = Random.Range(_minTimeBetweenShots, _maxTimeBetweenShots);
-        }
         public FireRangedAttack(Enemy enemy, EnemyProjectile projectile, float minTimeBetweenShots, float maxTimeBetweenShots, Animator enemyAnimator)
         {
             _enemy = enemy;
