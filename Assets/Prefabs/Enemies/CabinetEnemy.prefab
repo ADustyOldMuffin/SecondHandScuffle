@@ -22,7 +22,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5083326703933139185
 Transform:
   m_ObjectHideFlags: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 15
-  myAnimator: {fileID: 0}
-  myMovement: {fileID: 0}
+  myAnimator: {fileID: 4164347286904909842}
+  _currentHealth: 15
 --- !u!95 &4164347286904909842
 Animator:
   serializedVersion: 3
@@ -200,6 +200,7 @@ MonoBehaviour:
   spawnTimerMin: 2
   spawnTimerMax: 6
   enemyAnimator: {fileID: 4164347286904909842}
+  enemyHealth: {fileID: 5083326703933139196}
 --- !u!1 &5083326704231065520
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@
 using Pathfinding;
 using States;
 using UnityEngine;
+using Enemies;
 
 namespace Entities
 {
@@ -9,6 +10,7 @@ namespace Entities
     {
         [SerializeField] private float attackDistance = 1f;
         [SerializeField] private Animator enemyAnimator;
+        [SerializeField] private EnemyHealth enemyHealth;
 
         protected override void Awake()
         {
@@ -19,6 +21,7 @@ namespace Entities
                 , myRigidbody, spriteContainer);
             var idle = new Idle();
             var meleeAttack = new MeleeAttack(this, enemyAnimator);
+            var death = new Death(this, enemyAnimator);
 
             AddTransition(search, moveToTarget, TargetFound());
             AddTransition(search, idle, TargetMissing());
@@ -29,7 +32,8 @@ namespace Entities
             AddTransition(meleeAttack, search, TargetOutofRange());
 
             AddAnyTransition(idle, () => !shouldAttackPlayer);
-            
+            AddAnyTransition(death, ReadyToDie());
+
             StateMachine.SetState(search);
 
             Func<bool> TargetMissing() => () => Target == null;
@@ -38,6 +42,7 @@ namespace Entities
             Func<bool> ShouldAttack() => () => shouldAttackPlayer; Func<bool> InRangeToAttack() => () => Target != null
              && Mathf.Abs(Vector3.Distance(Target.transform.position, transform.position)) <= attackDistance;
             Func<bool> TargetOutofRange() => () => Target != null && Mathf.Abs(Vector3.Distance(Target.transform.position, transform.position)) > attackDistance;
+            Func<bool> ReadyToDie() => () => enemyHealth.GetCurrentHealth() <= 0;
 
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }

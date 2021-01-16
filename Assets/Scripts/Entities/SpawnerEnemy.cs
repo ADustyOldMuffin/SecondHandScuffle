@@ -2,6 +2,7 @@
 using Pathfinding;
 using States;
 using UnityEngine;
+using Enemies;
 
 namespace Entities
 {
@@ -15,6 +16,7 @@ namespace Entities
         [SerializeField] float spawnTimerMax = 10f;
 
         [SerializeField] private Animator enemyAnimator;
+        [SerializeField] private EnemyHealth enemyHealth;
 
         protected override void Awake()
         {
@@ -25,6 +27,7 @@ namespace Entities
                 , myRigidbody, spriteContainer);
             var idle = new Idle();
             var spawnEnemy = new SpawnMinionState(this, spawnTimerMin, spawnTimerMax, enemyAnimator);
+            var death = new Death(this, enemyAnimator);
 
             AddTransition(search, moveToTarget, TargetFound());
             AddTransition(search, idle, TargetMissing());
@@ -35,6 +38,7 @@ namespace Entities
             AddTransition(spawnEnemy, search, TargetOutofRange());
 
             AddAnyTransition(idle, () => !shouldAttackPlayer);
+            AddAnyTransition(death, ReadyToDie());
 
             StateMachine.SetState(search);
 
@@ -45,6 +49,7 @@ namespace Entities
             Func<bool> InRangeToAttack() => () => Target != null
             && Mathf.Abs(Vector3.Distance(Target.transform.position, transform.position)) <= maxDistance;
             Func<bool> TargetOutofRange() => () => Target != null && Mathf.Abs(Vector3.Distance(Target.transform.position, transform.position)) > maxDistance;
+            Func<bool> ReadyToDie() => () => enemyHealth.GetCurrentHealth() <= 0;
 
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }

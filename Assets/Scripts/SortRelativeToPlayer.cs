@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class SortRelativeToPlayer : MonoBehaviour
 {
+    
         private SpriteRenderer _spriteRenderer;
 
         private void Awake()
@@ -28,4 +29,5 @@ public class SortRelativeToPlayer : MonoBehaviour
                         _spriteRenderer.sortingOrder = -1;
                 }
         }
+    
 }

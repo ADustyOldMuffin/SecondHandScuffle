@@ -99,8 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
-  myAnimator: {fileID: 0}
-  myMovement: {fileID: 0}
+  myAnimator: {fileID: 1048176187321212871}
+  _currentHealth: 5
 --- !u!114 &8199647336359053096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +207,9 @@ MonoBehaviour:
   shouldAttackPlayer: 1
   seeker: {fileID: 5944723586959811458}
   currentIndex: 0
+  attackDistance: 0.1
+  enemyAnimator: {fileID: 1048176187321212871}
+  enemyHealth: {fileID: 8199647336359053097}
 --- !u!1 &8199647336589871205
 GameObject:
   m_ObjectHideFlags: 0

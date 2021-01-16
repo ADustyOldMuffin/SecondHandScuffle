@@ -36,7 +36,7 @@ namespace Weapons.Projectiles
             if (other.CompareTag("Enemy") &&
                 Vector2.Distance(other.transform.position, transform.position) <= damageDistance)
             {
-                other.GetComponent<EnemyHealth>().ChangeHealth(-DamageAmount);
+                other.GetComponent<EnemyHealth>().TakeDamage(DamageAmount);
                 Destroy(gameObject);
             }
             else if (other.CompareTag("Enemy") &&
@@ -60,7 +60,7 @@ namespace Weapons.Projectiles
             {
                 if (Vector2.Distance(_target.position, transform.position) <= damageDistance)
                 {
-                    _target.GetComponent<EnemyHealth>().ChangeHealth(-DamageAmount);
+                    _target.GetComponent<EnemyHealth>().TakeDamage(DamageAmount);
                     Destroy(gameObject);
                 }
 

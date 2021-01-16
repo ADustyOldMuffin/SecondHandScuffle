@@ -9,40 +9,23 @@ namespace Enemies
     {
         [SerializeField] private int maxHealth;
         public Animator myAnimator;
-        public EnemyMovement myMovement;
 
-        private int _currentHealth;
+        [SerializeField] private int _currentHealth = 5;
 
         private void Start()
         {
             _currentHealth = maxHealth;
         }
 
-        private void Update()
+        public void TakeDamage(int amount)
         {
-            if (_currentHealth <= 0)
-            {
-                //Debug.Log("I'm dying");
-                StartCoroutine(Die());
-            }
-        }
-
-        public void ChangeHealth(int amount)
-        {
-            if (amount < 0)
+            if (amount > 0)
             {
                 // We were damaged
                 StartCoroutine(Damaged());
             }
 
-            _currentHealth += amount;
-        }
-
-        private IEnumerator Die()
-        {
-            // TODO Play death animation?
-            Destroy(gameObject);
-            yield return null;
+            _currentHealth -= amount;
         }
 
         private IEnumerator Damaged()
@@ -52,5 +35,12 @@ namespace Enemies
             //myMovement.KnockBack();
             yield return null;
         }
+
+        public int GetCurrentHealth()
+        {
+            return _currentHealth;
+        }
+
+
     }
 }

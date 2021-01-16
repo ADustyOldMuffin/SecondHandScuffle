@@ -29,7 +29,7 @@ namespace Weapons.Projectiles
             else if (!HurtsPlayer && other.CompareTag("Enemy"))
             {
                 // If it's an enemy, then we're just going to damage them.
-                other.GetComponent<EnemyHealth>().ChangeHealth(-DamageAmount);
+                other.GetComponent<EnemyHealth>().TakeDamage(DamageAmount);
             }
         }
 

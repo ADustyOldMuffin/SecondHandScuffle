@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 3270965442076929204}
   - component: {fileID: 3270965442076929205}
   - component: {fileID: 3270965442076929200}
-  - component: {fileID: 4102116214626056732}
   - component: {fileID: 8366465378299649672}
   - component: {fileID: 972473269}
   - component: {fileID: 972473273}
@@ -105,7 +104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3270965442076929098
 Transform:
   m_ObjectHideFlags: 0
@@ -180,9 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cdb0350205a4f208d1af9171c4d788b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
-  myAnimator: {fileID: 0}
-  myMovement: {fileID: 0}
+  maxHealth: 10
+  myAnimator: {fileID: 3270965442076929200}
+  _currentHealth: 10
 --- !u!95 &3270965442076929200
 Animator:
   serializedVersion: 3
@@ -202,26 +201,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4102116214626056732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3270965442076929201}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dad07016b076de4ca4469975cc51ae2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minTimeBetweenShots: 1
-  maxTimeBetweenShots: 5
-  projectile: {fileID: -7839479601897941267, guid: a74298062b106c840abddb4a5a10de2e,
-    type: 3}
-  range: 6
-  myAnimator: {fileID: 3270965442076929200}
-  movement: {fileID: 3270965442076929207, guid: acb20289e06313f48b22c7f28558041c,
-    type: 3}
 --- !u!61 &8366465378299649672
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -302,3 +281,4 @@ MonoBehaviour:
   minTimeBetweenShots: 1
   maxTimeBetweenShots: 5
   enemyAnimator: {fileID: 3270965442076929200}
+  enemyHealth: {fileID: 3270965442076929205}
