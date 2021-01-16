@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8199647336359053098}
   - component: {fileID: 8199647336359053097}
   - component: {fileID: 8199647336359053096}
-  - component: {fileID: 8199647336359053103}
   - component: {fileID: 1048176187321212871}
   - component: {fileID: -6275073196143122351}
+  - component: {fileID: 5944723586959811458}
+  - component: {fileID: 4675748205481829589}
   m_Layer: 10
   m_Name: BroomEnemy
   m_TagString: Enemy
@@ -98,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 4
+  myAnimator: {fileID: 0}
+  myMovement: {fileID: 0}
 --- !u!114 &8199647336359053096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,21 +114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPower: 1
---- !u!114 &8199647336359053103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8199647336359053102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4
-  stoppingDistance: 2
-  isMeleeEnemy: 1
 --- !u!95 &1048176187321212871
 Animator:
   serializedVersion: 3
@@ -171,6 +159,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.88, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5944723586959811458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199647336359053102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &4675748205481829589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199647336359053102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d4e6275ccb4d8282cdd3589486f259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  nextWaypointDistance: 3
+  timeTillSearchWhenStuck: 1
+  myRigidbody: {fileID: 8199647336359053099}
+  spriteContainer: {fileID: 8199647336589871206}
+  shouldAttackPlayer: 1
+  seeker: {fileID: 5944723586959811458}
+  currentIndex: 0
 --- !u!1 &8199647336589871205
 GameObject:
   m_ObjectHideFlags: 0
