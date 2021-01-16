@@ -21,25 +21,25 @@ namespace Entities
             base.Awake();
 
             var search = new SearchForTarget(this, "Player");
-            var MoveToTarget = new MoveToTarget(this, moveSpeed, nextWaypointDistance
+            var moveToTarget = new MoveToTarget(this, moveSpeed, nextWaypointDistance
                 , myRigidbody, spriteContainer);
             var idle = new Idle();
-            var SpawnEnemy = new SpawnMinionState(this, spawnTimerMin, spawnTimerMax, enemyAnimator);
+            var spawnEnemy = new SpawnMinionState(this, spawnTimerMin, spawnTimerMax, enemyAnimator);
 
-            AddTransition(search, MoveToTarget, TargetFound());
+            AddTransition(search, moveToTarget, TargetFound());
             AddTransition(search, idle, TargetMissing());
             //AddTransition(moveToTarget, search, IsStuck());
-            AddTransition(MoveToTarget, search, TargetMissing());
+            AddTransition(moveToTarget, search, TargetMissing());
             AddTransition(idle, search, ShouldAttack());
-            AddTransition(MoveToTarget, SpawnEnemy, InRangeToAttack());
-            AddTransition(SpawnEnemy, search, TargetOutofRange());
+            AddTransition(moveToTarget, spawnEnemy, InRangeToAttack());
+            AddTransition(spawnEnemy, search, TargetOutofRange());
 
             AddAnyTransition(idle, () => !shouldAttackPlayer);
 
             StateMachine.SetState(search);
 
             Func<bool> TargetMissing() => () => Target == null;
-            Func<bool> IsStuck() => () => MoveToTarget.TimeStuck > timeTillSearchWhenStuck;
+            Func<bool> IsStuck() => () => moveToTarget.TimeStuck > timeTillSearchWhenStuck;
             Func<bool> TargetFound() => () => Target != null;
             Func<bool> ShouldAttack() => () => shouldAttackPlayer;
             Func<bool> InRangeToAttack() => () => Target != null

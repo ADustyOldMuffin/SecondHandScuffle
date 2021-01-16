@@ -18,17 +18,17 @@ namespace Entities
             base.Awake();
 
             var search = new SearchForTarget(this, "Player");
-            var MoveToTarget = new MoveToTarget(this, moveSpeed, nextWaypointDistance
+            var moveToTarget = new MoveToTarget(this, moveSpeed, nextWaypointDistance
                 , myRigidbody, spriteContainer);
             var idle = new Idle();
             var FireRangedAttack = new FireRangedAttack(this, enemyProjectile, minTimeBetweenShots, maxTimeBetweenShots, enemyAnimator);
 
-            AddTransition(search, MoveToTarget, TargetFound());
+            AddTransition(search, moveToTarget, TargetFound());
             AddTransition(search, idle, TargetMissing());
             //AddTransition(moveToTarget, search, IsStuck());
-            AddTransition(MoveToTarget, search, TargetMissing());
+            AddTransition(moveToTarget, search, TargetMissing());
             AddTransition(idle, search, ShouldAttack());
-            AddTransition(MoveToTarget, FireRangedAttack, InRangeToAttack());
+            AddTransition(moveToTarget, FireRangedAttack, InRangeToAttack());
             AddTransition(FireRangedAttack, search, TargetOutofRange());
 
             AddAnyTransition(idle, () => !shouldAttackPlayer);
@@ -36,7 +36,7 @@ namespace Entities
             StateMachine.SetState(search);
 
             Func<bool> TargetMissing() => () => Target == null;
-            Func<bool> IsStuck() => () => MoveToTarget.TimeStuck > timeTillSearchWhenStuck;
+            Func<bool> IsStuck() => () => moveToTarget.TimeStuck > timeTillSearchWhenStuck;
             Func<bool> TargetFound() => () => Target != null;
             Func<bool> ShouldAttack() => () => shouldAttackPlayer;
             Func<bool> InRangeToAttack() => () => Target != null 
