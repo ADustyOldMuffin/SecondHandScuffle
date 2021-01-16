@@ -68,11 +68,12 @@ namespace States
 
         public void OnEnter()
         {
+            //Debug.Log("I am moving now");
         }
 
         public void OnExit()
         {
-
+            //Debug.Log("I am not moving anymore");
         }
     }
 }

@@ -55,11 +55,13 @@ namespace States
         public void OnEnter()
         {
             //set animator to attack
+            //Debug.Log("I am attacking now");
             _enemyAnimator.SetBool("isAttacking", true);
         }
 
         public void OnExit()
         {
+            //Debug.Log("I am no longer attacking");
             //set animator to not attack
             _enemyAnimator.SetBool("isAttacking", false);
         }
