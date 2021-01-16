@@ -47,9 +47,7 @@ namespace States
         public void Fire()
         {
             GameObject.Instantiate(_projectile, _enemy.transform.position, Quaternion.identity);
-            Debug.Log("FIRE");
             shotCounter = Random.Range(_minTimeBetweenShots, _maxTimeBetweenShots);
-            Debug.Log("shotcounter " + shotCounter.ToString());
         }
 
         public void OnEnter()

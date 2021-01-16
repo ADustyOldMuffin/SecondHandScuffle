@@ -55,6 +55,7 @@ namespace Weapons
             var proj = Instantiate(projectile, spawnPoint.position, transform.rotation);
             proj.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
             EventBus.Instance.ShakeCameraRequest("PlayerGunShot_Shake", -Facing);
+            EventBus.Instance.WeaponStatusChanged(this);
             currentCooldown = fireRate;
             AmmoCount -= 1;
 

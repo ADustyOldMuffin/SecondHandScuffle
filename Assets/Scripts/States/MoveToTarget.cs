@@ -53,7 +53,6 @@ namespace States
 
             var distance = Vector2.Distance(position, _enemy.CurrentPath.vectorPath[_enemy.currentIndex]);
 
-            Debug.Log(distance);
             if (distance < _nextWaypointDistance)
             {
                 _enemy.currentIndex++;

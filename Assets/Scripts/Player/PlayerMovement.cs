@@ -22,13 +22,6 @@ namespace Player
 
         private void OnPlayerPushRequest(Vector2 direction, float amount)
         {
-            /*// We don't want to move if we're already moving.
-            if (LeanTween.isTweening(gameObject))
-                return;
-            
-            var movement = GetMovement() + (direction * amount);
-            LeanTween.move(gameObject, movement, tweenTime).setEase(LeanTweenType.easeOutBack);*/
-            Debug.Log(direction.normalized * amount);
             myRigidbody.AddForce(direction.normalized * amount);
         }
 

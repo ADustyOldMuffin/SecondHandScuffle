@@ -27,7 +27,6 @@ public class StateMachine
             
         CurrentState?.OnExit();
         CurrentState = state;
-        Debug.Log($"State changed to {CurrentState.GetType()}");
             
         _transitions.TryGetValue(CurrentState.GetType(), out _currentTransitions);
         if (_currentTransitions == null)

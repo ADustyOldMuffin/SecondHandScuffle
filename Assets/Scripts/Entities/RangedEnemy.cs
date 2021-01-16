@@ -41,8 +41,7 @@ namespace Entities
             Func<bool> ShouldAttack() => () => shouldAttackPlayer;
             Func<bool> InRangeToAttack() => () => Target != null 
             && Mathf.Abs(Vector3.Distance(Target.transform.position, transform.position)) <= maxDistance;
-            Func<bool> TargetOutofRange() => () => Target != null
-&& Mathf.Abs(Vector3.Distance(Target.transform.position, transform.position)) > maxDistance;
+            Func<bool> TargetOutofRange() => () => Target != null && Mathf.Abs(Vector3.Distance(Target.transform.position, transform.position)) > maxDistance;
 
             InvokeRepeating(nameof(UpdatePath), 0f, .5f);
         }
@@ -61,7 +60,6 @@ namespace Entities
             if (seeker.IsDone() && shouldAttackPlayer && StateMachine.CurrentState.GetType() == typeof(MoveToTarget))
             {
                 seeker.StartPath(myRigidbody.position, Target.transform.position, OnPathComplete);
-                Debug.Log("Checking path!");
             }
 
         }

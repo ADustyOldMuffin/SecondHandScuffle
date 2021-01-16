@@ -55,6 +55,7 @@ namespace Weapons
             EventBus.Instance.PlayerPushRequest(-Facing, knockBackDistance);
             currentCooldown = fireRate;
             AmmoCount -= 1;
+            EventBus.Instance.WeaponStatusChanged(this);
 
             if (AmmoCount == 0)
                 StartCoroutine(ReloadWeapon());
@@ -65,6 +66,7 @@ namespace Weapons
             _canFire = false;
             yield return new WaitForSeconds(reloadTime);
             AmmoCount = clipSize;
+            EventBus.Instance.WeaponStatusChanged(this);
             _canFire = true;
         }
     }
