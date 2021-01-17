@@ -8,114 +8,23 @@ namespace Enemies
 {
     public class EnemyMovement : MonoBehaviour
     {
-        [SerializeField] float baseMoveSpeed = 5f;
-        private float currenMoveSpeed;
-        [SerializeField] float stoppingDistance = 2f;
-        [SerializeField] private bool chasePlayer = true;
-        Rigidbody2D myRGB;
-        Vector2 aim;
-        public Animator myAnimator;
 
-        //[Tooltip("if enemy is melee true, if not melee false")]
-        //[SerializeField] bool isMeleeEnemy = true;
-
-        //cached reference to player
-        PlayerHealth target;
-
-        void Awake()
-        {
-            UpdateTargeting();
-            myRGB = GetComponent<Rigidbody2D>();
-            currenMoveSpeed = baseMoveSpeed;
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-            MoveTowardsTarget();
-        }
+        [SerializeField] Rigidbody2D myRGB;
+        [SerializeField] public Animator myAnimator;
 
         // Update is called once per frame
         void FixedUpdate()
         {
-            /**
-            if (!isMeleeEnemy)
-            {
-                CheckToStopAndAttack();
-            }
-            **/
             FacethePlayer();
-            UpdateTargeting();
-            MoveTowardsTarget();
         }
-
-        void UpdateTargeting()
-        {
-            if (GameObject.FindObjectOfType<PlayerHealth>() != null)
-            {
-                //find player in scene by player health script
-                target = FindObjectOfType<PlayerHealth>();
-                aim = (target.transform.position - transform.position).normalized * currenMoveSpeed * Time.deltaTime;
-            }
-            else //if no enemy stop
-            {
-                currenMoveSpeed = 0;
-                aim = new Vector2(0, 0);
-            }
-        }
-
-        void MoveTowardsTarget()
-        {
-            if (!chasePlayer)
-                return;
-            
-            var newPosition = Vector2.MoveTowards(transform.position, target.transform.position, currenMoveSpeed * Time.fixedDeltaTime);
-            newPosition = PixelMovementUtility.PixelPerfectClamp(newPosition, 16);
-            myRGB.MovePosition(newPosition);
-        }
-
-        /**
-        void CheckToStopAndAttack()
-        {
-            float distance = Vector3.Distance(target.transform.position, transform.position);
-            if (distance <= stoppingDistance)
-            {
-                Debug.Log("should stop");
-                currenMoveSpeed = 0f;
-                //Attack
-            }
-            else
-            {
-                currenMoveSpeed = baseMoveSpeed;
-            }
-        }
-        **/
-        public void PushBackAfterMeleeAttack()
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, -1 * currenMoveSpeed * Time.deltaTime);
-
-        }
-
-        public void ResetMoveSpeed()
-        {
-            currenMoveSpeed = baseMoveSpeed;
-        }
-        public void ZeroMoveSpeed()
-        {
-            currenMoveSpeed = 0;
-        }
-        /**
-        public void SetCurrentMoveSpeed(float newSpeed)
-        {
-            currenMoveSpeed = newSpeed;
-        }
-        **/
 
         private void FacethePlayer()
         {
+            if (LevelManager.Instance.Player != null) 
+            { 
             //Debug.Log(Mathf.Sign(target.transform.position.x - transform.position.x).ToString());
-            transform.localScale = new Vector2(Mathf.Sign(target.transform.position.x - transform.position.x),1);
-            //transform.localScale = new Vector2(Mathf.Sign(myRGB.velocity.x), 1);
+            transform.localScale = new Vector2(Mathf.Sign(LevelManager.Instance.Player.transform.position.x - transform.position.x), 1);
+            }
 
         }
 
@@ -130,7 +39,7 @@ namespace Enemies
                     (transform.position.x - LevelManager.Instance.Player.transform.position.x), 
                     (transform.position.y - LevelManager.Instance.Player.transform.position.y));
                 difference = difference * thrust;
-                Debug.Log(difference.ToString());
+                //Debug.Log(difference.ToString());
                 myRGB.AddForce(difference, ForceMode2D.Impulse);
                 StartCoroutine(KnockCo());
             }

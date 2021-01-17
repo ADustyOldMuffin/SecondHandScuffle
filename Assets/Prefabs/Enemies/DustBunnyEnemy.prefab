@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6041426789634596258}
   - component: {fileID: 1079119870}
   - component: {fileID: 1079119871}
+  - component: {fileID: 1067836996665889116}
   m_Layer: 10
   m_Name: DustBunnyEnemy
   m_TagString: Enemy
@@ -196,6 +197,22 @@ MonoBehaviour:
   attackDistance: 1
   enemyAnimator: {fileID: 5113059275134144506}
   enemyHealth: {fileID: 8774575137786889236}
+--- !u!114 &1067836996665889116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625424208667510973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRGB: {fileID: 6031373684644472770}
+  myAnimator: {fileID: 5113059275134144506}
+  thrust: 1
+  knockTime: 0.1
 --- !u!1 &8404508609915739013
 GameObject:
   m_ObjectHideFlags: 0

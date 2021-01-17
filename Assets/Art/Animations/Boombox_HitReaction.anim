@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vacuum_Move
+  m_Name: Boombox_HitReaction
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,25 +20,25 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 8974810475150840007, guid: cd9a72479dbfe254899d6ee3d7d48958,
+      value: {fileID: -3118886749482804276, guid: 5cb387af17741f94a945a3b226dc1c9b,
         type: 3}
     - time: 0.14285715
-      value: {fileID: 8374742966576334287, guid: cd9a72479dbfe254899d6ee3d7d48958,
+      value: {fileID: -9014356451964714979, guid: 5cb387af17741f94a945a3b226dc1c9b,
         type: 3}
     - time: 0.2857143
-      value: {fileID: -3714967682033096454, guid: cd9a72479dbfe254899d6ee3d7d48958,
+      value: {fileID: -2001847710534145801, guid: 5cb387af17741f94a945a3b226dc1c9b,
         type: 3}
     - time: 0.42857143
-      value: {fileID: 2237663309214697879, guid: cd9a72479dbfe254899d6ee3d7d48958,
+      value: {fileID: 3433846242229928758, guid: 5cb387af17741f94a945a3b226dc1c9b,
         type: 3}
     - time: 0.5714286
-      value: {fileID: 5674072770412474513, guid: cd9a72479dbfe254899d6ee3d7d48958,
+      value: {fileID: 4937998007041296855, guid: 5cb387af17741f94a945a3b226dc1c9b,
         type: 3}
     - time: 0.71428573
-      value: {fileID: -6852002673572878657, guid: cd9a72479dbfe254899d6ee3d7d48958,
+      value: {fileID: 3483710329460649674, guid: 5cb387af17741f94a945a3b226dc1c9b,
         type: 3}
     - time: 0.85714287
-      value: {fileID: -3200149962329259860, guid: cd9a72479dbfe254899d6ee3d7d48958,
+      value: {fileID: 5928222889955978322, guid: 5cb387af17741f94a945a3b226dc1c9b,
         type: 3}
     attribute: m_Sprite
     path: Body
@@ -59,13 +59,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 8974810475150840007, guid: cd9a72479dbfe254899d6ee3d7d48958, type: 3}
-    - {fileID: 8374742966576334287, guid: cd9a72479dbfe254899d6ee3d7d48958, type: 3}
-    - {fileID: -3714967682033096454, guid: cd9a72479dbfe254899d6ee3d7d48958, type: 3}
-    - {fileID: 2237663309214697879, guid: cd9a72479dbfe254899d6ee3d7d48958, type: 3}
-    - {fileID: 5674072770412474513, guid: cd9a72479dbfe254899d6ee3d7d48958, type: 3}
-    - {fileID: -6852002673572878657, guid: cd9a72479dbfe254899d6ee3d7d48958, type: 3}
-    - {fileID: -3200149962329259860, guid: cd9a72479dbfe254899d6ee3d7d48958, type: 3}
+    - {fileID: -3118886749482804276, guid: 5cb387af17741f94a945a3b226dc1c9b, type: 3}
+    - {fileID: -9014356451964714979, guid: 5cb387af17741f94a945a3b226dc1c9b, type: 3}
+    - {fileID: -2001847710534145801, guid: 5cb387af17741f94a945a3b226dc1c9b, type: 3}
+    - {fileID: 3433846242229928758, guid: 5cb387af17741f94a945a3b226dc1c9b, type: 3}
+    - {fileID: 4937998007041296855, guid: 5cb387af17741f94a945a3b226dc1c9b, type: 3}
+    - {fileID: 3483710329460649674, guid: 5cb387af17741f94a945a3b226dc1c9b, type: 3}
+    - {fileID: 5928222889955978322, guid: 5cb387af17741f94a945a3b226dc1c9b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -90,11 +90,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.42857143
-    functionName: SuckUpPlayer
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

@@ -11,12 +11,14 @@ GameObject:
   - component: {fileID: 6188740523664178136}
   - component: {fileID: 6188740523664178135}
   - component: {fileID: 6188740523664178134}
+  - component: {fileID: 4530232204143233513}
+  - component: {fileID: 3072567414814434107}
   - component: {fileID: 6188740523664178133}
-  - component: {fileID: 6188740523664178132}
   - component: {fileID: 4853381674124354976}
   - component: {fileID: 6188740523664178131}
-  - component: {fileID: 3072567414814434107}
-  - component: {fileID: 4530232204143233513}
+  - component: {fileID: 2334797130620451682}
+  - component: {fileID: 2397319754765906818}
+  - component: {fileID: 779768052282788678}
   m_Layer: 10
   m_Name: VacuumEnemy
   m_TagString: Enemy
@@ -86,79 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.3012524}
   m_EdgeRadius: 0
---- !u!114 &6188740523664178133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6188740523664178130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cdb0350205a4f208d1af9171c4d788b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
---- !u!114 &6188740523664178132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6188740523664178130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82e94aca7b058314c8a3da345c710870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPower: 1
---- !u!114 &4853381674124354976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6188740523664178130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9510f3be96911042bc3178ca8725e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minions: []
---- !u!114 &6188740523664178131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6188740523664178130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  stoppingDistance: 2
-  isMeleeEnemy: 1
---- !u!95 &3072567414814434107
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6188740523664178130}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92c3949af7683c640bf2b1e2af0b095a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &4530232204143233513
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -185,6 +114,134 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.05}
   m_EdgeRadius: 0
+--- !u!95 &3072567414814434107
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188740523664178130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92c3949af7683c640bf2b1e2af0b095a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6188740523664178133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188740523664178130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cdb0350205a4f208d1af9171c4d788b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  myAnimator: {fileID: 3072567414814434107}
+  _currentHealth: 5
+--- !u!114 &4853381674124354976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188740523664178130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9510f3be96911042bc3178ca8725e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minions: []
+--- !u!114 &6188740523664178131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188740523664178130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRGB: {fileID: 6188740523664178135}
+  myAnimator: {fileID: 3072567414814434107}
+  thrust: 1
+  knockTime: 0.1
+--- !u!114 &2334797130620451682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188740523664178130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &2397319754765906818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188740523664178130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7235c1d81c7254bb2fdb6bf56d316b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 400
+  nextWaypointDistance: 3
+  timeTillSearchWhenStuck: 1
+  myRigidbody: {fileID: 6188740523664178135}
+  spriteContainer: {fileID: 6188740523664178136}
+  shouldAttackPlayer: 1
+  seeker: {fileID: 2334797130620451682}
+  currentIndex: 0
+  attackDistance: 5
+  enemyAnimator: {fileID: 3072567414814434107}
+  enemyHealth: {fileID: 6188740523664178133}
+--- !u!114 &779768052282788678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188740523664178130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a8e88e08fa1964bab728b81d70079a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pull: 1000
+  knockTime: 0.1
 --- !u!1 &6188740523995657369
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ namespace Player
             var moveTo = GetMovement();
             
             myRigidbody.MovePosition(moveTo);
+            Debug.Log(transform.position.ToString());
         }
 
         private void OnEnable()

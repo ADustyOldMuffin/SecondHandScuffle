@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -6817748147587278638}
   - component: {fileID: 560488029}
   - component: {fileID: 560488030}
+  - component: {fileID: 6423188870120539006}
   m_Layer: 10
   m_Name: CabinetEnemy
   m_TagString: Enemy
@@ -201,6 +202,22 @@ MonoBehaviour:
   spawnTimerMax: 6
   enemyAnimator: {fileID: 4164347286904909842}
   enemyHealth: {fileID: 5083326703933139196}
+--- !u!114 &6423188870120539006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5083326703933139195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRGB: {fileID: 5083326703933139198}
+  myAnimator: {fileID: 4164347286904909842}
+  thrust: 1
+  knockTime: 0.1
 --- !u!1 &5083326704231065520
 GameObject:
   m_ObjectHideFlags: 0
