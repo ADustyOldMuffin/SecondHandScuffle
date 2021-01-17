@@ -39,7 +39,6 @@ namespace Weapons
 
         protected override void OnAttackAction(InputAction.CallbackContext context)
         {
-            Debug.Log("Holding!");
             _isFiring = true;
         }
 
@@ -52,7 +51,6 @@ namespace Weapons
             proj.GetComponent<BaseProjectile>().SetMovingDirection(Facing);
             attackSound.Play();
             EventBus.Instance.ShakeCameraRequest(shakePresetName, -Facing);
-            EventBus.Instance.PlayerPushRequest(-Facing, knockBackDistance);
             currentCooldown = fireRate;
             AmmoCount -= 1;
             EventBus.Instance.WeaponStatusChanged(this);

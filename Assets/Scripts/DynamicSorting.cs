@@ -17,7 +17,7 @@ public class DynamicSorting : MonoBehaviour
     void Update()
     {
         GameObject closestObstacle = SortDynamically();
-        Debug.Log(closestObstacle.name);
+        //Debug.Log(closestObstacle.name);
         SortRelativeToPlayer(closestObstacle);
     }
 

@@ -964,6 +964,7 @@
             <e p="DialogueManager.cs" t="Include" />
             <e p="ObjectDialogue.cs" t="Include" />
           </e>
+          <e p="DynamicSorting.cs" t="Include" />
           <e p="Enemies" t="Include">
             <e p="EnemyFireProjectile.cs" t="Include" />
             <e p="EnemyHealth.cs" t="Include" />
@@ -978,6 +979,7 @@
             <e p="Enemy.cs" t="Include" />
             <e p="MeleeEnemy.cs" t="Include" />
             <e p="RangedEnemy.cs" t="Include" />
+            <e p="SpawnerEnemy.cs" t="Include" />
           </e>
           <e p="IState.cs" t="Include" />
           <e p="KeepToPixelUnits.cs" t="Include" />
@@ -1010,10 +1012,13 @@
           <e p="SortRelativeToPlayer.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
           <e p="States" t="Include">
+            <e p="Death.cs" t="Include" />
             <e p="FireRangedAttack.cs" t="Include" />
             <e p="Idle.cs" t="Include" />
+            <e p="MeleeAttack.cs" t="Include" />
             <e p="MoveToTarget.cs" t="Include" />
             <e p="SearchForTarget.cs" t="Include" />
+            <e p="SpawnMinionState.cs" t="Include" />
           </e>
           <e p="SyncTransformWithTarget.cs" t="Include" />
           <e p="UI" t="Include">
@@ -1030,6 +1035,7 @@
             <e p="Boomerang.cs" t="Include" />
             <e p="EggBeater.cs" t="Include" />
             <e p="FireSpreader.cs" t="Include" />
+            <e p="NoRealoadWeapon.cs" t="Include" />
             <e p="OldWand.cs" t="Include" />
             <e p="Projectiles" t="Include">
               <e p="BaseballBatProjectile.cs" t="Include" />
@@ -1048,6 +1054,7 @@
             <e p="SuperSoaker.cs" t="Include" />
             <e p="Toaster.cs" t="Include" />
             <e p="Walkman.cs" t="Include" />
+            <e p="WalkmanWeapon.cs" t="Include" />
           </e>
         </e>
       </e>
