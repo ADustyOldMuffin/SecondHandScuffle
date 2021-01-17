@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4102815195517516841}
   - component: {fileID: 8801922072652182545}
-  - component: {fileID: 2906725893688456923}
   - component: {fileID: 180767736545037475}
   - component: {fileID: 2606258745090040197}
+  - component: {fileID: 439506175747465446}
+  - component: {fileID: 3470607684500980176}
   m_Layer: 0
   m_Name: Walkman
   m_TagString: Untagged
@@ -72,9 +73,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1535124273
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 501d532dc9f6c554e8915c60c391bb96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 90abe2f47208fba48ac7d42f16c2e2a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,33 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2906725893688456923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929627748846965041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022f6f9a05e240a88a40212f659151b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 450434234870457262, guid: 1f714d0d3396af44a8e19d95953fed19,
-    type: 3}
-  spawnPoint: {fileID: 4353416533521463375}
-  fireRate: 0.8
-  currentCooldown: 0
-  animancer: {fileID: 2606258745090040197}
-  idles: {fileID: 11400000, guid: 973d75bd04ef10b448b8d0e4769ce762, type: 2}
-  attacks: {fileID: 11400000, guid: 7627f99103259dc4aa85037e77c00284, type: 2}
-  type: 5
-  weaponName: Walkman
-  objectDialogue:
-  - {fileID: 11400000, guid: 2ff500155c6c5654ab3b63943deca5a8, type: 2}
-  - {fileID: 11400000, guid: c285a37d742ff4444a124985ead7f339, type: 2}
-  - {fileID: 11400000, guid: 99f99aea05c36be4593aefed8b5cca36, type: 2}
-  diskSpread: 0.2
 --- !u!95 &180767736545037475
 Animator:
   serializedVersion: 3
@@ -145,6 +119,135 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Animator: {fileID: 180767736545037475}
   _ActionOnDisable: 0
+--- !u!114 &439506175747465446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929627748846965041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d189ef836f44d72af0f0ba5f47086ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipSize: 0
+  projectile: {fileID: 450434234870457262, guid: 1f714d0d3396af44a8e19d95953fed19,
+    type: 3}
+  spawnPoint: {fileID: 4353416533521463375}
+  fireRate: 0.5
+  knockBackDistance: 0
+  currentCooldown: 0
+  reloadTime: 0
+  shakePresetName: PlayerGunShot_Shake
+  animancer: {fileID: 2606258745090040197}
+  idles: {fileID: 11400000, guid: 973d75bd04ef10b448b8d0e4769ce762, type: 2}
+  attacks: {fileID: 11400000, guid: 7627f99103259dc4aa85037e77c00284, type: 2}
+  attackSound: {fileID: 3470607684500980176}
+  type: 5
+  weaponName: Walkman
+  weaponIcon: {fileID: 21300000, guid: 501d532dc9f6c554e8915c60c391bb96, type: 3}
+  weaponStatusObject: {fileID: 0}
+  diskSpread: 0.5
+  openSprite: {fileID: 21300000, guid: 501d532dc9f6c554e8915c60c391bb96, type: 3}
+  closedSprite: {fileID: 21300000, guid: 90abe2f47208fba48ac7d42f16c2e2a6, type: 3}
+--- !u!82 &3470607684500980176
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929627748846965041}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -4134208003899421446, guid: 65cb4b0e315209842be8ca0ab97d223b,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: b985c899c6884324c9998b43a56a5d0a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3937392530989118000
 GameObject:
   m_ObjectHideFlags: 0

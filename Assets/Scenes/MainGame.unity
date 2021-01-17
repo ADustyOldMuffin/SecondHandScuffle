@@ -858,7 +858,7 @@ GameObject:
   - component: {fileID: 362042962}
   m_Layer: 11
   m_Name: Obstacles
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2413,6 +2413,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClothesRack_Long_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8417616678695522153, guid: b4ae1f749d6c34844ab116925c5edffd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 8417616678695522157, guid: b4ae1f749d6c34844ab116925c5edffd,
         type: 3}
       propertyPath: m_RootOrder
@@ -2643,6 +2648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
         type: 3}
+      propertyPath: mutationTime
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 710500471630046280, guid: 439680f1d1118e64c971cadd04468592,
+        type: 3}
       propertyPath: _WeaponDialogue
       value: 
       objectReference: {fileID: 0}
@@ -2655,7 +2665,7 @@ PrefabInstance:
         type: 3}
       propertyPath: weapons.Array.data[0]
       value: 
-      objectReference: {fileID: 4299141832617873128, guid: 7c9041bcafa24124791d3c2d1e2833b9,
+      objectReference: {fileID: 929627748846965041, guid: ffeb4ebf3d7c3644e867f81d9d49a627,
         type: 3}
     - target: {fileID: 1763867931160164617, guid: 439680f1d1118e64c971cadd04468592,
         type: 3}
@@ -4672,7 +4682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAABQIeyAjchjXwIAAP0EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjMJPEvbVOQnrIx5R2cvFFSGusQZY8+giQDP+9K1nGhHJBfvt29fbt2p9EKNsBc9osjeBPmgP5PiHhTL5NxuAj7OlGq5X4gIHzJrhrAolGzm/qhEZ8FtKsbsEZwX6ojQzkDEGvRK1Ne883UGrrLMI1lRYwZLQL2QqhzwnZ49+0CCkHPM1vwukDT0U2OeKRgXJgRuo8Eaf5VRZ/80VK6PleMUnbDngQP6bltylvdh1pCttKjNAC01IKmzQRd+hizyXtrMeOkMAFxR6jkOyqQKABsWlcEnRKf6lrCy5ZYOjhThg0q69LfurewZbaba/snUofbppni9soq6/69B9hOovh2uj2cbh4loVLXCPY9jc9MGrdmcfn8N2ofRYd2lG5pWsJbw2oZ7002iuOQWd8SPUW5nfj46m3sgG2HfFe6gXou9HyYaTDQEMPx9j+vpSiXUcrFz2wkjpaHvcADA7nFwqOW2JTCUSDir8W/tDN+TqlwIMw1mEodamCvLX2JlDJAx6C9cy7UhsFEU2aO1BUusMrVnGXI7yInd16EXmg4b1Jd6fY8DpcpER45GfZRehV706zso3ePYFtXryTQsEoOgSe0aZSK9VvmP0aDFkrb2rKzrI2XvCvi0WKrL6dFQWviwyA5zdTPs9rdp2vi3zBFnWdk7h5QmGbVL72OpM7ODM1Fle4ZcPXZLI0tIvLzg3dLcVHq8/0CVXrFTMA6qWvMDhkweAl+Fryey7QnxU4J1ScNvmsiNRsC7w6Fapip/d7Z2g1VqlIJ961C0hFyvj5qMiRHP8BUEsDBBQAAAgIAABQIewde9x0bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSpUGahaGlZUqapUFqaoqxuW6KkXFasplxkqWxSbJJWpqxUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAABQIeyAjchjXwIAAP0EAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAABQIewde9x0bQAAAHgAAAAJACQAAAAAAAAAAAAAAKwCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZAMAAAAA
+    dataString: UEsDBBQAAAgIAACQn+uAjchjXwIAAP0EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjMJPEvbVOQnrIx5R2cvFFSGusQZY8+giQDP+9K1nGhHJBfvt29fbt2p9EKNsBc9osjeBPmgP5PiHhTL5NxuAj7OlGq5X4gIHzJrhrAolGzm/qhEZ8FtKsbsEZwX6ojQzkDEGvRK1Ne883UGrrLMI1lRYwZLQL2QqhzwnZ49+0CCkHPM1vwukDT0U2OeKRgXJgRuo8Eaf5VRZ/80VK6PleMUnbDngQP6bltylvdh1pCttKjNAC01IKmzQRd+hizyXtrMeOkMAFxR6jkOyqQKABsWlcEnRKf6lrCy5ZYOjhThg0q69LfurewZbaba/snUofbppni9soq6/69B9hOovh2uj2cbh4loVLXCPY9jc9MGrdmcfn8N2ofRYd2lG5pWsJbw2oZ7002iuOQWd8SPUW5nfj46m3sgG2HfFe6gXou9HyYaTDQEMPx9j+vpSiXUcrFz2wkjpaHvcADA7nFwqOW2JTCUSDir8W/tDN+TqlwIMw1mEodamCvLX2JlDJAx6C9cy7UhsFEU2aO1BUusMrVnGXI7yInd16EXmg4b1Jd6fY8DpcpER45GfZRehV706zso3ePYFtXryTQsEoOgSe0aZSK9VvmP0aDFkrb2rKzrI2XvCvi0WKrL6dFQWviwyA5zdTPs9rdp2vi3zBFnWdk7h5QmGbVL72OpM7ODM1Fle4ZcPXZLI0tIvLzg3dLcVHq8/0CVXrFTMA6qWvMDhkweAl+Fryey7QnxU4J1ScNvmsiNRsC7w6Fapip/d7Z2g1VqlIJ961C0hFyvj5qMiRHP8BUEsDBBQAAAgIAACQn+sde9x0bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSpUGahaGlZUqapUFqaoqxuW6KkXFasplxkqWxSbJJWpqxUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+uAjchjXwIAAP0EAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+sde9x0bQAAAHgAAAAJACQAAAAAAAAAAAAAAKwCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZAMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -13353,6 +13363,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClothesRack_Short_1
       objectReference: {fileID: 0}
+    - target: {fileID: 679462427449862703, guid: 8e8f814e17f4eac45b7bddb5f85a7f6d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 3205201246458740475, guid: 8e8f814e17f4eac45b7bddb5f85a7f6d,
         type: 3}
       propertyPath: m_RootOrder
@@ -14365,6 +14380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClothesRack_Short_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4973436798756592038, guid: 43213d3e5c2ac964fa7e870e9537dd7e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6923146003389238642, guid: 43213d3e5c2ac964fa7e870e9537dd7e,
         type: 3}
