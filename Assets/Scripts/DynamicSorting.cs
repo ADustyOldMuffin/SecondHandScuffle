@@ -7,6 +7,7 @@ using Managers;
 public class DynamicSorting : MonoBehaviour
 {
     [SerializeField] private GameObject[] obstacles;
+    [SerializeField] private SpriteRenderer enemyRenderer;
     void Awake()
     {
         //add all objects in obstacles layer into the array
@@ -27,7 +28,7 @@ public class DynamicSorting : MonoBehaviour
         float closestDistanceSqr = Mathf.Infinity;
         foreach (GameObject o in obstacles)
         {
-            Vector3 directionToTarget = o.transform.position - LevelManager.Instance.Player.transform.position;
+            Vector3 directionToTarget = o.transform.position - transform.position;
             float dSqrToTarget = directionToTarget.sqrMagnitude;
             if (dSqrToTarget < closestDistanceSqr)
             {
@@ -41,18 +42,17 @@ public class DynamicSorting : MonoBehaviour
 
     void SortRelativeToPlayer(GameObject gameObject)
     {
-        if (LevelManager.Instance is null)
-            return;
+        var gameObjectY = gameObject.transform.position.y;
 
-        var playerY = LevelManager.Instance.Player.transform.position.y;
-
-        if (playerY - transform.position.y > 0)
+        if (gameObjectY >= transform.position.y)
         {
-            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+            enemyRenderer.sortingOrder = gameObject.GetComponent<SpriteRenderer>().sortingOrder + 3;
+            Debug.Log("sort higher " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + gameObject.name + " " + gameObject.transform.position.y.ToString() + " "  +gameObject.GetComponent<SpriteRenderer>().sortingOrder.ToString());
         }
         else
         {
-            gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
+            enemyRenderer.sortingOrder = gameObject.GetComponent<SpriteRenderer>().sortingOrder - 3;
+            Debug.Log("sort lower " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + gameObject.name + " " + gameObject.transform.position.y.ToString() + " " + gameObject.GetComponent<SpriteRenderer>().sortingOrder.ToString());
         }
     }
 }
