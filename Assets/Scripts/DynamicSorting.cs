@@ -40,19 +40,19 @@ public class DynamicSorting : MonoBehaviour
 
     }
 
-    void SortRelativeToPlayer(GameObject gameObject)
+    void SortRelativeToPlayer(GameObject obstacle)
     {
-        var gameObjectY = gameObject.transform.position.y;
+        var obstacleY = obstacle.transform.position.y;
 
-        if (gameObjectY >= transform.position.y)
+        if (obstacleY - transform.position.y > 0)
         {
-            enemyRenderer.sortingOrder = gameObject.GetComponent<SpriteRenderer>().sortingOrder + 3;
-            Debug.Log("sort higher " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + gameObject.name + " " + gameObject.transform.position.y.ToString() + " "  +gameObject.GetComponent<SpriteRenderer>().sortingOrder.ToString());
+            enemyRenderer.sortingOrder = obstacle.GetComponent<SpriteRenderer>().sortingOrder + 3;
+            Debug.Log("sort higher " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + obstacle.name + " " + obstacle.transform.position.y.ToString() + " "  + obstacle.GetComponent<SpriteRenderer>().sortingOrder.ToString());
         }
         else
         {
-            enemyRenderer.sortingOrder = gameObject.GetComponent<SpriteRenderer>().sortingOrder - 3;
-            Debug.Log("sort lower " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + gameObject.name + " " + gameObject.transform.position.y.ToString() + " " + gameObject.GetComponent<SpriteRenderer>().sortingOrder.ToString());
+            enemyRenderer.sortingOrder = obstacle.GetComponent<SpriteRenderer>().sortingOrder - 3;
+            Debug.Log("sort lower " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + obstacle.name + " " + obstacle.transform.position.y.ToString() + " " + obstacle.GetComponent<SpriteRenderer>().sortingOrder.ToString());
         }
     }
 }
