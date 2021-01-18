@@ -2719,7 +2719,7 @@ PrefabInstance:
         type: 3}
       propertyPath: weapons.Array.data[0]
       value: 
-      objectReference: {fileID: 929627748846965041, guid: ffeb4ebf3d7c3644e867f81d9d49a627,
+      objectReference: {fileID: 4892415075673869870, guid: 0c66c3f043e68e746985b29a2e24c7d6,
         type: 3}
     - target: {fileID: 1763867931160164617, guid: 439680f1d1118e64c971cadd04468592,
         type: 3}

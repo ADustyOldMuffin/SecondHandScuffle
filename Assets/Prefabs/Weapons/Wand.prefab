@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1417782853740661369}
   - component: {fileID: 872236754353397479}
-  - component: {fileID: 2004499825964163385}
   - component: {fileID: 6772452214275579863}
   - component: {fileID: 8247286811951882767}
+  - component: {fileID: 8950760737127839214}
+  - component: {fileID: 5024311908904706026}
   m_Layer: 0
   m_Name: Wand
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1535124273
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c9afc9752dff20c40a77bda682bef746, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -85,32 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2004499825964163385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4892415075673869870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 965e880696ff4d07a1574b83f993564a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 4358836418286617722, guid: 6f1f95bf680693446b20492f6f72f915,
-    type: 3}
-  spawnPoint: {fileID: 7850399515963041516}
-  fireRate: 0.5
-  currentCooldown: 0
-  animancer: {fileID: 8247286811951882767}
-  idles: {fileID: 11400000, guid: 27a88faa10470764dbd63da39153b8e8, type: 2}
-  attacks: {fileID: 11400000, guid: 085b6bdbc5db8374b833c825d5d45298, type: 2}
-  type: 6
-  weaponName: Wand
-  objectDialogue:
-  - {fileID: 11400000, guid: 44c49141492d0b54b87de090a3165142, type: 2}
-  - {fileID: 11400000, guid: 4a2896361831f5140bd2fb0e2e029d01, type: 2}
-  - {fileID: 11400000, guid: 93601609080719446aa31661248f87c4, type: 2}
 --- !u!95 &6772452214275579863
 Animator:
   serializedVersion: 3
@@ -144,6 +119,131 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Animator: {fileID: 6772452214275579863}
   _ActionOnDisable: 0
+--- !u!114 &8950760737127839214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892415075673869870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07abba97147643f29708579cef09afd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipSize: 0
+  projectile: {fileID: 4358836418286617722, guid: 6f1f95bf680693446b20492f6f72f915,
+    type: 3}
+  spawnPoint: {fileID: 7850399515963041516}
+  fireRate: 0.8
+  knockBackDistance: 0
+  currentCooldown: 0
+  reloadTime: 0
+  shakePresetName: PlayerGunShot_Shake
+  animancer: {fileID: 8247286811951882767}
+  idles: {fileID: 11400000, guid: 27a88faa10470764dbd63da39153b8e8, type: 2}
+  attacks: {fileID: 11400000, guid: 085b6bdbc5db8374b833c825d5d45298, type: 2}
+  attackSound: {fileID: 5024311908904706026}
+  type: 6
+  weaponName: Wand
+  weaponIcon: {fileID: 21300000, guid: c9afc9752dff20c40a77bda682bef746, type: 3}
+  weaponStatusObject: {fileID: 0}
+--- !u!82 &5024311908904706026
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4892415075673869870}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &7632785498105206310
 GameObject:
   m_ObjectHideFlags: 0
