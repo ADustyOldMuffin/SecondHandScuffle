@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 5858337360487096748}
   - component: {fileID: 9164384969206864957}
   - component: {fileID: 2499822502573151902}
+  - component: {fileID: 5729971710577603579}
   m_Layer: 10
   m_Name: BookEnemy
   m_TagString: Enemy
@@ -277,3 +278,19 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
+--- !u!114 &5729971710577603579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006571378466959188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRGB: {fileID: 6006571378466959185}
+  myAnimator: {fileID: 8122830074116639572}
+  thrust: 1
+  knockTime: 0.1

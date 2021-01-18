@@ -44,11 +44,13 @@ namespace States
             }
 
             ReachedEndOfPath = false;
-            
+
+
+
             var position = _rigidbody.position;
             var newPos = Vector2.MoveTowards(position, (Vector2) _enemy.CurrentPath.vectorPath[_enemy.currentIndex],
                 _speed * Time.fixedDeltaTime);
-            
+
             _rigidbody.MovePosition(newPos);
 
             var distance = Vector2.Distance(position, _enemy.CurrentPath.vectorPath[_enemy.currentIndex]);

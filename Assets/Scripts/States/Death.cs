@@ -22,7 +22,7 @@ namespace States
         {
             //Death Animation
             Debug.Log("I am about to die");
-            Object.Destroy(_enemy.gameObject, 2f);
+            Object.Destroy(_enemy.gameObject);
         }
 
         public void OnExit()

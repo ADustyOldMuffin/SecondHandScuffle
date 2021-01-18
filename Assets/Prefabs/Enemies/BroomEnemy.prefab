@@ -12,18 +12,18 @@ GameObject:
   - component: {fileID: 8199647336359053099}
   - component: {fileID: 8199647336359053098}
   - component: {fileID: 8199647336359053097}
-  - component: {fileID: 8199647336359053096}
   - component: {fileID: 1048176187321212871}
   - component: {fileID: -6275073196143122351}
   - component: {fileID: 5944723586959811458}
   - component: {fileID: 4675748205481829589}
+  - component: {fileID: 957631674854302516}
   m_Layer: 10
   m_Name: BroomEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8199647336359053092
 Transform:
   m_ObjectHideFlags: 0
@@ -101,19 +101,6 @@ MonoBehaviour:
   maxHealth: 4
   myAnimator: {fileID: 1048176187321212871}
   _currentHealth: 5
---- !u!114 &8199647336359053096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8199647336359053102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82e94aca7b058314c8a3da345c710870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPower: 1
 --- !u!95 &1048176187321212871
 Animator:
   serializedVersion: 3
@@ -210,6 +197,22 @@ MonoBehaviour:
   attackDistance: 0.1
   enemyAnimator: {fileID: 1048176187321212871}
   enemyHealth: {fileID: 8199647336359053097}
+--- !u!114 &957631674854302516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199647336359053102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58615b177dbecb5408a9001b643b45a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRGB: {fileID: 8199647336359053099}
+  myAnimator: {fileID: 1048176187321212871}
+  thrust: 1
+  knockTime: 0.1
 --- !u!1 &8199647336589871205
 GameObject:
   m_ObjectHideFlags: 0
