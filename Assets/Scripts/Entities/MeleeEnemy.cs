@@ -11,6 +11,11 @@ namespace Entities
         [SerializeField] private float attackDistance = 1f;
         [SerializeField] private Animator enemyAnimator;
         [SerializeField] private EnemyHealth enemyHealth;
+        [SerializeField] private Rigidbody2D enemyRGB;
+        [SerializeField] private float attackCounter;
+        [SerializeField] private int attackPower;
+        [SerializeField] private float jumpBack;
+        [SerializeField] private float jumpBackTime;
 
         protected override void Awake()
         {
@@ -20,7 +25,7 @@ namespace Entities
             var moveToTarget = new MoveToTarget(this, moveSpeed, nextWaypointDistance
                 , myRigidbody, spriteContainer);
             var idle = new Idle();
-            var meleeAttack = new MeleeAttack(this, enemyAnimator);
+            var meleeAttack = new MeleeAttack(this, enemyAnimator, enemyRGB, attackCounter, attackPower, jumpBack, jumpBackTime);
             var death = new Death(this, enemyAnimator);
 
             AddTransition(search, moveToTarget, TargetFound());

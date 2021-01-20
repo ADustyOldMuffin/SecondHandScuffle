@@ -17,13 +17,14 @@ GameObject:
   - component: {fileID: 1079119870}
   - component: {fileID: 1079119871}
   - component: {fileID: 1067836996665889116}
+  - component: {fileID: 86644229}
   m_Layer: 10
   m_Name: DustBunnyEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2420767669392913134
 Transform:
   m_ObjectHideFlags: 0
@@ -197,6 +198,11 @@ MonoBehaviour:
   attackDistance: 1
   enemyAnimator: {fileID: 5113059275134144506}
   enemyHealth: {fileID: 8774575137786889236}
+  enemyRGB: {fileID: 6031373684644472770}
+  attackCounter: 1
+  attackPower: 1
+  jumpBack: 2
+  jumpBackTime: 0.1
 --- !u!114 &1067836996665889116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +219,38 @@ MonoBehaviour:
   myAnimator: {fileID: 5113059275134144506}
   thrust: 1
   knockTime: 0.1
+--- !u!114 &86644229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6625424208667510973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40096a62e4f5cc14b82d1d71bad45411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyRenderer: {fileID: 4147885000335178410}
 --- !u!1 &8404508609915739013
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,8 +318,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -818766417
-  m_SortingLayer: 2
+  m_SortingLayerID: 410573485
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7068116690594894782, guid: 4414574398f59ff4db7fa462d4b58ab8,
     type: 3}
