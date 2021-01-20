@@ -13,7 +13,6 @@ namespace States
         private readonly Seeker _seeker;
         private readonly Rigidbody2D _rigidbody;
         
-        //private Path _path;
         private int _currentWaypoint;
         private Coroutine _findPathRoutine;
         private Vector2 _lastPosition;
@@ -39,7 +38,6 @@ namespace States
             if (_enemy.currentIndex >= _enemy.CurrentPath.vectorPath.Count)
             {
                 ReachedEndOfPath = true;
-                //Debug.Log("I am sitting on target"); 
                 return;
             }
 
@@ -64,17 +62,16 @@ namespace States
                 TimeStuck += Time.fixedDeltaTime;
 
             _lastPosition = _enemy.transform.position;
-            //_graphics.localScale = force.x >= 0.01f ? new Vector3(-1f, 1f, 1f) : new Vector3(1f, 1f, 1f);
         }
 
         public void OnEnter()
         {
-            //Debug.Log("I am moving now");
+            // Nothing to do
         }
 
         public void OnExit()
         {
-            //Debug.Log("I am not moving anymore");
+            // Nothing to do
         }
     }
 }

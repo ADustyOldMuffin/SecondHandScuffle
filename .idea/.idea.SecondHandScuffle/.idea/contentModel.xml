@@ -980,6 +980,7 @@
             <e p="MeleeEnemy.cs" t="Include" />
             <e p="RangedEnemy.cs" t="Include" />
             <e p="SpawnerEnemy.cs" t="Include" />
+            <e p="SpecialAttackEnemy.cs" t="Include" />
           </e>
           <e p="IState.cs" t="Include" />
           <e p="KeepToPixelUnits.cs" t="Include" />
@@ -1019,6 +1020,7 @@
             <e p="MoveToTarget.cs" t="Include" />
             <e p="SearchForTarget.cs" t="Include" />
             <e p="SpawnMinionState.cs" t="Include" />
+            <e p="SpecialAttack.cs" t="Include" />
           </e>
           <e p="SyncTransformWithTarget.cs" t="Include" />
           <e p="UI" t="Include">
@@ -1032,11 +1034,9 @@
           <e p="Weapons" t="Include">
             <e p="BaseballBat.cs" t="Include" />
             <e p="BaseWeapon.cs" t="Include" />
-            <e p="Boomerang.cs" t="Include" />
             <e p="EggBeater.cs" t="Include" />
             <e p="FireSpreader.cs" t="Include" />
-            <e p="NoRealoadWeapon.cs" t="Include" />
-            <e p="OldWand.cs" t="Include" />
+            <e p="NoReloadWeapon.cs" t="Include" />
             <e p="Projectiles" t="Include">
               <e p="BaseballBatProjectile.cs" t="Include" />
               <e p="BaseProjectile.cs" t="Include" />
@@ -1044,19 +1044,20 @@
               <e p="DamageOverTime.cs" t="Include" />
               <e p="EggBeaterProjectile.cs" t="Include" />
               <e p="FireProjectile.cs" t="Include" />
+              <e p="IThrowableProjectile.cs" t="Include" />
               <e p="NormalProjectile.cs" t="Include" />
               <e p="ToastProjectile.cs" t="Include" />
               <e p="WandProjectile.cs" t="Include" />
               <e p="WaterProjectile.cs" t="Include" />
             </e>
             <e p="ReloadableWeapon.cs" t="Include" />
-            <e p="Revolver.cs" t="Include" />
             <e p="SuperSoaker.cs" t="Include" />
-            <e p="Toaster.cs" t="Include" />
-            <e p="Walkman.cs" t="Include" />
+            <e p="ThrowableWeapon.cs" t="Include" />
             <e p="WalkmanWeapon.cs" t="Include" />
           </e>
         </e>
+        <e p="Seeker.cs" t="Include" />
+        <e p="Vacuum_Attack.cs" t="Include" />
       </e>
       <e p="AstarPathfindingProject.csproj" t="IncludeRecursive" />
       <e p="AstarPathfindingProjectEditor.csproj" t="IncludeRecursive" />
