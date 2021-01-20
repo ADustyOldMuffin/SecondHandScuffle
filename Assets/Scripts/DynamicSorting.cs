@@ -47,12 +47,12 @@ public class DynamicSorting : MonoBehaviour
         if (obstacleY - transform.position.y > 0)
         {
             enemyRenderer.sortingOrder = obstacle.GetComponent<SpriteRenderer>().sortingOrder + 3;
-            Debug.Log("sort higher " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + obstacle.name + " " + obstacle.transform.position.y.ToString() + " "  + obstacle.GetComponent<SpriteRenderer>().sortingOrder.ToString());
+            //Debug.Log("sort higher " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + obstacle.name + " " + obstacle.transform.position.y.ToString() + " "  + obstacle.GetComponent<SpriteRenderer>().sortingOrder.ToString());
         }
         else
         {
             enemyRenderer.sortingOrder = obstacle.GetComponent<SpriteRenderer>().sortingOrder - 3;
-            Debug.Log("sort lower " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + obstacle.name + " " + obstacle.transform.position.y.ToString() + " " + obstacle.GetComponent<SpriteRenderer>().sortingOrder.ToString());
+            //Debug.Log("sort lower " + transform.position.y.ToString() + " " + enemyRenderer.sortingOrder.ToString() + " " + obstacle.name + " " + obstacle.transform.position.y.ToString() + " " + obstacle.GetComponent<SpriteRenderer>().sortingOrder.ToString());
         }
     }
 }

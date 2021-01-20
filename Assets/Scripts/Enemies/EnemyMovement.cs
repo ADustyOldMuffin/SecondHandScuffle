@@ -53,5 +53,22 @@ namespace Enemies
 
         }
 
+        /**
+         * used in melee attack to stop jump back
+         * *coroutines cannot be run from static non-monobehaviour classes
+         * **/
+        public void EndJumpBack(float jumpBackTime)
+        {
+            StartCoroutine(StopMovingBack(jumpBackTime));
+        }
+
+        private IEnumerator StopMovingBack(float jumpBackTime)
+        {
+            yield return new WaitForSeconds(jumpBackTime);
+            myRGB.velocity = Vector2.zero;
+        }
+
+
+
     }
 }

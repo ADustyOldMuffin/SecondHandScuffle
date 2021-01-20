@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5944723586959811458}
   - component: {fileID: 4675748205481829589}
   - component: {fileID: 957631674854302516}
+  - component: {fileID: 52011030}
   m_Layer: 10
   m_Name: BroomEnemy
   m_TagString: Enemy
@@ -73,7 +74,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04, y: -0.47}
+  m_Offset: {x: 0.04, y: 0.47}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -133,7 +134,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: 0}
+  m_Offset: {x: 0.03, y: 1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -197,6 +198,11 @@ MonoBehaviour:
   attackDistance: 0.1
   enemyAnimator: {fileID: 1048176187321212871}
   enemyHealth: {fileID: 8199647336359053097}
+  enemyRGB: {fileID: 8199647336359053099}
+  attackCounter: 1
+  attackPower: 3
+  jumpBack: 2
+  jumpBackTime: 0.1
 --- !u!114 &957631674854302516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +219,38 @@ MonoBehaviour:
   myAnimator: {fileID: 1048176187321212871}
   thrust: 1
   knockTime: 0.1
+--- !u!114 &52011030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8199647336359053102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40096a62e4f5cc14b82d1d71bad45411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyRenderer: {fileID: 0}
 --- !u!1 &8199647336589871205
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8199647336589871205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8199647336359053092}
@@ -280,8 +318,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -818766417
-  m_SortingLayer: 2
+  m_SortingLayerID: 410573485
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -3931973309364645782, guid: ed071673a0d58bf4e9d66715fe777403,
     type: 3}

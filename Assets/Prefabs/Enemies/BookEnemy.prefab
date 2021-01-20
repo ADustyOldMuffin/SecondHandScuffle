@@ -67,8 +67,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -818766417
-  m_SortingLayer: 2
+  m_SortingLayerID: 410573485
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 368706861109775875, guid: 15a40224a0ec9394ea68baa6b453b5ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 9164384969206864957}
   - component: {fileID: 2499822502573151902}
   - component: {fileID: 5729971710577603579}
+  - component: {fileID: 164962095}
   m_Layer: 10
   m_Name: BookEnemy
   m_TagString: Enemy
@@ -250,6 +251,11 @@ MonoBehaviour:
   attackDistance: 0.1
   enemyAnimator: {fileID: 8122830074116639572}
   enemyHealth: {fileID: 6006571378466959187}
+  enemyRGB: {fileID: 6006571378466959185}
+  attackCounter: 1
+  attackPower: 2
+  jumpBack: 2
+  jumpBackTime: 0.1
 --- !u!114 &2499822502573151902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,3 +300,35 @@ MonoBehaviour:
   myAnimator: {fileID: 8122830074116639572}
   thrust: 1
   knockTime: 0.1
+--- !u!114 &164962095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006571378466959188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40096a62e4f5cc14b82d1d71bad45411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyRenderer: {fileID: 0}
