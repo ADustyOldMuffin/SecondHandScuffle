@@ -18,6 +18,8 @@ namespace Entities
         [SerializeField] private Animator enemyAnimator;
         [SerializeField] private EnemyHealth enemyHealth;
 
+        [SerializeField] private Transform spawnerTransform;
+
         protected override void Awake()
         {
             base.Awake();
@@ -75,8 +77,10 @@ namespace Entities
         public void SpawnMinion()
         {
             GameObject minion = Instantiate(minions[UnityEngine.Random.Range(0, minions.Length)],
-                    transform.position,
+                    spawnerTransform.position,
                     transform.rotation) as GameObject;
+            Debug.Log(minion.name);
+
 
             //minion's parent is the minion spawner. if the spawner dies, so do it's children
             minion.transform.parent = transform;

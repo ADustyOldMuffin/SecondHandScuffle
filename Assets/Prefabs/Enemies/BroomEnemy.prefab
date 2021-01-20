@@ -24,7 +24,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8199647336359053092
 Transform:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  enemyRenderer: {fileID: 0}
+  enemyRenderer: {fileID: 8199647336589871207}
 --- !u!1 &8199647336589871205
 GameObject:
   m_ObjectHideFlags: 0

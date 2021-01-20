@@ -27,11 +27,19 @@ using Player;
             Destroy(gameObject, 10f); //so it doesn't fly off forever
         }
 
- 
-        
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+            EventBus.Instance.ChangePlayerHealthRequest(-attackPower);
+            }
+        }
 
 
 
-    }
+
+
+
+}
 
 
